@@ -2,11 +2,15 @@
  height:  var(--height) !important;
  cursor: pointer;
 }
+
 #rotate_01{
   transform: rotate(1deg);
-  transition: transform 2s;
+  transition: transform 2s, filter 2s;
 }
+
+/* hue rotation has no effect on black */
 #rotate_90{
-  transform: rotate(90deg);
-  transition: transform 2s;
+  transform: rotate(90deg) scale(1.1);
+  filter: hue-rotate(90deg);
+  transition: transform 2s, filter 2s;
 }
