@@ -1,0 +1,12 @@
+#menu_hold {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+  position: relative;
+}
+
+#menu_top{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

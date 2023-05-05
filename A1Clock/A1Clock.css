@@ -1,0 +1,49 @@
+.page_generic{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#station{
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background: var(--opa);
+  box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.5);
+}
+
+#box_clock {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+#box_clock_inner {
+  display: flex;
+  font-size: 40px;
+}
+
+#box_weather {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  margin:10px;
+}
+
+#box_weather_inner {
+  display:flex;
+  font-size: 40px;
+}
+
+#image_weather {
+
+}
