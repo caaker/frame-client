@@ -10,7 +10,7 @@
 
 /* hue rotation has no effect on black */
 #rotate_90{
-  transform: rotate(90deg) scale(1.1);
-  filter: hue-rotate(90deg);
+  transform: rotate(90deg) scale(.9);
+  filter: hue-rotate(10deg);
   transition: transform 2s, filter 2s;
 }

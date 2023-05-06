@@ -28,9 +28,3 @@ export default () => {
     </div>
   );
 };
-
-
-
-/*
-Call us at 347.933.2910 or email us at contact@bikelong.ai to schedule an appointment.
-*/

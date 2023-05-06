@@ -81,8 +81,3 @@ export default () => {
     </span>
   );
 };
-
-
-
-
-// https://www.google.com/search?q=document.body.addEventListener(%27click%27%2C+bodyClicked)%3B

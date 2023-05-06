@@ -5,11 +5,15 @@ import Weather                          from './Weather.jsx';
 import getPosition                      from './Location';
 
 /*
+
 Weather data is fetched from the openWeather every time the user clicks on the Station App
+
 However location is only updated once per hour to save resources.
+
 Need to have open weather api rate limited to once per hour to correlate with location API
 
 Also, if the user leaves the page open, we want to the location and weather to update once per hour
+
 */
 
 export default () => {

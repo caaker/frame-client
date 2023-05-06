@@ -15,11 +15,9 @@ export default (props) => {
 
     <div id="article_bar" >
 
-      {/*  domain and title  */}
       <ImageFavicon className='c1_favicon' domain={article.domain}/>
       <C1Copy title={article.title} />
 
-      {/*  admin for articles allows Update / Delete  */}
       {admin && <div id="article_bar_admin">
         <C1Edit article={article}/>
         <C1Delete article={article}/>
