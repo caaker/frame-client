@@ -2,18 +2,18 @@ import './ULoginLocal.css';
 import React from 'React';
 import BoxUserForm from './BoxUserForm.jsx';
 
-export default () => {  
-  return ( 
+export default () => {
+  return (
     <div className ="box-inner">
       <form>
-        <input 
-          type="text" 
+        <input
+          type="text"
           className="user-input"
           placeholder="email"
           autoComplete="on" >
         </input>
-        <input 
-          type="password" 
+        <input
+          type="password"
           className="user-input"
           placeholder="password"
           autoComplete="on">
@@ -21,7 +21,7 @@ export default () => {
         <button className="user-button ">
           Log in
         </button>
-      </form> 
+      </form>
     </div>
   );
 };

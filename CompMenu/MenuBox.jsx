@@ -13,6 +13,8 @@ import SVGHome            from '../C0Vectors/SVGHome.jsx';
 import SVGAdd             from '../C0Vectors/SVGAdd.jsx';
 import SVGPeople          from '../C0Vectors/SVGPeople.jsx';
 import SVGBike            from '../C0Vectors/SVGBike.jsx';
+import SVGMap             from '../C0Vectors/SVGMap.jsx';
+
 
 import                         './MenuBox.css';
 import config             from '../F1Customize/config_private.js';
@@ -47,6 +49,10 @@ export default () => {
 
       {admin && <MenuBoxItem name='Stocks'>
         <SVGStocks/>
+      </MenuBoxItem>}
+
+      {admin && <MenuBoxItem name='Map'>
+        <SVGMap/>
       </MenuBoxItem>}
 
       <MenuBoxItem name='Clock'>

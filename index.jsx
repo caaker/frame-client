@@ -8,7 +8,6 @@ import F1           from './F1/F1.jsx';
 import './class.Header.js';
 import './class.Global.js';
 
-
 console.logD('DEBUG: L0 : index.jsx');
 
 // updated on move to react / react-dom 18.2
