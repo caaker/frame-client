@@ -2,19 +2,15 @@ import arc              from  'frame-arc';
 import React            from  'react';
 import                        './Article.css';
 import ArticleBar       from  './ArticleBar.jsx';
-import testImage        from  './testImage.js';
 
-
+const image_not_found = '/images/medical-symbol.jpeg';
 export default (props) => {
-  const image_not_found = '/images/medical-symbol.jpeg';
 
-  // articles object is passed in from parent component
+  // article object is passed in from parent component
   const article = props.article;
 
   // create hash from the article title
   const hash = arc.makeAnchorHash(article.title);
-
-  testImage(article.image, 'article_link_image');
 
   // return the article component
   return (
