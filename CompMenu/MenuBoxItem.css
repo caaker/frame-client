@@ -1,0 +1,18 @@
+/* border and border radius are holders so that hover works with out distortion */
+.menu_holder{
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+.menu_holder:hover{
+  border: 1px solid rgba(200, 200, 200, 1);
+  background: #ffffff;
+  color:  var(--color-blue);
+}
+.menu_name{
+  margin: 0px;
+  text-align: center;   
+  font-size: .7rem; 
+}
