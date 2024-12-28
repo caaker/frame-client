@@ -1,16 +1,16 @@
-import URL                         from '../../frame-arc/arc-url.js';
+import arc                            from 'frame-arc';
 
 export default (name, value) => {
 
   if(name === 'link') {
-    const link = new URL(value);
+    const link = new arc.URL(value);
     if( !link.valid ) {
       return false;
     }
   }
 
   if(name === 'image') {
-    const image = new URL(value);
+    const image = new arc.URL(value);
     if( !image.valid ) {
       return false;
     }
