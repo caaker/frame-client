@@ -29,15 +29,26 @@ export default () => {
 
   // tags
   function makeTags() {
-    const array = Object.keys(top_hash).sort;
-    return array.map((value, index) => {
+    // empty object
+    console.log(top_hash);
+
+    // empty array
+    const t1 = Object.keys(top_hash);
+    console.log(t1);
+
+    //empty array
+    const t2 = t1.sort();
+    console.log(t2);
+
+
+    return t2.map((value, index) => {
       return <div key={index} onClick={clicked} id={value} className='tag_ovals'>{value}</div>
     });
   };
 
   // domains
   function makeDomains() {
-    if(!articles) {
+    if(!articles || articles.length === 0) {
       return;
     }
     const array = Object.keys(top_hash[tag]).sort();

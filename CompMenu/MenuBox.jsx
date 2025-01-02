@@ -21,8 +21,6 @@ import                         './MenuBox.css';
 
 export default () => {
   const dispatch = useDispatch();
-  const email = useSelector((state)=>state.User.current.email);
-  const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
 
   function bodyClicked(event) {
     console.log('DEBUG: document.body clicked via', event.target.id);
@@ -46,6 +44,15 @@ export default () => {
         <SVGUser />
       </MenuBoxItem>}
 
+      {<MenuBoxItem name='Articles'>
+        <SVGHome  />
+      </MenuBoxItem>}
+
+      {<MenuBoxItemOdd name='Add'>
+        <SVGAdd />
+      </MenuBoxItemOdd>}
+
+{/*      
       {admin && <MenuBoxItem name='Stocks'>
         <SVGStocks/>
       </MenuBoxItem>}
@@ -54,35 +61,33 @@ export default () => {
         <SVGMap/>
       </MenuBoxItem>}
 
-      <MenuBoxItem name='Clock'>
+      { false && <MenuBoxItem name='Clock'>
         <SVGClock/>
-      </MenuBoxItem>
+      </MenuBoxItem>}
 
       {admin && <MenuBoxItem name='People'>
         <SVGPeople/>
       </MenuBoxItem>}
 
-      {<MenuBoxItem name='BikeCab'>
+      {false && <MenuBoxItem name='BikeCab'>
         <SVGBike  />
       </MenuBoxItem>}
 
-      {<MenuBoxItem name='Bike'>
+      {false && <MenuBoxItem name='Bike'>
         <SVGBike  />
       </MenuBoxItem>}
-
-      {<MenuBoxItem name='Articles'>
-        <SVGHome  />
-      </MenuBoxItem>}
-
 
       {<MenuBoxItem name='Bookmarks'>
         <SVGBookmark />
       </MenuBoxItem>}
 
-      {<MenuBoxItemOdd name='Add'>
-        <SVGAdd />
-      </MenuBoxItemOdd>}
+*/}
 
     </span>
   );
 };
+
+
+  // const email = useSelector((state)=>state.User.current.email);
+  // const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
+

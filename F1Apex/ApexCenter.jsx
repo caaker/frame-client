@@ -11,20 +11,24 @@ import ApexCenterBikeCab            from './ApexCenterBikeCab.jsx';
 
 export default () => {
   console.logD('DEBUG: L3 : F1-Apex-Center ');
-  const user = useSelector( state => state.User.current );
-  const show = user || (window.location.hostname === 'localhost');
   return (
 
     <div className="apex-center">
       {<ApexCenterUser/>}
       {<ApexCenterHome/>}
-      {<ApexCenterBookmark/>}
 
+{/*   
+      {<ApexCenterBookmark/>}
       {<ApexCenterBike/>}
       {<ApexCenterBikeCab/>}
+      {<ApexCenterPeople/>}
 
-      {show && <ApexCenterPeople/>}
+*/}
 
     </div>
   );
 };
+
+
+  // const user = useSelector( state => state.User.current );
+  // const show = user || (window.location.hostname === 'localhost');

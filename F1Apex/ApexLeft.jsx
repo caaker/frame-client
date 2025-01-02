@@ -13,7 +13,7 @@ export default () => {
   console.logD('DEBUG: L3 : F1-Apex-Left ');
   return (
     <div className="apex-left">
-      <ImageLogo path=''/>
+      <ImageLogo/>
       {config.title_on && <CompTitle / >}
       <CompSearch />
     </div>

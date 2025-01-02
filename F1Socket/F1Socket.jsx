@@ -1,32 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { sendFingerPrint, parseMessages } from './F1SocketFunctions.jsx';
 
 export default () => {
-  console.logD('DEBUG: L2 : F1-Socket ');
+  console.logD('DEBUG: L2 : F1-Socket');
   const dispatch = useDispatch();
 
-  const socket = new WebSocket(location.origin.replace(/^http/, 'ws'));
-  dispatch({type: 'initializeWebSocket', socket: socket});
+  useEffect(() => {
+    const socket = new WebSocket(location.origin.replace(/^http/, 'ws'));
 
-  // on a connection event / open event, send a fingerprint
-  socket.addEventListener('open', (event) => {
-    console.logD('DEBUG: WEBSOCKET: socket opened', 'green');
-    sendFingerPrint(socket);
-  });
+    // Dispatch WebSocket initialization to Redux store
+    dispatch({ type: 'initializeWebSocket', socket });
 
-  // when receiving a message parse it
-  socket.addEventListener('message', (event) => {
-    const obj = parseMessages(event.data);
-    console.logD('DEBUG: WEBSOCKET: message received', 'green');
-    // console.log(obj);
-  });
+    // WebSocket event listeners
+    socket.addEventListener('open', () => {
+      console.logD('DEBUG: F1-Socket: socket opened');
+      sendFingerPrint(socket);
+    });
 
-  // https://stackoverflow.com/questions/24213584/in-what-cases-will-a-websocket-close-event-tell-you-wasclean-is-false
-  socket.addEventListener('close', (event) => {
-    console.logD('DEBUG: WEBSOCKET: closed clean', 'green');
-  });
+    socket.addEventListener('message', (event) => {
+      const obj = parseMessages(event.data);
+      console.logD('DEBUG: F1-Socket: message received');
+    });
 
-  return null;
+    socket.addEventListener('close', () => {
+      console.logD('DEBUG: F1-Socket: closed cleanly');
+    });
+
+    // Cleanup WebSocket on component unmount
+    return () => {
+      console.logD('DEBUG: F1-Socket: cleaning up socket');
+      socket.close();
+    };
+  }, [dispatch]); // Dependency array ensures this runs only once
+
+  return null; // No UI to render
 };
-

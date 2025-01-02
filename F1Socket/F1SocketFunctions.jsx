@@ -1,7 +1,7 @@
 
 // currently the fingerprint is just the user agent
 export const sendFingerPrint = function(socket) {
-  console.logD('DEBUG: WEBSOCKET: message sent', 'green');
+  console.logD('DEBUG: F1-Socket: message sent');
   sendType('fingerprint', window.navigator.userAgent, socket);
 };
 

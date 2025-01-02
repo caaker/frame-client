@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import './ImageLogo.css';
-import config             from      '../F1Customize/config_all.js';
+import React, { useState } from       'react';
+import                                './ImageLogo.css';
+import config              from       '../F1Customize/config_all.js';
 
 
-export default function(props) {
+export default function() {
 
-  // also used as a favicon - config.favicon
-  // const logo = props.path || '/images/favicon-wheel.png';
-  const logo = props.path || config.favicon;
+  const logo = config.logo;
+
   const [on, toggle] = useState(true);
+  
   function onClick() {
     if(on) {
       document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .1)');
