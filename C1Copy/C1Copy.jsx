@@ -4,8 +4,7 @@ import                    './C1Copy.css';
 import SVGCopy from       '../C0Vectors/SVGCopy.jsx';
 
 export default (props) => {
-  // const hash = arc.makeAnchorHash(props.title);
-  const hash = 'broken';
+  const hash = arc.makeAnchorHash(props.title);
   const hash_link = window.location.origin + '#' + hash;
   const class_name = props.className || 'c1_copy';
 

@@ -1,5 +1,5 @@
 ## Overview
-Client side code for [livelong.ai](https://www.livelong.ai).
+Client side code for frame.
 
 ## Block Diagram
 ![frame1](frame1.png)

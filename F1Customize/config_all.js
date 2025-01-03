@@ -10,7 +10,7 @@
 
 /****************************************************************************************************/
 
-const chris = {
+const livelong = {
 
   // favicon
   favicon: "images/favicon.png",
@@ -19,7 +19,7 @@ const chris = {
   logo: "images/favicon.png",
 
   // background
-  background: "images/bg-wood.jpg",
+  background: "images/bg-hex.jpg",
 
   // title
   title: "livelong",
@@ -39,19 +39,19 @@ const chris = {
 
 /****************************************************************************************************/
 
-const erik = {
+const livestrong = {
 
   // favicon
-  favicon: "images/erikorp.png",
+  favicon: "images/livestrong.png",
 
   // logo
-  logo: "images/erikorp.png",
+  logo: "images/livestrong.png",
 
   // background
   background: "images/bg-hex.jpg",
 
   // title
-  title: "erikorp",
+  title: "livestrong",
   title_on: true,
 
   // apps
@@ -61,13 +61,13 @@ const erik = {
   start_page: "User",
 
   // footer
-  email: "erik@erikorp.com",
-  subject: "dork level 5000 achieved",
-  github: "github.com/erik"
+  email: "chris@livestrong.ai",
+  subject: "inquiry",
+  github: "github.com/caaker"
 };
 
 /****************************************************************************************************/
 
-export default chris;
+export default livelong;
 
 /****************************************************************************************************/

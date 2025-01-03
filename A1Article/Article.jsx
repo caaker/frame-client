@@ -10,8 +10,7 @@ export default (props) => {
   const article = props.article;
 
   // create hash from the article title
-  // const hash = arc.makeAnchorHash(article.title);
-  const hash ='broken';
+  const hash = arc.makeAnchorHash(article.title);
 
   // return the article component
   return (
