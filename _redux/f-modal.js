@@ -1,12 +1,15 @@
-const Modal = (state = { on: false, data: false }, action) => {
+
+const Modal = (state = { on:false, data: false, config: false }, action) => {
   const newState = { ...state };
-  newState.config = action.config;
   switch(action.type) {
     case 'toggleModalOn':
       newState.on = true;
       return newState;
     case 'toggleModalOff':
       newState.on = false;
+      return newState;
+    case 'toggleConfig':
+      newState.config = !newState.config;
       return newState;
   }
   return state;

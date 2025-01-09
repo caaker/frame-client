@@ -7,12 +7,12 @@ import UUser              from './UUser.jsx';
 
 export default () => {
   const user = useSelector((state)=>state.User.current);
-  const show = user || (window.location.hostname === 'localhost');
-  console.logD('DEBUG: L3 : F1-Page-User, ' + user);
+  const log = user || 'no user detected';
+  console.logD('DEBUG: L3 : F1-Page-User: ' + log);
   return (
     <div id='page-user'>
-      {!show && <ULogin></ULogin>}
-      {show  && <UUser></UUser>}
+      {!user && <ULogin></ULogin>}
+      {user  && <UUser></UUser>}
     </div>
   );
 };

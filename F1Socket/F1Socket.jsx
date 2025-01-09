@@ -6,8 +6,9 @@ export default () => {
   console.logD('DEBUG: L2 : F1-Socket');
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const socket = new WebSocket(location.origin.replace(/^http/, 'ws'));
+
+  function ws(protocol) {
+    const socket = new WebSocket(protocol);
 
     // Dispatch WebSocket initialization to Redux store
     dispatch({ type: 'initializeWebSocket', socket });
@@ -31,8 +32,19 @@ export default () => {
     return () => {
       console.logD('DEBUG: F1-Socket: cleaning up socket');
       socket.close();
-    };
-  }, [dispatch]); // Dependency array ensures this runs only once
+    };    
+  }
 
-  return null; // No UI to render
+  // for static site with no websockets
+  useEffect(() => {
+    const protocol = location.origin.replace(/^http/, 'ws');
+
+    // static_site_check
+    if(location.protocol !== 'file:') {
+      return ws(protocol)
+    }
+
+  }, [dispatch]); // dependency array ensures this runs only once
+
+  return null; // no UI to render
 };
