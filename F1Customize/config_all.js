@@ -29,7 +29,7 @@ const livelong = {
   test: 'test',
 
   // page
-  start_page: "User",
+  start_page: "Articles",
 
   // footer
   email: "chris@livelong.ai",
