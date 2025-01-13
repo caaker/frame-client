@@ -38,11 +38,8 @@ export default () => {
     const fetchArticles = async () => {
       const options = { credentials: 'include' };
       try {
-        const response = await fetch(baseURL + '/articles/get', options);
+        const response = await fetch((baseURL + '/articles/get'), options);
         const articles = await response.json();
-        if(articles.length === 0) {
-          console.logD('DEBUG: L2 : F1-Data: articlesInitialized: length = 0: ', 'red');          
-        }
         articles.reverse();
         dispatch({ type: 'initializeArticles', articles });
         console.logD('DEBUG: L2 : F1-Data: articlesInitialized: length: ' + articles.length, 'green');
@@ -55,7 +52,7 @@ export default () => {
     const fetchUser = async () => {
       const options = { credentials: 'include' };
       try {
-        const response = await fetch(baseURL + '/users/get', options);
+        const response = await fetch((baseURL + '/users/get'), options);
         const user = await response.json();
         if (user) {
           dispatch({ type: 'initializeUser', current: user });
