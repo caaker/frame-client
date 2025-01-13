@@ -12,7 +12,7 @@ export default () => {
   } else if ( hostname === 'localhost' ) {
     baseURL = 'http://localhost:3000';
   } else {
-    console.log('Error: hostname not detected')
+    baseURL = '';
   }
 
   return (

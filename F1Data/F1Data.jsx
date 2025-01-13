@@ -17,12 +17,19 @@ export default () => {
     }
 
     let baseURL;
+
     if ( hostname === 'caaker.github.io' ) {
       baseURL = 'https://frame-server-x8qw.onrender.com';
       console.logD('DEBUG: L2 : F1-Data: fetching from: ' + baseURL);
+
     } else if ( hostname === 'localhost' ) {
       baseURL = 'http://localhost:3000';
       console.logD('DEBUG: L2 : F1-Data: fetching from: ' + baseURL);
+
+    } else if ( hostname === 'frame-server-x8qw.onrender.com' ) {
+      baseURL = 'https://frame-server-x8qw.onrender.com';
+      console.logD('DEBUG: L2 : F1-Data: fetching from: ' + baseURL);
+
     } else {
       baseURL = 'https://frame-server-x8qw.onrender.com';
       console.logD(('DEBUG: L2 : F1-Data: fetching from fallback: ' + baseURL), 'red');
