@@ -3,9 +3,7 @@ import { useDispatch } from 'react-redux';
 
 const ServerTest = () => {
   console.logD('DEBUG: L2 : F1-ServerTest');
-
   const dispatch = useDispatch();
-
   const isServerAvailable = async (url) => {
     try {
       const response = await fetch(url, { method: 'HEAD' });
@@ -16,18 +14,16 @@ const ServerTest = () => {
   };
 
   useEffect(() => {
-    // const checkServer = async () => {
-    //   const available = await isServerAvailable('/users/get');
-    //   if (!available) {
-    //     console.logD('DEBUG: L2 : F1-ServerTest: server is not available: offline mode');
-    //   } else {
-    //     console.logD('DEBUG: L2 : F1-ServerTest: server is available: online mode');
-    //   }
-    // };
-    // checkServer();
-
+    const checkServer = async () => {
+      const available = await isServerAvailable('/users/get');
+      if (!available) {
+        console.logD('DEBUG: L2 : F1-ServerTest: current origin not available');
+      } else {
+        console.logD('DEBUG: L2 : F1-ServerTest: current origin is available');
+      }
+    };
+    checkServer();
   }, [dispatch]);
-
   return null;
 };
 

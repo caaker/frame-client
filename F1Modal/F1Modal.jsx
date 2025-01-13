@@ -7,7 +7,7 @@ export default () => {
 
   const dispatch = useDispatch();
   const on = useSelector(state => state.Modal.on);
-  console.logD('DEBUG: L2 : F1-Modal: on: ' + on);
+  console.logD('DEBUG: L2 : F1-Modal');
 
   function offModalClick(event) {
     if(event.target.className === 'modal_hold onModal') {

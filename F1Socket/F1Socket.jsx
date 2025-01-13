@@ -15,22 +15,22 @@ export default () => {
 
     // WebSocket event listeners
     socket.addEventListener('open', () => {
-      console.logD('DEBUG: F1-Socket: socket opened');
+      // console.logD('DEBUG: F1-Socket: socket opened');
       sendFingerPrint(socket);
     });
 
     socket.addEventListener('message', (event) => {
       const obj = parseMessages(event.data);
-      console.logD('DEBUG: F1-Socket: message received');
+      // console.logD('DEBUG: F1-Socket: message received');
     });
 
     socket.addEventListener('close', () => {
-      console.logD('DEBUG: F1-Socket: closed cleanly');
+      // console.logD('DEBUG: F1-Socket: closed cleanly');
     });
 
     // Cleanup WebSocket on component unmount
     return () => {
-      console.logD('DEBUG: F1-Socket: cleaning up socket');
+      // console.logD('DEBUG: F1-Socket: cleaning up socket');
       socket.close();
     };    
   }
