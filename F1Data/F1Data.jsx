@@ -20,29 +20,30 @@ export default () => {
 
     if ( hostname === 'caaker.github.io' ) {
       baseURL = 'https://frame-server-x8qw.onrender.com';
-      console.logD('DEBUG: L2 : F1-Data: fetching from: ' + baseURL);
 
     } else if ( hostname === 'localhost' ) {
       baseURL = 'http://localhost:3000';
-      console.logD('DEBUG: L2 : F1-Data: fetching from: ' + baseURL);
 
     } else if ( hostname === 'frame-server-x8qw.onrender.com' ) {
       baseURL = 'https://frame-server-x8qw.onrender.com';
-      console.logD('DEBUG: L2 : F1-Data: fetching from: ' + baseURL);
 
     } else {
       baseURL = 'https://frame-server-x8qw.onrender.com';
-      console.logD(('DEBUG: L2 : F1-Data: fetching from fallback: ' + baseURL), 'red');
     }
 
+    let fullURL = baseURL + '/articles/get';
+    if(true) {
+      fullURL = './cache.txt'; 
+    }
+    
     const fetchArticles = async () => {
       const options = { credentials: 'include' };
       try {
-        const response = await fetch((baseURL + '/articles/get'), options);
+        const response = await fetch(fullURL, options);
         const articles = await response.json();
         articles.reverse();
         dispatch({ type: 'initializeArticles', articles });
-        console.logD('DEBUG: L2 : F1-Data: articlesInitialized: length: ' + articles.length, 'green');
+        console.logD(('DEBUG: L2 : F1-Data: fetching from: ' + fullURL));
       } catch (err) {
         console.logD('DEBUG: F1DATA: fetch() articles failed: ', 'red');
       }

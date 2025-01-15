@@ -32,11 +32,20 @@ const output = {
 
 const stats = { warnings: false };
 
+const clearConsolePlugin = {
+  apply: (compiler) => {
+    compiler.hooks.watchRun.tap('ClearConsole', () => {
+      process.stdout.write('\x1Bc'); // Clears the console
+    });
+  }
+};
+
 const config_obj = {
   stats:          stats,
   entry:          entry,
   output:         output,
-  module:         file_types
+  module:         file_types,
+  plugins:        [clearConsolePlugin]
 };
 
 module.exports = (env) => {
