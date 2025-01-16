@@ -15,6 +15,8 @@ export default () => {
       console.logD('DEBUG: L2 : F1-Data: file protocol detected: no fetch() available');
       return;
     }
+    
+    let cache = true;
 
     let baseURL;
 
@@ -31,19 +33,19 @@ export default () => {
       baseURL = 'https://frame-server-x8qw.onrender.com';
     }
 
-    let fullURL = baseURL + '/articles/get';
-    if(true) {
-      fullURL = './cache.txt'; 
+    let articlesURL = baseURL + '/articles/get';
+    if(cache) {
+      articlesURL = './cache.txt'; 
     }
     
     const fetchArticles = async () => {
       const options = { credentials: 'include' };
       try {
-        const response = await fetch(fullURL, options);
+        const response = await fetch(articlesURL, options);
         const articles = await response.json();
         articles.reverse();
         dispatch({ type: 'initializeArticles', articles });
-        console.logD(('DEBUG: L2 : F1-Data: fetching from: ' + fullURL));
+        console.logD(('DEBUG: L2 : F1-Data: fetching from: ' + articlesURL));
       } catch (err) {
         console.logD('DEBUG: F1DATA: fetch() articles failed: ', 'red');
       }

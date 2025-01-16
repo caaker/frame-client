@@ -17,6 +17,17 @@ export default () => {
   //   console.error('DEBUG: navigator.geolocation error', error);
   // });
 
+
+  const hostname = window.location.hostname;
+  let baseURL;
+  if ( hostname === 'caaker.github.io' ) {
+    baseURL = 'https://frame-server-x8qw.onrender.com';
+  } else if ( hostname === 'localhost' ) {
+    baseURL = 'http://localhost:3000';
+  } else {
+    baseURL = '';
+  }
+
   return (
     <div id = "user-container">
       <div id = "user-container-2">
@@ -29,7 +40,7 @@ export default () => {
 
         {/*<p id = "user-location">Location: {lat}, {long}</p>*/}
 
-        <a id = "user-button" href="/auth/logout">Logoff</a>
+        <a id = "user-button" href={baseURL + '/auth/logout'}>Logoff</a>
       </div>
     </div>
   );
