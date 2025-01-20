@@ -5,8 +5,8 @@ import store        from './_redux/store';
 import F1           from './F1/F1.jsx';
 
 // customize the app
-import './class.Header.js';
-import './class.Global.js';
+import './F1Customize/class.Header.js';
+import './F1Customize/class.Global.js';
 
 console.logD('DEBUG: L0 : index.jsx');
 

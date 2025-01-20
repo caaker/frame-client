@@ -9,37 +9,32 @@ export default () => {
   useEffect(() => {
 
     const protocol = window.location.protocol;
-    const hostname = window.location.hostname;
+    const origin = window.location.origin;
 
     if(protocol === 'file:'){
       console.logD('DEBUG: L2 : F1-Data: file protocol detected: no fetch() available');
       return;
     }
     
+    // call cache first to guarantee fast load time
     let cache = true;
 
-    let baseURL;
-
-    if ( hostname === 'caaker.github.io' ) {
-      baseURL = 'https://frame-server-x8qw.onrender.com';
-
-    } else if ( hostname === 'localhost' ) {
-      baseURL = 'http://localhost:3000';
-
-    } else if ( hostname === 'frame-server-x8qw.onrender.com' ) {
-      baseURL = 'https://frame-server-x8qw.onrender.com';
-
-    } else {
+    // on a static site call the dynamic server configured for cors
+    let baseURL = ''
+    if ( origin === 'https://caaker.github.io' ) {
       baseURL = 'https://frame-server-x8qw.onrender.com';
     }
 
+    // articles cache and network locations
     let articlesURL = baseURL + '/articles/get';
     if(cache) {
       articlesURL = './cache.txt'; 
     }
+    let usersURL = baseURL + '/users/get';
+    const options = { credentials: 'include' };
+
     
     const fetchArticles = async () => {
-      const options = { credentials: 'include' };
       try {
         const response = await fetch(articlesURL, options);
         const articles = await response.json();
@@ -53,14 +48,12 @@ export default () => {
     fetchArticles();
 
     const fetchUser = async () => {
-      const options = { credentials: 'include' };
       try {
-        const response = await fetch((baseURL + '/users/get'), options);
+        const response = await fetch(usersURL, options);
         const user = await response.json();
         if (user) {
           dispatch({ type: 'initializeUser', current: user });
           console.logD('DEBUG: L2 : F1-Data: user logged in');
-          // socket.send({type: 'authenticate', current: user}); // Uncomment if needed
         } else {
           console.logD('DEBUG: L2 : F1-Data: user not logged in');
         }
@@ -72,6 +65,6 @@ export default () => {
 
   }, [dispatch]);
 
-  return null
-  // return <F1ServerTest />;
+  // return null
+  return <F1ServerTest />;
 };

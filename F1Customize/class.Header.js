@@ -1,4 +1,4 @@
-import config             from      './F1Customize/config_all.js';
+import config             from      './config_all.js';
 
 class Header {
   constructor() {
