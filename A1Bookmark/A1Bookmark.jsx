@@ -51,7 +51,7 @@ export default () => {
     if(!articles || articles.length === 0) {
       return;
     }
-    const array = Object.keys(top_hash[tag]).sort();
+    let array = Object.keys(top_hash[tag]).sort();
     array = array.map((value, index) => {
       return  <div className='domain_divs' key={index} id={value} >
         <img className='domain_images' src={'https://www.google.com/s2/favicons?domain=' + value} />

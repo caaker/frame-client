@@ -16,13 +16,12 @@ export default () => {
     <div className="apex-center">
       {<ApexCenterUser/>}
       {<ApexCenterHome/>}
+      {<ApexCenterBookmark/>}
 
 {/*   
-      {<ApexCenterBookmark/>}
       {<ApexCenterBike/>}
       {<ApexCenterBikeCab/>}
       {<ApexCenterPeople/>}
-
 */}
 
     </div>

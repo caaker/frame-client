@@ -6,7 +6,7 @@ import F1           from './F1/F1.jsx';
 
 // customize the app
 import './F1Customize/class.Header.js';
-import './F1Customize/class.Global.js';
+import './F1Customize/class.GlobalCSS.js';
 
 console.logD('DEBUG: L0 : index.jsx');
 

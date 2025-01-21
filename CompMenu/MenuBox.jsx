@@ -52,6 +52,10 @@ export default () => {
         <SVGAdd />
       </MenuBoxItemOdd>}
 
+      {<MenuBoxItem name='Bookmarks'>
+        <SVGBookmark />
+      </MenuBoxItem>}
+
 {/*      
       {admin && <MenuBoxItem name='Stocks'>
         <SVGStocks/>
@@ -75,10 +79,6 @@ export default () => {
 
       {false && <MenuBoxItem name='Bike'>
         <SVGBike  />
-      </MenuBoxItem>}
-
-      {<MenuBoxItem name='Bookmarks'>
-        <SVGBookmark />
       </MenuBoxItem>}
 
 */}
