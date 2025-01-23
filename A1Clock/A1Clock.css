@@ -10,7 +10,7 @@
 #station{
   width: 300px;
   height: 300px;
-  border-radius: 150px;
+  border-radius: 30px;
   display:flex;
   flex-direction: column;
   justify-content:center;

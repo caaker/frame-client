@@ -20,8 +20,8 @@ const Weather = ({lat, lon}) => {
   let icon;
 
   if(weatherData) {
-    console.log(weatherData);
-    console.log(weatherData.weather[0].icon);
+    // console.log(weatherData);
+    // console.log(weatherData.weather[0].icon);
     icon = weatherData.weather[0].icon;
   }
 
