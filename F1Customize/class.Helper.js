@@ -20,16 +20,28 @@ class Helper {
     };
   }
 
-  static async fetchJSON(url, options, onsuccess, onfailure) {
+  static async fetchJSON(url, options = { credentials: 'include' }, onsuccess = Helper.onSuccessDefault, onfailure = Helper.onFailureDefault) {
     try {
       const response = await fetch(url, options);
       const json = await response.json();
-      onSuccess(data);
+      onsuccess(json);
+      console.logD(('DEBUG: L2 : F1-Data: fetching from: ' + url));
+
     } catch (error) {
-      onFailure(error);
-      console.log(errror)
+      onfailure(error);
+      console.logD('DEBUG: L2: F1-Data: fetch failed: ' + url, 'red');
+      console.logD(error);
     }
   }
+  
+  static onFailureDefault() {
+
+  }
+
+  static onSuccessDefault() {
+
+  }
+
 }
 
 export default Helper;

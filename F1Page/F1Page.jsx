@@ -12,7 +12,7 @@ import A1People     from              '../A1People/A1People.jsx';
 
 
 // framework pages
-import A1User from                 '../A1User/A1User.jsx';
+import A1User from                    '../A1User/A1User.jsx';
 
 export default () => {
   const page = useSelector( (state) => state.MenuPage.current );
