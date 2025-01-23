@@ -21,10 +21,3 @@ function getPosition(resolve, reject, options = defaults) {
 }
 
 module.exports = getPosition;
-
-
-/*
-    Austin
-      let lat = 30.2666;
-      let lon = -97.7333;
-*/
