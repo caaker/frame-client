@@ -1,11 +1,3 @@
-/*
-  MDN - https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition
-  maximumAge - refers to how long a cached position can be used,
-  timeout - maximum amount of time the device has to return a location
-  enableHighAccuray - setting to true may result in slower response times ...
-  and overrides maximumAge to 0
-*/
-
 // location updated every hour
 let maximumAge = 3600000;
 let timeout = Infinity;

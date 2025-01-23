@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { openweather } from '../private.js';
+// import { openweather } from '../private.js';
 
 const Weather = ({lat, lon}) => {
   const [weatherData, setWeatherData] = useState(null);
-
+  const openweather = '78fd50d70e6c6a18205f31af5ff95107';
+  
   useEffect(() => {
     const fetchData = () => {
       fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ lat }&lon=${ lon }&units=imperial&appid=${ openweather }`)
@@ -37,12 +38,3 @@ const Weather = ({lat, lon}) => {
 };
 
 export default Weather;
-
-
-/*
-creek and the cave
-vulcan
-red band's room, sunset atx or room or strip room
-velveta room
-green room - ron white
-*/

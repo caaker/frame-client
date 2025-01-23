@@ -3,6 +3,15 @@ class Helper {
   constructor() {
   }
 
+  static getWebSocketURL() {
+    const origin = window.location.origin;
+    let baseURL = '';
+    if ( origin === 'https://caaker.github.io' ) {
+      baseURL = 'wss://frame-server-x8qw.onrender.com';
+    }
+    return baseURL;
+  }
+
   static getBaseURL() {
     const origin = window.location.origin;
     let baseURL = '';

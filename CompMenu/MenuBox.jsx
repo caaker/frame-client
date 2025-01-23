@@ -12,18 +12,14 @@ import SVGHome            from '../C0Vectors/SVGHome.jsx';
 import SVGAdd             from '../C0Vectors/SVGAdd.jsx';
 import SVGPeople          from '../C0Vectors/SVGPeople.jsx';
 
-
-
 import                         './MenuBox.css';
-
 
 export default () => {
   const dispatch = useDispatch();
 
   function bodyClicked(event) {
-    console.log('DEBUG: document.body clicked via', event.target.id);
+    // console.logD('DEBUG: document.body clicked via', event.target.id);
     if((event.target.id !== 'menu_top') && (event.target.id !== 'menu_path')) {
-      // console.log('DEBUG: MenuBox: dipatch: toggleOff');
       dispatch({type: 'toggleMenuPageOff'});
     }
   }
@@ -54,11 +50,12 @@ export default () => {
         <SVGBookmark />
       </MenuBoxItem>}
 
-{/*      
-
-      { false && <MenuBoxItem name='Clock'>
+      {<MenuBoxItem name='Clock'>
         <SVGClock/>
       </MenuBoxItem>}
+
+{/*      
+
 
       {admin && <MenuBoxItem name='People'>
         <SVGPeople/>
@@ -69,8 +66,4 @@ export default () => {
     </span>
   );
 };
-
-
-  // const email = useSelector((state)=>state.User.current.email);
-  // const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
 
