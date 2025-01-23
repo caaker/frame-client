@@ -1,6 +1,5 @@
 import React, { useEffect }   from 'react';
 import { useDispatch }        from 'react-redux';
-import F1ServerTest           from './F1ServerTest.jsx';
 import Helper                 from '../F1Customize/class.Helper.js';
 
 export default () => {
@@ -12,12 +11,12 @@ export default () => {
 
     const urls = Helper.getURLs(true);
 
-    Helper.fetchJSON(urls.articles, options, (articles) => {
+    Helper.fetchJSON(urls.articles, null, (articles) => {
       articles.reverse();
       dispatch({ type: 'initializeArticles', articles });
     });
 
-    Helper.fetchJSON(urls.users, options, (user) => {
+    Helper.fetchJSON(urls.users, null, (user) => {
       dispatch({ type: 'initializeUser', current: user });
     });
 

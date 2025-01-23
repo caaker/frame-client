@@ -4,10 +4,7 @@ import                        './Article.css';
 import ArticleBar       from  './ArticleBar.jsx';
 
 const image_not_found = '/images/medical-symbol.jpeg';
-export default (props) => {
-
-  // article object is passed in from parent component
-  const article = props.article;
+export default ({ article }) => {
 
   // create hash from the article title
   const hash = arc.makeAnchorHash(article.title);

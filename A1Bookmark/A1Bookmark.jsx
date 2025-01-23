@@ -7,19 +7,15 @@ export default () => {
   const articles = useSelector((state) => state.Articles.articles);
   const top_hash = {};
 
-  // top hash
+  // top hash models an n-ary tree with only 2 levels - tags and domains
   function makeTopHash() {
     if(!articles) {
       return;
     }
     articles.forEach((article) => {
-
-      // tags
       if(!(article.tag in top_hash)) {
         top_hash[article.tag] = {};
       }
-
-      // domains
       if(!(article.domain in top_hash[article.tag])) {
         top_hash[article.tag][article.domain] = {};
       }
@@ -27,20 +23,9 @@ export default () => {
   }
   makeTopHash();
 
-  // tags
   function makeTags() {
-    // empty object
-    console.log(top_hash);
-
-    // empty array
     const t1 = Object.keys(top_hash);
-    console.log(t1);
-
-    //empty array
     const t2 = t1.sort();
-    console.log(t2);
-
-
     return t2.map((value, index) => {
       return <div key={index} onClick={clicked} id={value} className='tag_ovals'>{value}</div>
     });
