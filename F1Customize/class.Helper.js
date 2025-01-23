@@ -15,11 +15,21 @@ class Helper {
   static getURLs(cache = true) {
     const baseURL = this.getBaseURL();
     return {
-      articles: cache ? './cache.txt' : baseURL + '/articles/get',
-      users: baseURL + '/users/get',
+      articles: cache ? ('./cache.txt' ) : ( baseURL + '/articles/get' ),
+      users: ( baseURL + '/users/get' ),
     };
   }
 
+  static async fetchJSON(url, options, onsuccess, onfailure) {
+    try {
+      const response = await fetch(url, options);
+      const json = await response.json();
+      onSuccess(data);
+    } catch (error) {
+      onFailure(error);
+      console.log(errror)
+    }
+  }
 }
 
 export default Helper;

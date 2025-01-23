@@ -5,15 +5,13 @@ import MenuBoxItem        from './MenuBoxItem.jsx';
 import MenuBoxItemOdd     from './MenuBoxItemOdd.jsx';
 import SVGBookmark        from '../C0Vectors/SVGBookmark.jsx';
 
-import SVGStocks          from '../C0Vectors/SVGStocks.jsx';
 import SVGClock           from '../C0Vectors/SVGClock.jsx';
 
 import SVGUser            from '../C0Vectors/SVGUser.jsx';
 import SVGHome            from '../C0Vectors/SVGHome.jsx';
 import SVGAdd             from '../C0Vectors/SVGAdd.jsx';
 import SVGPeople          from '../C0Vectors/SVGPeople.jsx';
-import SVGBike            from '../C0Vectors/SVGBike.jsx';
-import SVGMap             from '../C0Vectors/SVGMap.jsx';
+
 
 
 import                         './MenuBox.css';
@@ -57,13 +55,6 @@ export default () => {
       </MenuBoxItem>}
 
 {/*      
-      {admin && <MenuBoxItem name='Stocks'>
-        <SVGStocks/>
-      </MenuBoxItem>}
-
-      {admin && <MenuBoxItem name='Map'>
-        <SVGMap/>
-      </MenuBoxItem>}
 
       { false && <MenuBoxItem name='Clock'>
         <SVGClock/>
@@ -71,14 +62,6 @@ export default () => {
 
       {admin && <MenuBoxItem name='People'>
         <SVGPeople/>
-      </MenuBoxItem>}
-
-      {false && <MenuBoxItem name='BikeCab'>
-        <SVGBike  />
-      </MenuBoxItem>}
-
-      {false && <MenuBoxItem name='Bike'>
-        <SVGBike  />
       </MenuBoxItem>}
 
 */}

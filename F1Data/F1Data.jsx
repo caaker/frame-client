@@ -15,9 +15,10 @@ export default () => {
         const articles = await response.json();
         articles.reverse();
         dispatch({ type: 'initializeArticles', articles });
-        console.logD(('DEBUG: L2 : F1-Data: fetching from: ' + articlesURL));
+        console.logD(('DEBUG: L2 : F1-Data: fetching from: ' + urls.articles));
       } catch (err) {
-        console.logD('DEBUG: F1DATA: fetch() articles failed: ', 'red');
+        console.logD('DEBUG: L2: F1-Data: fetch() articles failed: ' + urls.articles, 'red');
+        console.log(err);
       }
     };
     fetchArticles();
@@ -33,13 +34,13 @@ export default () => {
           console.logD('DEBUG: L2 : F1-Data: user not logged in');
         }
       } catch (err) {
-        console.logD('DEBUG: L2 : F1-Data: user:', 'red');
+        console.logD('DEBUG: L2 : F1-Data: fetch() users failed:' + urls.users, 'red');
       }
     };
     fetchUser();
 
   }, [dispatch]);
 
-  // return null
-  return <F1ServerTest />;
+  return null
+  // return <F1ServerTest />;
 };
