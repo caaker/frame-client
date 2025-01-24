@@ -11,7 +11,9 @@ const Weather = ({lat, lon}) => {
     const fetchData = () => {
       fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${ lat }&lon=${ lon }&units=imperial&appid=${ openweather }`)
         .then(response => response.json())
-        .then(json => setWeatherData(json));
+        .then(json => {
+          setWeatherData(json)
+        });
     };
 
     const fetchAir = () => {
@@ -22,13 +24,13 @@ const Weather = ({lat, lon}) => {
         });
     };
 
-    if(lat && lon) {
-      fetchData();
-      fetchAir();
-    } else {
-      lat = 30.2666;
-      lon = -97.7333; 
-    }
+    if(!(lat && lon)) {
+      lat = 30.2827813;
+      lon = -97.7384504;
+    } 
+    fetchData();
+    fetchAir();
+    
   }, [lat, lon]);  // runs on mount and if lat or lon changes on a re-render
 
   return (
