@@ -6,9 +6,9 @@ const defaults = {
   enableHighAccuracy: false
 };
 
-function getLocation(resolve, reject, options = defaults) {
-  return new Promise((resolve, reject) =>
-    navigator.geolocation.getCurrentPosition(resolve, reject, options)
+function getLocation(options = defaults) {
+  return new Promise((resolveInternal, rejectInternal) =>
+    navigator.geolocation.getCurrentPosition(resolveInternal, rejectInternal, options)
   );
 }
 

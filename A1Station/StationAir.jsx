@@ -9,7 +9,7 @@ const StationAir = ({lat, lon}) => {
   const [airData, setAirData] = useState(null);
 
    useEffect(() => {
-    const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${ lat }&lon=${ lon }&units=imperial&appid=${ openweather }`;
+    const url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${ lat }&lon=${ lon }&units=imperial&appid=${ openweather }`;
     Helper.fetchJSON(url , null, (json) => {
       setAirData(json)
     });
