@@ -72,13 +72,10 @@ const ArticleForm = (state = initial_state, action) => {
   return state;
 };
 
-//
-const SearchInput = (state = {current: ''}, action) => {
-  const newState = { ...state };
-  switch(action.type) {
+const SearchInput = (state = { current: '' }, action) => {
+  switch (action.type) {
     case 'updateSearchInput':
-      newState.current = action.current;
-      return newState;
+      return { ...state, current: action.current };
   }
   return state;
 };
