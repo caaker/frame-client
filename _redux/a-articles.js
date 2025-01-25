@@ -78,7 +78,3 @@ export default {
   ArticleForm,
   SearchInput
 };
-
-
-// newArticles2.splice(action.index, 1);                       // delete the updated article
-// newArticles2.splice(action.index, 0, action.new_article)    // insert the updated article
