@@ -10,29 +10,25 @@ const Articles = (state = {articles: false}, action) => {
       newState.articles = action.articles;
       return newState;
 
-    // called by the delete SVG component
-    case 'deleteArticle':
-      const newArticles = [...newState.articles];
-
-      // deletes 1 item from newArticles
-      newArticles.splice(action.index, 1);
-      newState.articles = newArticles;
-      return newState;
-
-    // called by F1Modal Submission function
+    // called by F1Modal Submission function for creating
     case 'addArticle':
       const newArticles1 = [...newState.articles];
-
-      // adds 1 article to the front of the array
       newArticles1.unshift(action.new_article);
       newState.articles = newArticles1;
       return newState;
 
-    // called by F1Modal Submission function
+    // called by F1Modal Submission function for updating
     case 'updateArticle':
       const newArticles2 = [...newState.articles];
       newArticles2.splice(action.index, 1, action.new_article);
       newState.articles = newArticles2;
+      return newState;
+
+    // called by the delete SVG component to delete component at action.index
+    case 'deleteArticle':
+      const newArticles = [...newState.articles];
+      newArticles.splice(action.index, 1);
+      newState.articles = newArticles;
       return newState;
   }
 
