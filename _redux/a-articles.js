@@ -49,29 +49,26 @@ const ArticleForm = (state = initial_state, action) => {
     case 'clearArticleForm':
       return initial_state;
 
-    // implemented in M1Form
+    // implemented in M1Form to quickly populate the form for test purposes
     case 'testArticleForm':
       return test_state;
 
-    //  called by edit SVG component
+    //  called by edit SVG component in Article component
     case 'setArticleForm':
       return makeData(action.data);
 
-    // called in M1FormInputs; this is a controlled form and Z1AddDomain
+    // called in M1FormInputs, a controlled form
     case 'updateArticleForm':
       let newState = { ...state };
-      const name = action.data[0];
-      const value = action.data[1];
-      const valid = action.data[2];
-      newState[name] = {value: value, valid: valid};
+      const [name, value, valid] = action.data; 
+      newState[name] = {value, valid};
       newState.valid = test(newState);
       return newState;
   }
-
-  // no change; return the previous state
   return state;
 };
 
+// object is used for possible future updates to search
 const SearchInput = (state = { current: '' }, action) => {
   switch (action.type) {
     case 'updateSearchInput':
