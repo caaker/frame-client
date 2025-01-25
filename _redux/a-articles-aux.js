@@ -93,16 +93,16 @@ export const makeData = (raw) => {
   return ret;
 };
 
-export const test = (newState) => {
-  let keys = Object.keys(newState);
-  for(let i = 0; i < keys.length; i++) {
-    if(keys[i] === 'valid') {
-    } else if( !newState[keys[i]].valid) {
+// check all properties for false except the outer valid
+export const isValid = (state) => {
+  for (let key in state) {
+    if (key !== 'valid' && !state[key].valid) {
       return false;
     }
   }
   return true;
 };
 
-export const exp = { initial_state, test_state, makeData, test };
+
+export const exp = { initial_state, test_state, makeData, isValid };
 export default exp;
