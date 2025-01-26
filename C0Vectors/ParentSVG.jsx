@@ -18,7 +18,7 @@ export default ( props ) => {
   }
 
   // id
-  const id = '' || props.id;
+  const id = props.id || '';
 
   // path, fontSize, onClick, className, id
   return (
