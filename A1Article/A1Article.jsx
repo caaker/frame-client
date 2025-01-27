@@ -1,12 +1,9 @@
 import                      './A1Article.css';
-
 import React, { useEffect }   from 'react';
 import { useSelector }        from 'react-redux';
-
-import Article                from './Article.jsx';
-import Search                 from './Search.js';
 import arc                    from 'frame-arc';
-
+import Article                from './Article.jsx';
+import ArticleFilter          from './ArticleFilter.js';
 
 export default () => {
 
@@ -23,7 +20,7 @@ export default () => {
     if(articles) {
       if(search) {
         articles = articles.filter((val) => {
-          return Search(val, search);
+          return ArticleFilter(val, search);
         });
       };
       articles = articles.map((article, index) => {

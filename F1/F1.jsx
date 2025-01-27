@@ -1,14 +1,14 @@
-// css
-import                              './F1.css';
-
 // npm modules
 import React              from      'react';
 import { useSelector }    from      'react-redux';
 
-// repo files
+// css
+import                              './F1.css';
+
+// components
 import F1Data             from      '../F1Data/F1Data.jsx';
 import F1Socket           from      '../F1Socket/F1Socket.jsx';
-import F1Apex             from      '../F1Apex/Apex.jsx';
+import F1Apex             from      '../F1Apex/F1Apex.jsx';
 import F1Page             from      '../F1Page/F1Page.jsx';
 import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';

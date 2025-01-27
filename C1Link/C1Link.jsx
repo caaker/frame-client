@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './C2Link.css';
+import './C1Link.css';
 
 export default (props) => {
 

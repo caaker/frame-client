@@ -1,11 +1,10 @@
-import React from 'react';
-import { useSelector, useDispatch }   from 'react-redux';
-import validate                       from './Z1Validate.js';
-import M10                            from './M1FormInputsSingle.jsx';
-import addDomain                      from './Z1AddDomain.jsx';
-
-import './M1FormInputs.css';
-import C1Copy                         from    '../C1Copy/C1Copy.jsx';
+import React                          from  'react';
+import { useSelector, useDispatch }   from  'react-redux';
+import                                      './M1FormInputs.css';
+import validate                       from  './Z1Validate.js';
+import M10                            from  './M1FormInputsSingle.jsx';
+import addDomain                      from  './Z1AddDomain.jsx';
+import C1Copy                         from  '../C1Copy/C1Copy.jsx';
 
 
 export default () => {

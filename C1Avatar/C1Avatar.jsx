@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './CompAvatar.css';
+import './C1Avatar.css';
 
 export default (props) => {
   console.logD('DEBUG: L4 : F1-Apex-Right-Avatar');

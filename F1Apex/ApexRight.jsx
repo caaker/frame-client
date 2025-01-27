@@ -1,7 +1,7 @@
 import                                      './ApexRight.css';
 import React                          from  'react';
 import { useSelector }                from  'react-redux';
-import CompAvatar                     from  '../CompAvatar/CompAvatar.jsx';
+import C1Avatar                       from  '../C1Avatar/C1Avatar.jsx';
 import CompMenu                       from  '../CompMenu/Menu.jsx';
 
 export default () => {
@@ -9,7 +9,7 @@ export default () => {
   const User = useSelector( state => state.User );
   return (
     <div className="apex-right">
-      { User.current && <CompAvatar /> }
+      { User.current && <C1Avatar /> }
       <CompMenu/>
     </div>
   );

@@ -6,8 +6,6 @@ import ApexCenterUser               from './ApexCenterUser.jsx';
 import ApexCenterPeople             from './ApexCenterPeople.jsx';
 import ApexCenterBookmark           from './ApexCenterBookmark.jsx';
 
-import ApexCenterBike               from './ApexCenterBike.jsx';
-import ApexCenterBikeCab            from './ApexCenterBikeCab.jsx';
 
 export default () => {
   console.logD('DEBUG: L3 : F1-Apex-Center ');
@@ -19,8 +17,7 @@ export default () => {
       {<ApexCenterBookmark/>}
 
 {/*   
-      {<ApexCenterBike/>}
-      {<ApexCenterBikeCab/>}
+
       {<ApexCenterPeople/>}
 */}
 
