@@ -1,14 +1,9 @@
 import React, { useState } from       'react';
 import                                './C1Logo.css';
-import config              from       '../F1Customize/config_all.js';
+import {logo}              from       '../F1Customize/config_all.js';
 
-
-export default function() {
-
-  const logo = config.logo;
-
+export default function Logo() {
   const [on, toggle] = useState(true);
-  
   function onClick() {
     if(on) {
       document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .1)');
