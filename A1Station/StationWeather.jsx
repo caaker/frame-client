@@ -22,7 +22,7 @@ const StationWeather = ({lat, lon}) => {
           <>
             <img
               id="image_weather"
-              src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
+              src={`https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`}
               alt="Weather Icon"
             />
             <p id="box_weather_inner">{Math.round(weatherData.main.temp)}°</p>

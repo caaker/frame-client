@@ -1,6 +1,8 @@
 import React, { useEffect }   from 'react';
 import { useDispatch }        from 'react-redux';
 import Helper                 from '../F1Customize/class.Helper.js';
+import config_people          from '../F1Customize/config_people.js';
+
 
 export default () => {
   
@@ -20,6 +22,8 @@ export default () => {
       dispatch({ type: 'initializeUser', current: user });
     });
 
+    // place holder for actual data later
+    dispatch({ type: 'initializePeople', people: config_people });
   }, [dispatch]);
 
   return null

@@ -1,39 +1,39 @@
 // id, name, pic, online, messages
-const test = [
+const people = [
 
   {
     id: 0,
-    name: 'chris',
+    name: 'Chris',
     pic: '/images/test.jpg',
     online: true,
     messages: [
-      { time: 1, message: 'Hello', from: 'chris', to: 'll' },
-      { time: 2, message: 'My name is Neal', from: 'chris',  to: 'll' },
+      { time: 1, message: 'Hello', from: 0, to: 1 },
+      { time: 2, message: 'My name is Chris', from: 0,  to: 1 },
     ]
   },
 
   {
     id: 1,
-    name: 'll',
+    name: 'Lauren',
     pic: 'https://laurenrimmerg2.files.wordpress.com/2011/05/80s-girls-19.jpg',
     online: true,
     messages: [
-      { time: 1, message: 'Hi', from: 'll',  to: 'chris' },
-      { time: 2, message: 'My name is Joe', from: 'll', to: 'chris' },
+      { time: 1, message: 'Hi', from: 1,  to: 0 },
+      { time: 2, message: 'My name is Lauren', from: 1, to: 0 },
     ]
   },
 
   {
     id: 2,
-    name: 'neal',
-    pic: 'https://eadn-wc02-3894996.nxedge.io/cdn/wp-content/uploads/2019/01/neal-barnard-headshot-cropped.jpg',
+    name: 'Ming',
+    pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxXOTBoLxxUGVk7Q2kPVUobwiHsWzD_MkWVg&s',
     online: true,
     messages: [
-      { time: 1, message: 'Greetings', from: 'neal', to: 'bob' },
-      { time: 2, message: 'My name is Neal', from: 'neal', to: 'bob' },
+      { time: 1, message: 'Greetings', from: 2, to: 1 },
+      { time: 2, message: 'My name is Ming', from: 2, to: 1 },
     ]
   }
 
 ];
 
-export default test;
+export default people;

@@ -54,12 +54,11 @@ export default () => {
         <SVGClock/>
       </MenuBoxItem>}
 
-{/*      
-
-
-      {admin && <MenuBoxItem name='People'>
+      {<MenuBoxItem name='People'>
         <SVGPeople/>
       </MenuBoxItem>}
+
+{/*      
 
 */}
 

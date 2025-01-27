@@ -1,9 +1,9 @@
-import './A1People.css';
-import React                        from         'react';
-import PeopleFaces                  from         './PeopleFaces.jsx';
-import PeopleConvo                  from         './PeopleConvo.jsx';
-import PeopleForm                   from         './PeopleForm.jsx';
-import { connect, useSelector }     from         'react-redux';
+import                                            './A1People.css';
+import React                        from          'react';
+import PeopleFaces                  from          './PeopleFaces.jsx';
+import PeopleConvo                  from          './PeopleConvo.jsx';
+import PeopleForm                   from          './PeopleForm.jsx';
+import { connect, useSelector }     from          'react-redux';
 
 export default () => {
 
