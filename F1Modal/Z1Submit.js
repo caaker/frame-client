@@ -11,19 +11,14 @@ exp.post = function(state, dispatch) {
       return response.json();
     })
     .then((response) => {
-      // console.log('DEBUG: /articles/add ', response);
-
-      // dispatch({type: 'deleteArticle', index: index});
-
-      dispatch({type: 'addArticle', new_article: response}); // add article works
+      dispatch({type: 'addArticle', new_article: response});
     })
     .catch((error) => {
-      console.log('fetch/POST error', error);
+      console.logD('DEBUG: Z1Submit: articles/add failed', 'red');
     });
 };
 
 exp.put = function(article_object, dispatch) {
-  console.log(article_object);
   const options = {
     headers: {'Content-Type': 'application/json'},
     method: 'PUT',
@@ -34,7 +29,6 @@ exp.put = function(article_object, dispatch) {
       return response.json();
     })
     .then((response) => {
-      // console.log('DEBUG: /articles/put ', response); // update article ... does not return the article
       const send = {
         type: 'updateArticle',
         new_article: article_object,
@@ -43,9 +37,8 @@ exp.put = function(article_object, dispatch) {
       dispatch(send);
     })
     .catch((error) => {
-      console.error('DEBUG: fetch/PUT error', error);
+      console.logD('DEBUG: Z1Submit: articles/put failed', 'red');
     });
 };
 
 export default exp;
-

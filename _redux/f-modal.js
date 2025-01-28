@@ -1,5 +1,5 @@
 
-const Modal = (state = { on:false, data: false, config: false }, action) => {
+const Modal = (state = { on:false, data: {}, config: false }, action) => {
   const newState = { ...state };
   switch(action.type) {
     case 'toggleModalOn':
