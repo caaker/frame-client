@@ -11,10 +11,8 @@ export default () => {
     const URL = Helper.getWebSocketURL();
     const socket = new WebSocket(URL);
 
-    // 
     dispatch({ type: 'initializeWebSocket', socket });
 
-    //
     socket.addEventListener('open', () => {
       console.logD('DEBUG: L2 : F1Socket: Event: open', 'green');
       sendFingerPrint(socket);
@@ -36,7 +34,7 @@ export default () => {
 
   useEffect(() => {
     ws();
-  }, [dispatch]);
+  });
 
   return null;
 };

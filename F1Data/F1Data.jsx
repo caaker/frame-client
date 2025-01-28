@@ -24,7 +24,7 @@ export default () => {
 
     // place holder for actual data later
     dispatch({ type: 'initializePeople', people: config_people });
-  }, [dispatch]);
+  });
 
   return null
 
