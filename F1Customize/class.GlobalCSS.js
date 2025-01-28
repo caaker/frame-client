@@ -11,12 +11,16 @@ class Global {
     const media_query_guard = '301px';
   }
 
-  // set global CSS values here
   setCSSConstants() {
-    document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .9)');
+
+    // height for logo and search
+    document.documentElement.style.setProperty('--height', '30px');
+
     document.documentElement.style.setProperty('--color-blue', '#4285f3');
     document.documentElement.style.setProperty('--color-grey', '#444444');
-    document.documentElement.style.setProperty('--height', '30px');
+    document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .9)');
+
+
     document.documentElement.style.setProperty('--left', '20px');
   }
 

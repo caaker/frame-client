@@ -1,12 +1,5 @@
-/****************************************************************************************************/
-
-
 // Options
-// Page Options - User, Articles, Bookmarks, Stocks, Clock, People, Bike, BikeCab 
-// App Options
-
-
-/****************************************************************************************************/
+// Page - User, Articles, Bookmarks, Clock, People
 
 /****************************************************************************************************/
 
@@ -24,9 +17,6 @@ const livelong = {
   // title
   title: "livelong",
   title_on: true,
-
-  // apps
-  test: 'test',
 
   // page
   start_page: "Articles",
@@ -54,9 +44,6 @@ const livestrong = {
   title: "livestrong",
   title_on: true,
 
-  // apps
-  test: "test",
-
   // page
   start_page: "User",
 
@@ -69,5 +56,3 @@ const livestrong = {
 /****************************************************************************************************/
 
 export default livelong;
-
-/****************************************************************************************************/

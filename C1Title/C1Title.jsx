@@ -1,6 +1,6 @@
 import React                          from  'react';
 import config                         from  '../F1Customize/config_all.js';
-import                                      './CompTitle.css';
+import                                      './C1Title.css';
 
 export default () => {
   return (
