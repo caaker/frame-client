@@ -24,7 +24,7 @@ const livelong = {
   // footer
   email: "chris@livelong.ai",
   subject: "inquiry",
-  github: "github.com/caaker"
+  github: "https://github.com/caaker"
 };
 
 /****************************************************************************************************/
@@ -50,7 +50,7 @@ const livestrong = {
   // footer
   email: "chris@livestrong.ai",
   subject: "inquiry",
-  github: "github.com/caaker"
+  github: "https://github.com/caaker"
 };
 
 /****************************************************************************************************/

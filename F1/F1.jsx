@@ -14,20 +14,21 @@ import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';
 import config             from      '../F1Customize/config_all.js';
 
-// functional component
 export default () => {
   console.logD('DEBUG: L1 : F1');
   const page = useSelector( state => state.MenuPage.current );
   return (
     <div id="app_hold">
 
-      {/* Application pulls much data on load into redux */}
+      {/* These components do not render */}
       <F1Data />
       <F1Socket />
+
+      {/* The core structre of the application is constructed with these 4 components */}
       <F1Apex />
       <F1Page />
       <F1Modal />
-      <F1Footer email={config.email} subject={config.subject} github={config.github} />
+      <F1Footer config={config} />
     </div>
   );
 };

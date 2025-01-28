@@ -54,12 +54,13 @@ export default () => {
         <SVGClock/>
       </MenuBoxItem>}
 
-      {<MenuBoxItem name='People'>
-        <SVGPeople/>
-      </MenuBoxItem>}
 
 {/*      
 
+      {<MenuBoxItem name='People'>
+        <SVGPeople/>
+      </MenuBoxItem>}
+      
 */}
 
     </span>
