@@ -13,12 +13,12 @@ export default () => {
 
     const urls = Helper.getURLs(true);
 
-    Helper.fetchJSON(urls.articles, null, (articles) => {
+    Helper.fetchJSON(urls.articles, undefined, (articles) => {
       articles.reverse();
       dispatch({ type: 'initializeArticles', articles });
     });
 
-    Helper.fetchJSON(urls.users, null, (user) => {
+    Helper.fetchJSON(urls.users, undefined, (user) => {
       dispatch({ type: 'initializeUser', current: user });
     });
 
