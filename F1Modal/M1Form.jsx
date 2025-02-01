@@ -6,6 +6,8 @@ import M1FormButton                   from './M1FormButton.jsx';
 import Submit                         from './Z1Submit.js';
 
 export default () => {
+  console.logD('DEBUG: L4 : F1-Modal-M1-Form ');
+
   const dispatch = useDispatch();
   const article_form = useSelector((state) => state.ArticleForm) || {};
   const config = useSelector((state) => state.Modal.config);

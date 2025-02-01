@@ -4,12 +4,12 @@ const Modal = (state = { on:false, data: {}, config: false }, action) => {
   switch(action.type) {
     case 'toggleModalOn':
       newState.on = true;
+      if (action.config !== undefined) {
+        newState.config = action.config;
+      }
       return newState;
     case 'toggleModalOff':
       newState.on = false;
-      return newState;
-    case 'toggleConfig':
-      newState.config = !newState.config;
       return newState;
   }
   return state;

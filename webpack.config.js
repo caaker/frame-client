@@ -36,6 +36,7 @@ const clearConsolePlugin = {
   apply: (compiler) => {
     compiler.hooks.watchRun.tap('ClearConsole', () => {
       process.stdout.write('\x1Bc'); // Clears the console
+      console.log('DEBUG:  console cleared via webpack plugin');
     });
   }
 };

@@ -7,6 +7,7 @@ import config_people          from '../F1Customize/config_people.js';
 export default () => {
   
   console.logD('DEBUG: L2 : F1-Data');
+
   const dispatch = useDispatch();
   
   useEffect(() => {

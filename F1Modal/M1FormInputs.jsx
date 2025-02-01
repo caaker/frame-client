@@ -12,7 +12,7 @@ export default () => {
   const data = useSelector((state) => state.ArticleForm);
 
   function onChange(event) {
-    const { name, value } = events.target;
+    const { name, value } = event.target;
     const valid = validate(name, value);
     dispatch({type: 'updateArticleForm', data: [name, value, valid]});
     addDomain(name, value, dispatch);

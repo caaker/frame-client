@@ -5,14 +5,8 @@ const People = (state = {people: false}, action) => {
       newState.people = action.people;
       return newState;
 
-    // called along with updatePeopleInput
     case 'addMessage':
 
-      // this is a bug, why are you adding a person on a message update
-      // const clone = [...newState.people];
-      // clone.push(action.message);
-      // newState.people = clone;
-      // return newState;
   }
   return state;
 };
@@ -33,4 +27,3 @@ export default {
   People,
   PeopleInput
 };
-

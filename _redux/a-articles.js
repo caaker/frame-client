@@ -1,4 +1,4 @@
-import {initial_state, test_state, makeData, test} from './a-articles-aux';
+import {initial_state, test_state, makeData, isValid} from './a-articles-aux';
 
 // holds json data for all articles
 const Articles = (state = {articles: false}, action) => {
@@ -58,7 +58,7 @@ const ArticleForm = (state = initial_state, action) => {
       let newState = { ...state };
       const [name, value, valid] = action.data; 
       newState[name] = {value, valid};
-      newState.valid = test(newState);
+      newState.valid = isValid(newState);
       return newState;
   }
   return state;

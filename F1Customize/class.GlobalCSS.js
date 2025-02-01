@@ -20,7 +20,6 @@ class Global {
     document.documentElement.style.setProperty('--color-grey', '#444444');
     document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .9)');
 
-
     document.documentElement.style.setProperty('--left', '20px');
   }
 

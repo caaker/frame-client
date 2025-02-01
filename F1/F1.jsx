@@ -14,6 +14,9 @@ import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';
 import config             from      '../F1Customize/config_all.js';
 
+import F1ServerTester     from      '../F1Customize/class.ServerTester.js';
+
+
 export default () => {
   console.logD('DEBUG: L1 : F1');
   const page = useSelector( state => state.MenuPage.current );

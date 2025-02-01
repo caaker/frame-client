@@ -9,6 +9,5 @@ export default (props) => {
     dispatch({type: 'toggleModalOn', config: true});
     dispatch({type: 'setArticleForm', data: props.article});
   }
-
   return <SVGEdit className='medd_edit' onClick={event => editClicked(event)} />
 };

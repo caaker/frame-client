@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "client": "webpack --mode development -w &",
-    "client-dev": "webpack --mode development -w &"
+    "client": "webpack --mode development -w",
+    "client-dev": "webpack --mode development -w"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.0",
