@@ -6,19 +6,23 @@ import MenuBox                           from     './MenuBox.jsx';
 import                                            './Menu.css';
 
 export default () => {
+  
   const dispatch = useDispatch();
-  const menu = useSelector((state)=>state.MenuPage.on);
-  function clicked() {
+  const menu_on = useSelector((state)=>state.MenuPage.on);
+  
+  function menuClicked() {
     setTimeout(dispatchIt, 100);
   }
+  
   function dispatchIt() {
     dispatch({type: 'toggleMenuPage'})
   }
+  
   return (
     <div id="menu_hold">
-      <SVGMenu onClick={clicked} id='menu_top'/>
-      {menu && <MenuBox/>}
+      <SVGMenu onClick={menuClicked} id='menu_top'/>
+      {menu_on && <MenuBox/>}
     </div>
   );
-};
 
+};

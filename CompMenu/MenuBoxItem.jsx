@@ -6,13 +6,13 @@ import { useDispatch } from 'react-redux';
 export default (props) => {
   const dispatch = useDispatch();
 
-  function click() {
+  function menuItemClicked() {
     dispatch({type: 'updateMenuPage', current: props.name });
     dispatch({type: 'toggleMenuPageOff'});
   }
 
   return (
-    <span className="menu_holder" onClick={click}>
+    <span className="menu_holder" onmenuItemClicked={click}>
       {props.children}
       <p className='menu_name'>{props.name}</p>
     </span>

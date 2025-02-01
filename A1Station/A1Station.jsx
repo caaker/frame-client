@@ -7,6 +7,8 @@ import StationAir                               from './StationAir.jsx';
 
 export default () => {
   console.logD('DEBUG: L3 : F1-Page-Station ', '#888888');
+
+  // default location is Austin, TX
   const [lat, setLat] = useState(30.2827813);
   const [lon, setLong] = useState(-97.7384504);
 
@@ -16,7 +18,7 @@ export default () => {
     console.logD('DEBUG: navigator.geolocation: location found ' + location.coords.latitude, '#888888');
   }).catch((error) =>{
     console.logD('DEBUG: navigator.geolocation error: no access to location', 'red');
-    console.logD('DEBUG: using default location of Austin', 'red');
+    console.logD('DEBUG: using default location for Austin - lat - 30.2827813', 'red');
   });
 
   return (
