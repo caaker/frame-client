@@ -6,11 +6,14 @@ import CompMenu                       from  '../CompMenu/Menu.jsx';
 
 export default () => {
   console.logD('DEBUG: L3 : F1-Apex-Right ');
-  const User = useSelector( state => state.User );
   return (
     <div className="apex-right">
-      { User.current && <C1Avatar /> }
+      <C1Avatar />
       <CompMenu/>
     </div>
   );
 };
+
+
+// const User = useSelector( state => state.User );
+// { User.current }
