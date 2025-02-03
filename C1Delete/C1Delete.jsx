@@ -7,13 +7,17 @@ import Helper                       from  '../F1Customize/class.Helper.js';
 export default function C1Delete({ article }) {
   const dispatch = useDispatch();
 
-  function verifyDelete() {
-    const id = encodeURIComponent(article._id);
+  function deleteClicked() {
+    const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
+    if(!admin) {
+      alert("You must be logged in as an administrator for this operation");
+      return;
+    }
     if (!confirm(`Are you sure you want to delete the article titled - '${article.title}'?`)) {
       return;
     }
     deleteClientArticle(article.index);
-    deleteServerArticle(id);
+    deleteServerArticle(encodeURIComponent(article._id));
   }
 
   function deleteClientArticle(index) {
@@ -28,5 +32,5 @@ export default function C1Delete({ article }) {
     Helper.fetchJSON(`${Helper.getBaseURL()}/articles/delete/${id}`, options);
   }
 
-  return <SVGDelete className="medd_delete" onClick={verifyDelete} />;
+  return <SVGDelete className="medd_delete" onClick={deleteClicked} />;
 }
