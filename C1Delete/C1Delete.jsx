@@ -9,7 +9,7 @@ export default function C1Delete({ article }) {
 
   function verifyDelete() {
     const id = encodeURIComponent(article._id);
-    if (!confirm(`Are you sure you want to delete the article titled - '${article.title}'?`);) {
+    if (!confirm(`Are you sure you want to delete the article titled - '${article.title}'?`)) {
       return;
     }
     deleteClientArticle(article.index);
