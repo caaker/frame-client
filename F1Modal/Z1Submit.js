@@ -13,7 +13,6 @@ exp.post = function(state, dispatch) {
   });
 };
 
-// update / edit
 exp.put = function(article_object, dispatch) {
   const options = {
     headers: {'Content-Type': 'application/json'},
@@ -21,7 +20,6 @@ exp.put = function(article_object, dispatch) {
     body: JSON.stringify(article_object)
   };
   Helper.fetchJSON('/articles/put/' + encodeURIComponent(article_object._id), options, (response) => {
-    // console.log(response);
     const send = {
       type: 'updateArticle',
       new_article: article_object,
