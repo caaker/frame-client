@@ -24,7 +24,3 @@ export default () => {
     </div>
   );
 };
-
-
-  // const user = useSelector( state => state.User.current );
-  // const show = user || (window.location.hostname === 'localhost');
