@@ -1,3 +1,5 @@
+import './C1Favicon.css';
+
 import React from 'react';
 
 export default (props) => {
