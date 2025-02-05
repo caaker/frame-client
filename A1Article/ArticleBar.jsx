@@ -15,10 +15,10 @@ export default ({article}) => {
     <div id="article_bar" >
       <C1Favicon className='c1_favicon' domain={article.domain}/>
       <C1Copy title={article.title} />
-      {admin && <div id="article_bar_admin">
-        <C1Edit article={article}/>
-        <C1Delete article={article}/>
-      </div>}
+      <div id="article_bar_admin">
+        <C1Edit   article={article}   admin={admin}/>
+        <C1Delete article={article}   admin={admin}/>
+      </div>
     </div>
   );
 };

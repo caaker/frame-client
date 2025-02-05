@@ -3,11 +3,9 @@ import { useDispatch }  from  'react-redux';
 import SVGEdit          from  '../C0Vectors/SVGEdit.jsx';
 import                        './C1Edit.css';
 
-export default function C1Edit({ article }) {
+export default function C1Edit({ article, admin }) {
   const dispatch = useDispatch();
-
   function editClicked() {
-    const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
     if(!admin) {
       alert("You must be logged in as an administrator for this operation");
       return;

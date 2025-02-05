@@ -4,11 +4,9 @@ import { useDispatch }              from  'react-redux';
 import SVGDelete                    from  '../C0Vectors/SVGDelete.jsx';
 import Helper                       from  '../F1Customize/class.Helper.js';
 
-export default function C1Delete({ article }) {
+export default function C1Delete({ article, admin }) {
   const dispatch = useDispatch();
-
   function deleteClicked() {
-    const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
     if(!admin) {
       alert("You must be logged in as an administrator for this operation");
       return;
@@ -19,11 +17,9 @@ export default function C1Delete({ article }) {
     deleteClientArticle(article.index);
     deleteServerArticle(encodeURIComponent(article._id));
   }
-
   function deleteClientArticle(index) {
     dispatch({ type: 'deleteArticle', index });
   }
-
   function deleteServerArticle(id) {
     const options = {
       method: 'DELETE',
@@ -31,6 +27,5 @@ export default function C1Delete({ article }) {
     };
     Helper.fetchJSON(`${Helper.getBaseURL()}/articles/delete/${id}`, options);
   }
-
   return <SVGDelete className="medd_delete" onClick={deleteClicked} />;
 }
