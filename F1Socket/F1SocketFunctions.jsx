@@ -5,6 +5,8 @@ export const sendFingerPrint = function(socket) {
 };
 
 export const parseMessages = function(json) {
+
+  // this is a stub to fill out later
   let obj = JSON.parse(json);
   if(obj.type === 'tweet') {
 
