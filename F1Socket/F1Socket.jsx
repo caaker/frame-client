@@ -29,13 +29,17 @@ export default () => {
       console.logD('DEBUG: L2 : F1-Socket: Event: close', 'green');
     });
 
-    return () => {
+    // closing the socket automatically removes all the event listeners
+    function cleanUp() {
       socket.close();
-    };    
+    }
+
+    return cleanUp;
   }
 
+  // return value runs on the unmount
   useEffect(() => {
-    ws();
+    return ws();
 
     // empty array gurantees useEffect only runs once, creating only 1 WebSocket
   }, []);
