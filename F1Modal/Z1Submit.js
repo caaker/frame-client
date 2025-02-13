@@ -1,7 +1,6 @@
 import Helper                 from '../F1Customize/class.Helper.js';
 const exp = {};
 
-// create
 exp.post = function(state, dispatch) {
   const options = {
     headers: {'Content-Type': 'application/json'},
@@ -19,7 +18,7 @@ exp.put = function(article_object, dispatch) {
     method: 'PUT',
     body: JSON.stringify(article_object)
   };
-  Helper.fetchJSON('/articles/put/' + encodeURIComponent(article_object._id), options, (response) => {
+  Helper.fetchJSON(`${Helper.getBaseURL()}/articles/put/${encodeURIComponent(article_object._id)}`, options, (response) => {
     const send = {
       type: 'updateArticle',
       new_article: article_object,
@@ -29,6 +28,7 @@ exp.put = function(article_object, dispatch) {
   });
 
 };
+
 
 export default exp;
 

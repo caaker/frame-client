@@ -34,10 +34,10 @@ class Helper {
       const response = await fetch(url, options);
       const json = await response.json();
       onsuccess(json);
-      console.logD(('DEBUG: L2 : F1-Data: fetching path: ' + url), 'green');
+      console.logD(('DEBUG: Helper: fetching path: ' + url), 'green');
     } catch (error) {
       onfailure(error);
-      console.logD('DEBUG: L2: F1-Data: fetch failed: ' + url, 'red');
+      console.logD('DEBUG: Helper: fetch failed: ' + url, 'red');
       console.logD(error);
     }
   }
