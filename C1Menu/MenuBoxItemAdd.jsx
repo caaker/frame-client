@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 export default (props) => {
   const dispatch = useDispatch();
   function menuItemClicked() {
-    dispatch({type: 'toggleModalOn', config: 'false'});
+    dispatch({type: 'toggleModalOn', config: false});
     dispatch({type: 'toggleMenuPageOff'});
   }
   return (

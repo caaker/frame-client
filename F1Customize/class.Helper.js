@@ -42,9 +42,13 @@ class Helper {
     }
   }
   
-  static onFailureDefault() { }
+  static onFailureDefault() { 
 
-  static onSuccessDefault() { }
+  }
+
+  static onSuccessDefault() { 
+
+  }
 
 }
 

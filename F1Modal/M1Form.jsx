@@ -13,19 +13,31 @@ export default () => {
   const config = useSelector((state) => state.Modal.config);
 
   function onSubmit() {
+
     event.preventDefault();
+
     if(article_form.valid) {
+
       dispatch({type: 'clearArticleForm'});
       dispatch({type: 'toggleModalOff'});
+
+      // true
       if(config) {
+        console.logD('DEBUG: L4 : F1-Modal-M1-Form: Submit.put ', 'green');
+        alert('Aricle Edited.  Thank you.');
         Submit.put(makeObject(), dispatch);
+
+      // false  
       } else {
+        console.logD('DEBUG: L4 : F1-Modal-M1-Form: Submit.post ', 'green');
+        alert('Aricle Created.  Thank you.');
         Submit.post(makeObject(), dispatch);
       }
-      alert('Form submitted.  Thank you.');
+
     } else {
       alert('Form has errors.  Please correct.');
     }
+
   }
 
   function makeObject() {
