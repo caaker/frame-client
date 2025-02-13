@@ -8,6 +8,8 @@ import C1Copy                         from  '../C1Copy/C1Copy.jsx';
 
 
 export default () => {
+  console.logD('DEBUG: L5: F1-Modal-M1-Form-Inputs: Controlled ');
+
   const dispatch = useDispatch();
   const data = useSelector((state) => state.ArticleForm);
 
