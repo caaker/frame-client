@@ -1,21 +1,24 @@
-.link_div{
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 1);
-  display: inline-block;
-  width: 100%;
-  margin: 5px
+.domain_divs{
+  padding: 8px;
+  background-color: rgba(255, 255 ,255 , .5);
+  font-size: 11px;
+  border-radius: 2px;
 }
-.link_div:hover{
-  background-color: rgba(255, 255, 255, 0);
+
+.domain_divs:hover{
+  background-color: rgba(255, 255 ,255 , 1);
 }
-.link_image{
-  vertical-align: middle;
-  height: 16px;
+
+.domain_images{
+  float: left;
 }
-.link_anchor{
-  vertical-align: middle;
-  font-size: 12px;
+
+.domain_values{
+  float: left;
+  margin-left: 10px;
   text-decoration: none;
-  color: #113c71;
-  margin: 0 0 0 4px;
+  color: black;
+}
+.domain_values:hover{
+  color: #4285F4;  
 }

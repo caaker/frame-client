@@ -4,7 +4,7 @@ import React from 'react';
 
 export default (props) => {
 
-  // never fires even when the Google API returns a 404 error
+  // does not fire on a "404 error"
   function errorHandler (event) {
     event.target.src = '/images/medical-symbol.jpeg';
     console.logD('DEBUG: Google Favicon API: failed', red);

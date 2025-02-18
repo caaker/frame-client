@@ -1,6 +1,7 @@
 import React                          from    'react';
 import { useDispatch, useSelector }   from    'react-redux';
 import                                        './C1Avatar.css';
+import SVGAvatar                      from    '../C0Vectors/SVGAvatar.jsx';
 
 export default function C1Avatar (props) {
   console.logD('DEBUG: L4 : F1-Apex-Right-Avatar');
@@ -17,11 +18,7 @@ export default function C1Avatar (props) {
   if(pic) {
     element = <img onClick = {clicked} className = 'user_pic' src = {pic} alt = 'avatar' />;
   } else {
-    element = <svg  onClick = {clicked} className = 'user_pic light' xmlns = "http://www.w3.org/2000/svg"
-                    height="24" viewBox="0 0 24 24" width="24">
-                <path d="M0 0h24v24H0V0z" fill="none"/>
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-              </svg>;
+    element = <SVGAvatar onClick = {clicked} className = 'user_pic light'/>;
   }
   return element;
 };

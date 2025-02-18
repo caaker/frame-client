@@ -1,6 +1,7 @@
 import                                  './A1Bookmark.css';
 import React, { useEffect, useState }   from 'react';
 import { useSelector }                  from 'react-redux';
+import C1Link                           from '../C1Link/C1Link.jsx'
 
 export default () => {
   const [tag, setTag] = useState('Nutrition');
@@ -9,9 +10,6 @@ export default () => {
 
   // top hash models an n-ary tree with only 2 levels - tags and domains
   function makeTopHash() {
-    if(!articles) {
-      return;
-    }
     articles.forEach((article) => {
       if(!(article.tag in top_hash)) {
         top_hash[article.tag] = {};
@@ -24,26 +22,13 @@ export default () => {
   makeTopHash();
 
   function makeTags() {
-    const t1 = Object.keys(top_hash);
-    const t2 = t1.sort();
-    return t2.map((value, index) => {
-      return <div key={index} onClick={clicked} id={value} className='tag_ovals'>{value}</div>
-    });
+    const tags = (Object.keys(top_hash)).sort();
+    return tags.map((value, index) => <div key={index} onClick={clicked} id={value} className='tag_ovals'>{value}</div>);
   };
 
-  // domains
   function makeDomains() {
-    if(!articles || articles.length === 0) {
-      return;
-    }
-    let array = Object.keys(top_hash[tag]).sort();
-    array = array.map((value, index) => {
-      return  <div className='domain_divs' key={index} id={value} >
-        <img className='domain_images' src={'https://www.google.com/s2/favicons?domain=' + value} />
-        <a className='domain_values' target="_blank" href={'https://' + value}>{value}</a>
-      </div>
-    });
-    return array;
+    const domains = Object.keys(top_hash[tag]).sort();
+    return domains.map((value, index) => <C1Link key={index} value={value}/>);
   }
 
   function clicked(event) {
