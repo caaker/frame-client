@@ -5,7 +5,7 @@ import Helper                             from    '../F1Customize/class.Helper.j
 
 // note logD is a custom log function
 export default () => {
-  console.logD('DEBUG: L2 : F1-Socket:');
+  console.logD('DEBUG: L2 : F1-Socket');
   const dispatch = useDispatch();
 
   function ws() {
@@ -16,7 +16,7 @@ export default () => {
     dispatch({ type: 'initializeWebSocket', socket });
 
     socket.addEventListener('open', () => {
-      console.logD('DEBUG: L2 : F1Socket: Event: open', 'green');
+      console.logD('DEBUG: L2 : F1-Socket: Event: open', 'green');
       sendFingerPrint(socket);
     });
 

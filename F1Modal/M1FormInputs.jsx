@@ -1,25 +1,24 @@
 import React                          from  'react';
 import { useSelector, useDispatch }   from  'react-redux';
+
 import                                      './M1FormInputs.css';
-import validate                       from  './Z1Validate.js';
+
 import M10                            from  './M1FormInputsSingle.jsx';
-import addDomain                      from  './Z1AddDomain.jsx';
 import C1Copy                         from  '../C1Copy/C1Copy.jsx';
 
+import addDomain                      from  './Z1AddDomain.jsx';
+import validate                       from  './Z1Validate.js';
 
 export default () => {
-  console.logD('DEBUG: L5: F1-Modal-M1-Form-Inputs: Controlled ');
-
+  console.logD('DEBUG: L5 : F1-Modal-M1-Form-Inputs');
   const dispatch = useDispatch();
   const data = useSelector((state) => state.ArticleForm);
-
   function onChange(event) {
     const { name, value } = event.target;
     const valid = validate(name, value);
     dispatch({type: 'updateArticleForm', data: [name, value, valid]});
     addDomain(name, value, dispatch);
   }
-
   return (
     <span>
       <M10 valid = {data.link.valid}      value = {data.link.value}    onChange={onChange} className = 'modal_article_input' placeholder="link"    name="link" />

@@ -1,3 +1,5 @@
+require('./global');
+
 const css = {
   test: /\.css$/i,
   use: ['style-loader', 'css-loader']
@@ -36,7 +38,7 @@ const clearConsolePlugin = {
   apply: (compiler) => {
     compiler.hooks.watchRun.tap('ClearConsole', () => {
       process.stdout.write('\x1Bc'); // Clears the console
-      console.log('DEBUG:  console cleared via webpack plugin');
+      console.logD('DEBUG: console cleared via webpack plugin: ' + time() + ' \n', 'blue');
     });
   }
 };

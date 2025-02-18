@@ -12,7 +12,9 @@ export default function C1Copy (props) {
     arc.copyToClipboard(hash_link);
     alert('Copied the text: ' + hash_link);
   }
+
   return (
     <SVGCopy id={hash} className={class_name} onClick={onClick} />
   );
+
 };
