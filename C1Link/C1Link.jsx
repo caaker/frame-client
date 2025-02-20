@@ -3,6 +3,7 @@ import './C1Link.css';
 
 export default function C1Link({ value }) {
 
+  // implement1 - remove or update this to be useful
   function clicked(event) {
     event.preventDefault();
     window.open(data.link, '_blank');

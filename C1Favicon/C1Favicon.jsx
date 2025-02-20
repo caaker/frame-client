@@ -2,7 +2,7 @@ import './C1Favicon.css';
 
 import React from 'react';
 
-export default (props) => {
+export default function C1Favicon (props) {
 
   // does not fire on a "404 error"
   function errorHandler (event) {
@@ -12,8 +12,8 @@ export default (props) => {
 
   return (
     <img className={props.className} 
-    src={'https://www.google.com/s2/favicons?domain=' + props.domain}
-    onError={errorHandler}
+      src={'https://www.google.com/s2/favicons?domain=' + props.domain}
+      onError={errorHandler}
     />
   );
 };

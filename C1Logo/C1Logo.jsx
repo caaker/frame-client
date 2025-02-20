@@ -4,9 +4,11 @@ import config                 from        '../F1Customize/config_all.js';
 
 export default function Logo() {
   
-  const [rotation, setRotation] = useState(true);
+  // initial rotation state is 0 degrees
+  const [rotation, setRotationState] = useState(true);
   
-  function setOpacity() {
+  // on each click we toggle the global opacity
+  function toggleGlobalOpacity() {
     if(rotation) {
       document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .1)');
     } else {
@@ -15,12 +17,14 @@ export default function Logo() {
   }
   
   function onClick() {
-    setRotation(!rotation);
-    setOpacity(rotation);
+    toggleGlobalOpacity(rotation);
+
+    // toggle the rotation state
+    setRotationState(!rotation);
   }
   
   return (
-    <img className='left-logo' id = {rotation ? 'rotate_01' : 'rotate_90'} onClick={onClick} src={config.logo}/>
+    <img className='left-logo' id = {rotation ? 'rotate_00' : 'rotate_90'} onClick={onClick} src={config.logo}/>
   );
 
 };

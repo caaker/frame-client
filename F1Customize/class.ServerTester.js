@@ -4,23 +4,24 @@ class ServerTester {
   static async testServer(url) {
     console.logD('DEBUG: L2 : F1-ServerTester');
 
+    const color = '#888888'
     const startTime = performance.now();
+
+    console.logD(`DEBUG: L2 : F1-ServerTester: start:`, color);
 
     try {
       const response = await fetch(url);
       const endTime = performance.now();
       const responseTime = endTime - startTime;
-      console.logD(`DEBUG: L2 : F1-ServerTester: Response time: ${responseTime.toFixed(2)} ms`);
       if (response.ok) {
-        // console.logD('DEBUG: L2 : F1-ServerTester: success', 'green');
+        console.logD(`DEBUG: L2 : F1-ServerTester: response: ok: ${responseTime.toFixed(2)} ms`, color);
       } else {
-        // console.logD('DEBUG: L2 : F1-ServerTester: fail', 'red');
-        // console.logD(response);
+        console.logD(`DEBUG: L2 : F1-ServerTester: response: !ok: ${responseTime.toFixed(2)} ms`, color);
       }
     } catch (error) {
       const endTime = performance.now();
       const responseTime = endTime - startTime;
-      console.logD(`DEBUG: L2 : F1-ServerTester: Response time: ${responseTime.toFixed(2)} ms`);
+      console.logD(`DEBUG: L2 : F1-ServerTester: response: error: ${responseTime.toFixed(2)} ms`, color);
       // console.logD('DEBUG: L2 : F1-ServerTester: error', 'red');
       // console.logD(error);
     }

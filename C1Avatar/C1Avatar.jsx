@@ -8,6 +8,8 @@ export default function C1Avatar (props) {
   const dispatch = useDispatch();
   const page = useSelector((state) => state.MenuPage.current);
   const UserCurrent = useSelector((state) => state.User.current);
+
+  // implement1 - move this to reducer?
   function clicked() {
     if(page !== 'User') {
       dispatch({type: 'updateMenuPage', current: 'User' });
