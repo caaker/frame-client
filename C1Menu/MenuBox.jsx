@@ -3,16 +3,16 @@ import { useDispatch, useSelector }   from 'react-redux';
 
 import                                './MenuBox.css';
 
+// SVG Containers
 import MenuBoxItem                    from './MenuBoxItem.jsx';
 import MenuBoxItemAdd                 from './MenuBoxItemAdd.jsx';
-import SVGBookmark                    from '../C0Vectors/SVGBookmark.jsx';
 
-import SVGClock                       from '../C0Vectors/SVGClock.jsx';
-
+// SVG
+import SVGAdd                         from '../C0Vectors/SVGAdd.jsx';
 import SVGUser                        from '../C0Vectors/SVGUser.jsx';
 import SVGHome                        from '../C0Vectors/SVGHome.jsx';
-import SVGAdd                         from '../C0Vectors/SVGAdd.jsx';
-import SVGPeople                      from '../C0Vectors/SVGPeople.jsx';
+import SVGBookmark                    from '../C0Vectors/SVGBookmark.jsx';
+import SVGClock                       from '../C0Vectors/SVGClock.jsx';
 
 export default () => {
   const dispatch = useDispatch();
@@ -31,6 +31,7 @@ export default () => {
   });
 
   return (
+
     <span id='menu_box'>
 
       {<MenuBoxItemAdd name='Add'>
@@ -53,16 +54,7 @@ export default () => {
         <SVGClock/>
       </MenuBoxItem>}
 
-
-{/*      
-
-      {<MenuBoxItem name='People'>
-        <SVGPeople/>
-      </MenuBoxItem>}
-      
-*/}
-
     </span>
+
   );
 };
-

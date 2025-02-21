@@ -5,10 +5,10 @@ import config                 from        '../F1Customize/config_all.js';
 export default function Logo() {
   
   // initial rotation state is 0 degrees
-  const [rotation, setRotationState] = useState(true);
+  const [rotation, setRotation] = useState(true);
   
   // on each click we toggle the global opacity
-  function toggleGlobalOpacity() {
+  function setGlobalOpacity() {
     if(rotation) {
       document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .1)');
     } else {
@@ -17,10 +17,10 @@ export default function Logo() {
   }
   
   function onClick() {
-    toggleGlobalOpacity(rotation);
+    setGlobalOpacity(rotation);
 
     // toggle the rotation state
-    setRotationState(!rotation);
+    setRotation(!rotation);
   }
   
   return (

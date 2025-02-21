@@ -9,7 +9,7 @@ export default function C1Search () {
   const dispatch = useDispatch();
   const page = useSelector((state) => state.MenuPage.current);
   const search_current = useSelector((state) => state.SearchInput.current);
-  const id = (page === 'Articles') ? 'left_input_show' : 'left_input_hide';
+  const css_id = (page === 'Articles') ? 'left_input_show' : 'left_input_hide';
 
   // this is a controlled component
   function onChange(event) {
@@ -21,7 +21,7 @@ export default function C1Search () {
       <input
         type="text"
         className="left_input"
-        id={id}
+        id={css_id}
         name="search"
         placeholder=" Search"
         value={search_current}
