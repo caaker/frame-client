@@ -59,6 +59,7 @@ const ArticleForm = (state = initial_state, action) => {
       const [name, value, valid] = action.data; 
       newState[name] = {value, valid};
       newState.valid = isValid(newState);
+      // console.log(newState);
       return newState;
   }
   return state;

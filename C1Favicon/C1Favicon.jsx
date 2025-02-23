@@ -7,7 +7,7 @@ export default function C1Favicon (props) {
   // does not fire on a "404 error"
   function errorHandler (event) {
     event.target.src = '/images/medical-symbol.jpeg';
-    console.logD('DEBUG: Google Favicon API: failed', red);
+    console.logD('DEBUG: Google Favicon API: failed', 'red');
   }
 
   return (

@@ -19,9 +19,13 @@ export default function M1FormInputs() {
   function oC(event) {
     const { name, value } = event.target;
     const valid = validate(name, value);
-    dispatch({type: 'updateArticleForm', d1: [name, value, valid]});
+    // console.logD('DEBUG: L5 : F1-Modal-M1-Form-Inputs');
+    console.logD(valid, name, value);
+    dispatch({type: 'updateArticleForm', data: [name, value, valid]});
     addDomain(name, value, dispatch);
   }
+
+  console.log(d1.title.valid);
 
   return (
 

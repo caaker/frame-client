@@ -2,6 +2,8 @@ import React                          from    'react';
 import SVGCheck                       from    '../C0Vectors/SVGCheck.jsx';
 
 export default (props) => {
+  console.log(props);
+
   return (
     <div className='modal_article_div'>
       <input

@@ -2,7 +2,7 @@ import { applyMiddleware } from 'redux';
 
 
 const logger = store => next => action => {
-  console.logD('REDUX: action: ' + action.type, 'brown');
+  // console.logD('REDUX: action: ' + action.type, 'brown');
   next(action);
   // console.log('REDUX: state: ', store.getState());
 };

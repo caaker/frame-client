@@ -1,6 +1,6 @@
 import arc                            from 'frame-arc';
 
-export default (name, value) => {
+export default function Z1Validate (name, value) {
 
   if(name === 'link') {
     const link = new arc.URL(value);
