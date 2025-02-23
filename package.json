@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "client": "webpack --mode development -w",
+    "client": "webpack -w",
     "client-dev": "webpack --mode development -w"
   },
   "devDependencies": {
