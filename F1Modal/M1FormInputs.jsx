@@ -9,29 +9,33 @@ import C1Copy                         from  '../C1Copy/C1Copy.jsx';
 import addDomain                      from  './Z1AddDomain.jsx';
 import validate                       from  './Z1Validate.js';
 
-export default () => {
+
+// this file is a controlled form that delegates validation, style is broken purposefully
+export default function M1FormInputs() {
   console.logD('DEBUG: L5 : F1-Modal-M1-Form-Inputs');
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.ArticleForm);
-  function onChange(event) {
+  const d1 = useSelector((state) => state.ArticleForm);
+
+  function oC(event) {
     const { name, value } = event.target;
     const valid = validate(name, value);
-    dispatch({type: 'updateArticleForm', data: [name, value, valid]});
+    dispatch({type: 'updateArticleForm', d1: [name, value, valid]});
     addDomain(name, value, dispatch);
   }
+
   return (
-    <span>
-      <M10 valid = {data.link.valid}      value = {data.link.value}    onChange={onChange} className = 'modal_article_input' placeholder="link"    name="link" />
-      { true &&
-      <div className='modal_admin_inputs'>
-        <M10 valid={data.image.valid}     value = {data.image.value}   onChange={onChange} className = 'modal_article_input' placeholder="image"   name="image" />
-        <M10 valid={data.title.valid}     value = {data.title.value}   onChange={onChange} className = 'modal_article_input' placeholder="title"   name="title" />
-        <M10 valid={data.summary.valid}   value = {data.summary.value} onChange={onChange} className = 'modal_article_input' placeholder="summary" name="summary" />
-        <M10 valid={data.tag.valid}       value = {data.tag.value}     onChange={onChange} className = 'modal_article_input' placeholder="tag"     name="tag" />
-        <M10 valid={data.domain.valid}    value = {data.domain.value}  onChange={onChange} className = 'modal_article_input' placeholder="domain"  name="domain" readonly = {true} />
-        {!!data.title.value && <C1Copy className='c1_copy_modal' title={data.title.value}/>}
-      </div>
-      }
-    </span>
+
+<span>
+  <M10 valid = {d1.link.valid}      value = {d1.link.value}    onChange={oC} className = 'm_a_input' placeholder="link"    name="link" />
+  <div className='modal_admin_inputs'>
+    <M10 valid={d1.image.valid}     value = {d1.image.value}   onChange={oC} className = 'm_a_input' placeholder="image"   name="image" />
+    <M10 valid={d1.title.valid}     value = {d1.title.value}   onChange={oC} className = 'm_a_input' placeholder="title"   name="title" />
+    <M10 valid={d1.summary.valid}   value = {d1.summary.value} onChange={oC} className = 'm_a_input' placeholder="summary" name="summary" />
+    <M10 valid={d1.tag.valid}       value = {d1.tag.value}     onChange={oC} className = 'm_a_input' placeholder="tag"     name="tag" />
+    <M10 valid={d1.domain.valid}    value = {d1.domain.value}  onChange={oC} className = 'm_a_input' placeholder="domain"  name="domain" readonly = {true} />
+    {!!d1.title.value && <C1Copy className='c1_copy_modal' title={d1.title.value}/>}
+  </div>
+</span>
+
   );
 };
