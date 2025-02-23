@@ -2,13 +2,9 @@ import React from 'react';
 import './M1FormButton.css';
 
 // Consider React.memo() to stop unneeded re-render
-export default function M1FormButton(props) {
+export default function M1FormButton({config}) {
   console.logD('DEBUG: L5 : F1-Modal-M1-Form-Button ');
-  if(props.config === true) {
-    return <button className="form_button">Update</button>;
-  } else {
-    return <button className="form_button">Add</button>;
-  }
 
+  return config ? <button className="form_button">Update</button> : <button className="form_button">Add</button>;
 };
 
