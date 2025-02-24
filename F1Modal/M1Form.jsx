@@ -8,7 +8,7 @@ import M1FormButton                   from './M1FormButton.jsx';
 import Submit                         from './Z1Submit.js';
 import makeObject                     from './M1FormHelper.js';
 
-export default () => {
+export default function M1Form () {
   console.logD('DEBUG: L4 : F1-Modal-M1-Form ');
 
   const dispatch = useDispatch();
