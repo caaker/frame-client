@@ -4,3 +4,9 @@
   font-size: 30px;
   margin-left: var(--left);
 }
+
+@media screen and (max-width: 701px) {
+  .apex_title {
+    display:  none;
+  }
+}
