@@ -14,7 +14,7 @@ import SVGHome                        from '../C0Vectors/SVGHome.jsx';
 import SVGBookmark                    from '../C0Vectors/SVGBookmark.jsx';
 import SVGClock                       from '../C0Vectors/SVGClock.jsx';
 
-export default () => {
+export default function MenuBox () {
   const dispatch = useDispatch();
 
   function bodyClicked(event) {

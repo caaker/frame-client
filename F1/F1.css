@@ -1,7 +1,10 @@
-#app_hold{
-  display: flex;
+/*  
   align-items: center;
   justify-content: center;
+*/
+
+#app_hold{
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;

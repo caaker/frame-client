@@ -1,6 +1,7 @@
 .left-logo{
- height:  var(--height) !important;
- cursor: pointer;
+  margin-left: var(--left);
+  height:      var(--height) !important;
+  cursor:      pointer;
 }
 
 #rotate_00{

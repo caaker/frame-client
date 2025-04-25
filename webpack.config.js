@@ -1,4 +1,4 @@
-require('./global');
+require('./webpack.global');
 
 const css = {
   test: /\.css$/i,
@@ -6,7 +6,7 @@ const css = {
 };
 
 const jsx = {
-  test: /\.jsx?/,
+  test: /\.(js|jsx)$/, 
   include: '/Users/chrisaaker/top/frame-client',
   exclude: /node_modules/,
   use: {
@@ -17,10 +17,20 @@ const jsx = {
   }
 };
 
+const tsx = {
+  test: /\.(ts|tsx)$/, 
+  include: '/Users/chrisaaker/top/frame-client',
+  exclude: /node_modules/,
+  use: {
+    loader: 'ts-loader'
+  }
+};
+
 const file_types = {
   rules: [
     css,
-    jsx
+    jsx,
+    tsx
   ]
 };
 

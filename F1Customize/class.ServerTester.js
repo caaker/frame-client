@@ -28,8 +28,10 @@ class ServerTester {
   }
 }
 
+// immediately invoke this function
 const serverURL = 'https://frame-server-x8qw.onrender.com';
-
 ServerTester.testServer(serverURL);
 
 export default ServerTester;
+
+// 512.495.4115
