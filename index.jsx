@@ -13,6 +13,6 @@ console.logD('DEBUG: L0 : index.jsx -0->');
 const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
   <Provider store={store}>
-    <F1></F1>
+    <F1 />
   </Provider> 
 );

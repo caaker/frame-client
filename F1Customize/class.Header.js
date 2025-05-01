@@ -9,17 +9,16 @@ class Header {
 
   // favicon
   setFavicon() {
-    const look = document.querySelector('link[rel*="icon"]');
-    const link = look || document.createElement('link');
+    const link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
     link.href = config.favicon;
-    document.getElementsByTagName('head')[0].appendChild(link);
+    document.head.appendChild(link);
   }
 
   // background
   setBackground() {
-    document.body.style.backgroundImage = "url(" + config.background + ")";
+    document.body.style.backgroundImage = `url(${config.background})`;
   }    
 
   // title
@@ -29,4 +28,5 @@ class Header {
 
 }
 
+// all imports use the same instance due to ES module caching
 export default new Header();

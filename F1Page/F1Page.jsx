@@ -13,7 +13,6 @@ import A1User from                    '../A1User/A1User.jsx';
 
 export default () => {
   const page = useSelector( (state) => state.MenuPage.current );
-  const user = useSelector( (state) => state.User.current );
   console.logD('DEBUG: L2 : F1-Page');
   return (
     <div id='page_hold'>

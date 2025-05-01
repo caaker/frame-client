@@ -8,10 +8,12 @@ import                              './F1.css';
 // configure
 import config             from      '../F1Customize/config_all.js';
 
+// immediately invoked
+import F1ServerTester     from      '../F1Customize/class.ServerTester.js';
+
 // components
 import F1Data             from      '../F1Data/F1Data.jsx';
 import F1Socket           from      '../F1Socket/F1Socket.jsx';
-import F1ServerTester     from      '../F1Customize/class.ServerTester.js';
 
 // rendered components
 import F1Apex             from      '../F1Apex/F1Apex.jsx';
@@ -21,9 +23,8 @@ import F1Footer           from      '../F1Footer/F1Footer.jsx';
 import F1West             from      '../F1West/F1West.tsx';
 
 
-export default () => {
+export default function F1 () {
   console.logD('DEBUG: L1 : F1');
-  const page = useSelector( state => state.MenuPage.current );
   return (
     <div id="app_hold">
 
@@ -31,7 +32,7 @@ export default () => {
       <F1Data />
       <F1Socket />
 
-      {/* The core structre of the application is constructed with these components */}
+      {/* The core structure of the application is constructed with these components */}
       <F1Apex />
       <F1West />
       <F1Page />
