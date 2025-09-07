@@ -1,5 +1,6 @@
 import './ULogin.css';
-import React from 'React';
+
+import React from 'react';
 import ULoginGoogle from './ULoginGoogle.jsx';
 import config             from      '../F1Customize/config_all.js';
 

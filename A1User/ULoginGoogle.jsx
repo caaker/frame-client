@@ -1,5 +1,6 @@
-import React from 'React';
 import './ULoginGoogle.css';
+
+import React from 'react';
 
 export default () => {
   

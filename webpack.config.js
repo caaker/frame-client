@@ -1,3 +1,4 @@
+
 require('./webpack.global');
 
 const css = {
@@ -7,7 +8,7 @@ const css = {
 
 const jsx = {
   test: /\.(js|jsx)$/, 
-  include: '/Users/chrisaaker/top/frame-client',
+  include: '/home/caaker/top/frame-client',
   exclude: /node_modules/,
   use: {
     loader: 'babel-loader',
@@ -19,7 +20,7 @@ const jsx = {
 
 const tsx = {
   test: /\.(ts|tsx)$/, 
-  include: '/Users/chrisaaker/top/frame-client',
+  include: '/home/caaker/top/frame-client',
   exclude: /node_modules/,
   use: {
     loader: 'ts-loader'
@@ -39,7 +40,7 @@ const entry = './index.jsx';
 // absolute path is required by webpack for the output path
 const output = {
   filename: 'bundle.js',
-  path: '/Users/chrisaaker/top/frame-server/dist'
+  path: '/home/caaker/top/frame-server/dist'
 };
 
 const stats = { warnings: false };
@@ -64,3 +65,7 @@ const config_obj = {
 module.exports = (env) => {
   return config_obj;
 };
+
+/*
+case sensitivity changed from macos to chromeos
+*/
