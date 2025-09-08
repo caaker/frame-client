@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "client": "webpack -w",
-    "client-dev": "webpack --mode development -w"
+    "client": "webpack --config /home/caaker/top/frame-config/install/webpack.config.js -w",
+    "client-dev": "webpack --config /home/caaker/top/frame-config/install/webpack.config.js --mode development -w"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.28.3",
