@@ -1,4 +1,4 @@
-import Helper                 from '../F1Customize/class.Helper.js';
+import Helper                 from '../F1Helper/class.Helper.js';
 const exp = {};
 
 exp.post = function(state, dispatch) {

@@ -1,0 +1,10 @@
+index   ->  F1          ->    F1ServerTester*
+        ->  Header*           F1Socket*
+        ->  Customize*        F1Data*
+                              F1Apex
+                              F1West
+                              F1Page
+                              F1Modal
+                              F1Footer
+
+Update F1Socket and F1Data to .js files - keep

@@ -1,6 +1,6 @@
 import React, { useEffect }   from 'react';
 import { useDispatch }        from 'react-redux';
-import Helper                 from '../F1Customize/class.Helper.js';
+import Helper                 from '../F1Helper/class.Helper.js';
 import config_people          from '../F1Customize/config_people.js';
 
 

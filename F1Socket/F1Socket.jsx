@@ -1,7 +1,7 @@
 import React, { useEffect }               from    'react';
 import { useDispatch }                    from    'react-redux';
 import { sendFingerPrint, parseMessages } from    './F1SocketFunctions.jsx';
-import Helper                             from    '../F1Customize/class.Helper.js';
+import Helper                             from    '../F1Helper/class.Helper.js';
 
 // note logD is a custom log function
 export default () => {

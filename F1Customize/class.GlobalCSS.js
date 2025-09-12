@@ -4,13 +4,6 @@ class Global {
     this.setCSSConstants();
   }
 
-  // media queries can not access custom properties, but define here for implementation later
-  // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
-  // setCSSConstantsFuture() {
-  //   const media_query_phone = '701px';
-  //   const media_query_guard = '301px';
-  // }
-
   setCSSConstants() {
 
     // height for logo and search
@@ -29,14 +22,13 @@ class Global {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${ vh }px`);
 
-    // update --vh on a resize
+    // update --vh on a resize - debounce this if it effects performance
     window.addEventListener('resize', () => {
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${ vh }px`);
     });
   }
-
 }
 
-// all imports use the same instance due to ES module caching
+// all imports use the same Global instance due to ES module caching
 export default new Global();

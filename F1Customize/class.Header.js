@@ -1,4 +1,4 @@
-import config             from      './config_all.js';
+import config from './config_all.js';
 
 class Header {
   constructor() {
@@ -7,7 +7,6 @@ class Header {
     this.setTitle();
   }
 
-  // favicon
   setFavicon() {
     const link = document.createElement('link');
     link.type = 'image/x-icon';
@@ -16,17 +15,13 @@ class Header {
     document.head.appendChild(link);
   }
 
-  // background
   setBackground() {
     document.body.style.backgroundImage = `url(${config.background})`;
   }    
 
-  // title
   setTitle() {
     document.title = config.title;
   }
-
 }
 
-// all imports use the same instance due to ES module caching
 export default new Header();
