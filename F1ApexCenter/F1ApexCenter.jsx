@@ -7,7 +7,7 @@ import ApexCenterPeople             from './ApexCenterPeople.jsx';
 import ApexCenterBookmark           from './ApexCenterBookmark.jsx';
 
 
-export default () => {
+export default function F1ApexCenter () {
   console.logD('DEBUG: L3 : F1-Apex-Center ');
   return (
 
@@ -15,12 +15,14 @@ export default () => {
       {<ApexCenterUser/>}
       {<ApexCenterHome/>}
       {<ApexCenterBookmark/>}
-
-{/*   
-
-      {<ApexCenterPeople/>}
-*/}
-
     </div>
   );
 };
+
+
+/*   
+
+  This will be the chat / AI integration later
+  {<ApexCenterPeople/>}
+
+*/

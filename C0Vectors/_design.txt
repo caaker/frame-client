@@ -1,0 +1,39 @@
+Design
+
+Currently using a hybrid aproach but this creates to much code and it might be better to simply use mui icons
+as webpack performs tree-shaking on production builds, keeping things light.
+
+Options
+
+1) fonts.google.com provides SVG downloads
+
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    height="24px" 
+    viewBox="0 -960 960 960" 
+    width="24px" 
+    fill="#1f1f1f"
+  >
+    <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+  </svg>
+
+2) mui.com provides React components
+
+  npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+  import HomeIcon from '@mui/icons-material/Home';
+  
+  svg code is below: ( need to add CSS later )
+  
+  <svg 
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1phnduy" 
+    focusable="false" 
+    aria-hidden="true" 
+    viewBox="0 0 24 24"
+  >
+    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+  </svg>
+
+3) hybrid aproacch
+
+  currently extracting the paths into a custom framework, but cumbersome, need to simplify
+

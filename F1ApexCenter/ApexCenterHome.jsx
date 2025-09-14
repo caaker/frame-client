@@ -1,8 +1,8 @@
-import React from 'react';
+import React                        from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SVGHome from '../C0Vectors/SVGHome.jsx';
+import SVGHome                      from '../C0Vectors/SVGHome.jsx';
 
-export default () => {
+export default function ApexCenterHome() {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
   function clicked() {
@@ -14,4 +14,4 @@ export default () => {
       <SVGHome fontSize='30px'/>
     </div>
   );
-};
+}

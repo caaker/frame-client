@@ -1,8 +1,8 @@
-import React from 'react';
+import React                        from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SVGPeople from '../C0Vectors/SVGPeople.jsx';
+import SVGPeople                    from '../C0Vectors/SVGPeople.jsx';
 
-export default () => {
+export default function ApexCenterPeople () {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
   function clicked() {
@@ -14,4 +14,4 @@ export default () => {
       <SVGPeople fontSize='30px'/>
     </div>
   );
-};
+}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React                        from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SVGBookmark from '../C0Vectors/SVGBookmark.jsx';
+import SVGBookmark                  from '../C0Vectors/SVGBookmark.jsx';
 
-export default () => {
+export default function ApexCenterBookmark() {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
   function clicked() {
@@ -14,4 +14,4 @@ export default () => {
       <SVGBookmark fontSize='30px'/>
     </div>
   );
-};
+}

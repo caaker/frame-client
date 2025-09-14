@@ -2,11 +2,10 @@ import React                              from      'react';
 import { useSelector, useDispatch }       from      'react-redux';
 import                                              './C1MenuLeft.css';
 
-
 // define a react functional component
+
 const C1MenuLeft: React.FC = () => {
   
-  const isMoved = useSelector((state: any) => state.MenuLeft.on);
   const dispatch = useDispatch();
 
   const handleClick = (): void => {

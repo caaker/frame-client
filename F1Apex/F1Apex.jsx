@@ -16,4 +16,4 @@ export default function F1Apex () {
       </div>
     </div>
   );
-};
+}
