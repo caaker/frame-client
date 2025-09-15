@@ -1,6 +1,6 @@
 .sphere {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     position: relative;
     transform-style: preserve-3d;
     animation: rotate 20s infinite linear;
@@ -8,8 +8,8 @@
 
 .ring {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     border: 1px solid rgba(74, 144, 226, 0.7);
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(74, 144, 226, 0.3);

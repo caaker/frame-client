@@ -1,35 +1,31 @@
-class ServerTester {
-  static async testServer(url) {
-    console.logD('DEBUG: L2 : F1-ServerTester');
+class Server {
+  static async test(url) {
+    console.logD('DEBUG: L2 : F1-Server');
     const color = '#888888'
-    
-    // record the start time
+
+    // fetch does not have a default timeout so we will abort it after 1 min using the AbortController idiom below
+    // error.name === 'AbortError' in this case
+    const controller = new AbortController();
+    const signal = controller.signal;
+    const timeoutId = setTimeout(() => controller.abort(), 60000);
+
+    // start the test using performance.now() which has a resolution of about 5 us
     const startTime = performance.now();
-    console.logD(`DEBUG: L2 : F1-ServerTester: start:`, color);
-
+    console.logD(`DEBUG: L2 : F1-Server: start:`, color);
     try {
-
-      // fetch the url
-      const response = await fetch(url);
-
-      // record the end time
-      const endTime = performance.now();
-      const responseTime = endTime - startTime;
-      if (response.ok) {
-        console.logD(`DEBUG: L2 : F1-ServerTester: response: ok: ${responseTime.toFixed(2)} ms`, color);
-      } else {
-        console.logD(`DEBUG: L2 : F1-ServerTester: response: !ok: ${responseTime.toFixed(2)} ms`, color);
-      }
+      const response = await fetch(url, {signal});
+      const responseTime = (performance.now() - startTime).toFixed(2);
+      console.logD(`DEBUG: L2 : F1-Server: response: ${response.ok ? 'ok' : '!ok'}: ${responseTime} ms`, color);
     } catch (error) {
-      const endTime = performance.now();
-      const responseTime = endTime - startTime;
-      console.logD(`DEBUG: L2 : F1-ServerTester: response: error: ${responseTime.toFixed(2)} ms`, color);
-    }
+      const responseTime = (performance.now() - startTime).toFixed(2);
+      console.logD(`DEBUG: L2 : F1-Server: fetch error (${error.name}): ${responseTime} ms`, color);
+    } finally {
+      clearTimeout(timeoutId);
+    }  
   }
 }
+Server.test('https://frame-server-x8qw.onrender.com');
+export default Server;
 
-// immediately invoke this function
-const serverURL = 'https://frame-server-x8qw.onrender.com';
-ServerTester.testServer(serverURL);
-
-export default ServerTester;
+// update to use this helper function later
+// const log = (msg) => console.logD(`DEBUG: L2 : F1-Server: ${msg}`, color);
