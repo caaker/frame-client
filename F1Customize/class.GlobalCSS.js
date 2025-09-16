@@ -1,5 +1,6 @@
 class Global {
   constructor() {
+    console.logD('DEBUG: L2 : F1-GlobalCSS');
     this.setCSSHeight();
     this.setCSSConstants();
   }

@@ -4,8 +4,7 @@ import React from 'react';
 
 export default function C1Favicon (props) {
 
-  // does not fire on a "404 error", but fires on "(failed)net::ERR_NETWORK_CHANGED"
-  // characterize by disconnecting and reviewing the console
+  // does not fire on a "404 error", as this is a valid response that shows up as an error in the console
   function errorHandler (event) {
     event.target.src = '/images/medical-symbol.jpeg';
     console.logD('DEBUG: Google Favicon API: failed', 'red');

@@ -11,7 +11,7 @@ import F1Footer           from      '../F1Footer/F1Footer.jsx';
 
 // 3 styles for non-react logic - dummy components, JS externally run, JS internally run
 // imports cause the function to run just one time, we can pull out the function later if needed 
-import                              '../F1ServerTester/class.ServerTester.js';
+import                              '../F1Server/class.Server.js';
 import                              '../F1Data/F1Data.js';
 import                              '../F1Socket/F1Socket.js';
 

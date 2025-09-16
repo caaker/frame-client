@@ -2,6 +2,7 @@ import config from './config_all.js';
 
 class Header {
   constructor() {
+    console.logD('DEBUG: L2 : F1-Header');
     this.setFavicon();
     this.setBackground();
     this.setTitle();
