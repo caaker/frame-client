@@ -20,14 +20,11 @@ export default function F1 () {
   console.logD('DEBUG: L1 : F1');
   return (
     <div id="app_hold">
-
-      {/* The core structure of the application is constructed with these components */}
       <F1Apex />
       <F1West />
       <F1Page />
       <F1Modal />
       <F1Footer config={config} />
-
     </div>
   );
 };
