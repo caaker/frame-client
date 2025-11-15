@@ -4,7 +4,7 @@ class Server {
     const color = '#888888'
 
     // fetch does not have a default timeout so we will abort it after 1 min using the AbortController idiom below
-    // error.name === 'AbortError' in this case
+    // AbortController is a built in class
     const controller = new AbortController();
     const signal = controller.signal;
     const timeoutId = setTimeout(() => controller.abort(), 60000);

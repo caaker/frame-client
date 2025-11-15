@@ -18,7 +18,7 @@ class Header {
 
   setBackground() {
     document.body.style.backgroundImage = `url(${config.background})`;
-  }    
+  }
 
   setTitle() {
     document.title = config.title;
