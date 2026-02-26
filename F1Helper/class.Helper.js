@@ -1,24 +1,19 @@
 class Helper {
 
   constructor() {
+    // use later
+    // const origin = window.location.origin;
+    // if ( origin === 'https://caaker.github.io' ) {}
+
   }
 
+  // move to environment variable
   static getWebSocketURL() {
-    const origin = window.location.origin;
-    let baseURL = '';
-    if ( origin === 'https://caaker.github.io' ) {
-      baseURL = 'wss://frame-server-x8qw.onrender.com';
-    }
-    return baseURL;
+    return 'wss://frame-server-x8qw.onrender.com';
   }
 
   static getBaseURL() {
-    const origin = window.location.origin;
-    let baseURL = '';
-    if ( origin === 'https://caaker.github.io' ) {
-      baseURL = 'https://frame-server-x8qw.onrender.com';
-    }
-    return baseURL;
+    return 'https://frame-server-x8qw.onrender.com';
   }
 
   static getURLs(cache = true) {
