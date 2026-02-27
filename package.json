@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "webpack --config ./webpack.config.js",
     "client": "webpack --config ./webpack.config.js -w",
     "client-dev": "webpack --config ./webpack.config.js -w --mode development"  },
   "devDependencies": {
