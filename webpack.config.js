@@ -3,8 +3,6 @@ require('./webpack.global');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const HOME = '/home/caaker';
-
 const css = {
   test: /\.css$/i,
   use: ['style-loader', 'css-loader']
@@ -12,7 +10,7 @@ const css = {
 
 const jsx = {
   test: /\.(js|jsx)$/, 
-  include: path.resolve(HOME, 'top/frame-client'),
+  include: path.resolve(__dirname, 'frame-client'),
   exclude: /node_modules/,
   use: {
     loader: 'babel-loader',
@@ -24,11 +22,11 @@ const jsx = {
 
 const tsx = {
   test: /\.(ts|tsx)$/, 
-  include: path.resolve(HOME, 'top/frame-client'),
+  include: path.resolve(__dirname, 'frame-client'),
   exclude: /node_modules/,
   use: {
     loader: 'ts-loader',
-    options: { configFile: path.resolve(HOME, 'top/frame-config/install/tsconfig.json') }
+    options: { configFile: path.resolve(__dirname, 'tsconfig.json') }
   }
 };
 
@@ -45,7 +43,7 @@ const entry = './index.jsx';
 // absolute path is required by webpack for the output path
 const output = {
   filename: 'bundle.js',
-  path: path.resolve(HOME, 'top/frame-server/dist')
+  path: path.resolve(HOME, __dirname)
 };
 
 const stats = { warnings: false };
@@ -58,15 +56,6 @@ const clearConsolePlugin = {
     });
   }
 };
-
-const CopyPlugin = new CopyWebpackPlugin({
-  patterns: [
-    { 
-      from: path.resolve(HOME, 'top/frame-server/dist/bundle.js'),
-      to: path.resolve(HOME, 'top/caaker.github.io/bundle.js') 
-    }
-  ]
-})
 
 const config_obj = {
   stats:          stats,
