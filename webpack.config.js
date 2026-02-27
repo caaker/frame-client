@@ -3,7 +3,6 @@ require('./webpack.global');
 
 const CopyWebpackPlugin = require('/home/caaker/top/frame-client/node_modules/copy-webpack-plugin');
 
-
 const HOME = '/home/caaker';
 
 const css = {
