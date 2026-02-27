@@ -23,4 +23,4 @@ jobs:
         run: npm ci
 
       - name: Run Webpack build
-        run: npm run build
+        run: npm run client-dev
