@@ -3,8 +3,8 @@ name: Build Frontend
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:  # allows manual trigger
+      - main          # on push to branch main -> trigger
+  workflow_dispatch:  # manual gui button -> trigger
 
 jobs:
   build:
