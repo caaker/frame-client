@@ -6,6 +6,10 @@ on:
       - main          # on push to branch main -> trigger
   workflow_dispatch:  # manual gui button -> trigger
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
