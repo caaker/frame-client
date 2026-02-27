@@ -1,7 +1,7 @@
 const path = require('path');
 require('./webpack.global');
 
-const CopyWebpackPlugin = require('/home/caaker/top/frame-client/node_modules/copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const HOME = '/home/caaker';
 
