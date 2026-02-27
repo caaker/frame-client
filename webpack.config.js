@@ -46,21 +46,11 @@ const output = {
 
 const stats = { warnings: false };
 
-const clearConsolePlugin = {
-  apply: (compiler) => {
-    compiler.hooks.watchRun.tap('ClearConsole', () => {
-      process.stdout.write('\x1Bc'); // Clears the console
-      console.logD('DEBUG: console cleared via webpack plugin: ' + time() + ' \n', 'blue');
-    });
-  }
-};
-
 const config_obj = {
   stats:          stats,
   entry:          entry,
   output:         output,
-  module:         file_types,
-  plugins:        [clearConsolePlugin]
+  module:         file_types
 };
 
 module.exports = (env) => {
