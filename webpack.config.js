@@ -1,8 +1,6 @@
 const path = require('path');
 require('./webpack.global');
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 const css = {
   test: /\.css$/i,
   use: ['style-loader', 'css-loader']
