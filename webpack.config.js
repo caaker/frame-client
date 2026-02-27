@@ -62,7 +62,7 @@ const config_obj = {
   entry:          entry,
   output:         output,
   module:         file_types,
-  plugins:        [clearConsolePlugin, CopyPlugin]
+  plugins:        [clearConsolePlugin]
 };
 
 module.exports = (env) => {
