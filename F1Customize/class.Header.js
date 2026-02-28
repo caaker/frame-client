@@ -12,7 +12,7 @@ class Header {
     const link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = config.favicon;
+    link.href = config.favicon + '?favicon=true';
     document.head.appendChild(link);
   }
 
