@@ -1,0 +1,26 @@
+#
+# created by user
+#
+
+# begings with private
+private*
+
+#
+# created by apps+
+#
+
+# created by MacOS
+*.DS_Store
+
+# created by NPM
+# ignores all node_modules folders, not just the ones in the same directory as .gitignore
+**/node_modules/
+
+# created by javac
+**/classes/
+
+# created python
+__pycache__
+
+# created by c and cpp
+**/out/
