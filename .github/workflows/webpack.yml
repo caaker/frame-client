@@ -31,3 +31,10 @@ jobs:
 
       - name: Debug bundle location
         run: find . -name "bundle.js" -type f || echo "bundle.js not found anywhere"
+
+      - name: Commit bundle to repo
+        run: |
+          git add _dist/bundle.js
+          git commit -m "Add webpack bundle [skip ci]" || echo "No changes"
+          git push
+
