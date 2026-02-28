@@ -34,7 +34,7 @@ const file_types = {
   ]
 };
 
-const entry = './index.jsx';
+const entry = path.resolve(__dirname, 'index.jsx');
 
 // absolute path is required by webpack for the output path
 const output = {
