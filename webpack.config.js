@@ -37,7 +37,7 @@ const file_types = {
 const entry = './index.jsx';
 
 // absolute path is required by webpack for the output path
-output: {
+const output = {
   filename: 'bundle.js',
   path: path.resolve(__dirname, 'dist')
 }
