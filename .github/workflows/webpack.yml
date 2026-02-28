@@ -28,3 +28,6 @@ jobs:
 
       - name: Run Webpack build
         run: npm run build
+
+      - name: Debug bundle location
+        run: find . -name "bundle.js" -type f || echo "bundle.js not found anywhere"
