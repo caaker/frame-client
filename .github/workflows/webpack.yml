@@ -33,14 +33,12 @@ jobs:
       - name: Run Webpack build
         run: npm run build
 
-      - name: Debug bundle location
-        run: find . -name "bundle.js" -type f || echo "bundle.js not found anywhere"
-
-      - name: Commit bundle to repo
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add _dist/bundle.js
-          git commit -m "Add webpack bundle [skip ci]" || echo "No changes"
-          git push
-
+      - name: Push to caaker.github.io
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: '_dist'
+          destination-github-username: 'caaker'
+          destination-repository-name: 'caaker.github.io'
+          target-branch: 'main'
