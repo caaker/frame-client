@@ -8,7 +8,6 @@ const css = {
 
 const jsx = {
   test: /\.(js|jsx)$/, 
-  include: path.resolve(__dirname, 'frame-client'),
   exclude: /node_modules/,
   use: {
     loader: 'babel-loader',
@@ -20,7 +19,6 @@ const jsx = {
 
 const tsx = {
   test: /\.(ts|tsx)$/, 
-  include: path.resolve(__dirname, 'frame-client'),
   exclude: /node_modules/,
   use: {
     loader: 'ts-loader',

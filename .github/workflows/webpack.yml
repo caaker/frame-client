@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main          # on push to branch main -> trigger
-  workflow_dispatch:  # manual gui button -> trigger
+  workflow_dispatch:  # on GUI button push -> trigger
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
