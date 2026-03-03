@@ -53,20 +53,25 @@ Favicons - apple icon can not be transparent
 
 
     <link rel="apple-touch-icon"
-          sizes="144x144" href="/images/favicon-apple.png" />
+          sizes="144x144" 
+          href="/images/favicon-apple.png" />
 
-<!--
-
-    general favicon is now added dynamically in javascript
-    update to .ico file which holds multiple dimensions
-    
-    <link rel="shortcut icon"
-        type="image/x-icon" href="/images/favicon.png"/>
-
- -->
+    <link type="image/x-icon" 
+          rel="shortcut icon" 
+          href="/images/favicon.png?favicon_static=true">
 
   </head>
   <body>
+
+    
+<!--------------------------------------------------------------------------------------------------
+JavaScript Enabled?
+--------------------------------------------------------------------------------------------------->
+
+
+<noscript>
+  <p>JavaScript is not enabled.</p>
+</noscript>
 
 
 <!--------------------------------------------------------------------------------------------------
