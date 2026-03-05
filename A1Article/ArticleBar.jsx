@@ -12,10 +12,10 @@ export default ({article}) => {
   const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
 
   return (
-    <div id="article_bar" >
+    <div className='article_bar' >
       <C1Favicon className='c1_favicon' domain={article.domain}/>
       <C1Copy title={article.title} />
-      <div id="article_bar_admin">
+      <div className='article_bar_admin'>
         <C1Edit   article={article}   admin={admin}/>
         <C1Delete article={article}   admin={admin}/>
       </div>
