@@ -1,10 +1,11 @@
-name: Daily Script
+name: daily_midnight
+
+# runs at 00:00 UTC every day
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
-  workflow_dispatch:      # Allows manual trigger for testing
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
-# Grant permission to the GITHUB_TOKEN to push changes back to the repo
 permissions:
   contents: write
 
