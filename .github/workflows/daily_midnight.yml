@@ -11,6 +11,7 @@ permissions:
 jobs:
   run-script:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -19,7 +20,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      
+
+      - name: Network Test
+        run: curl -I https://frame-server-x8qw.onrender.com/articles/get
+
       - name: Run Fetch Script
         run: |
           mkdir -p _dist
