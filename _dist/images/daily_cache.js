@@ -19,3 +19,14 @@ if (articles) {
   fs.writeFileSync('_dist/cache.txt', JSON.stringify(articles, null, 2));
   console.log('Cache updated.');
 }
+// // get all images from the articles
+// function retreiveImages() {
+//   const images = [];
+//   articles.forEach((article, index) => {
+//     images.push(article.image);
+//   });
+//   return images;
+// }
+
+// const images = retreiveImages();
+// console.log(images.length);
