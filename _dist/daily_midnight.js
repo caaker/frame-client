@@ -5,9 +5,21 @@ import fs from 'fs';
 // test outward 
 const url = "https://jsonplaceholder.typicode.com/posts";
 
+const controller = new AbortController();
+
+const browser = {
+  signal: controller.signal,
+  headers: {
+    // The "Agent" - mimics a modern Chrome browser
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/json',
+    'Cache-Control': 'no-cache'
+  }
+}
+
 async function fetchData(url) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, browser);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
