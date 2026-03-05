@@ -152,13 +152,13 @@ React
     (function() {
   
       const script = document.createElement('script');
-      const cacheBuster = new Date().getTime(); 
-      script.src = "bundle.js?v=" + cacheBuster;
+      const timestamp = new Date().toLocaleTimeString('en-GB');
+      script.src = 'bundle.js?timestamp=' + timestamp;
     
-      // Optional: helps with page load speed
+      // optional: helps with page load speed
       script.async = true;
       document.head.appendChild(script);
-      console.logD('DEBUG: START : index.html loaded: ' + cacheBuster, 'green');
+      console.logD('DEBUG: START : index.html loaded: ' + timestamp, 'green');
 
     })();
 
