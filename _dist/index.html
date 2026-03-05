@@ -136,7 +136,6 @@ Global JavaScript
         console.log(str, 'color: ' + color);
       }
     }
-    console.logD('DEBUG: START : index.html', 'green');
 
   </script>
 
@@ -159,8 +158,8 @@ React
       // Optional: helps with page load speed
       script.async = true;
       document.head.appendChild(script);
-      console.log("Loading bundle with version: " + cacheBuster);
-  
+      console.logD('DEBUG: START : index.html loaded: ' + cacheBuster, 'green');
+
     })();
 
   </script>
