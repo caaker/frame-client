@@ -22,9 +22,3 @@ jobs:
       
       - name: Run Fetch Script
         run: node _dist/daily_midnight.js
-
-      - name: Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: auto-update article cache [skip ci]"
-          file_pattern: '_dist/cache.txt'
