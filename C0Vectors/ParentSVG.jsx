@@ -9,7 +9,6 @@ const ParentSVG = ({ path, fontSize = '25px', onClick = () => {}, id = '', class
       className={computedClassName}
       fontSize={fontSize}
       onClick={onClick}
-      focusable="false"
       viewBox="0 0 24 24"
       aria-hidden="true"
     >
@@ -19,3 +18,7 @@ const ParentSVG = ({ path, fontSize = '25px', onClick = () => {}, id = '', class
 };
 
 export default ParentSVG;
+
+/*
+removed:      focusable="false"
+*/
