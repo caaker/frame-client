@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: 20
       
-      - run: node _dist/your-script-name.js
+      - run: node _dist/daily_midnight.js
