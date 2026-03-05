@@ -12,21 +12,11 @@ async function fetchData(url) {
   }
 }
 
-// Top-level await is valid here because of "type": "module"
 const articles = await fetchData(url);
-
 if (articles) {
   fs.writeFileSync('_dist/cache.txt', JSON.stringify(articles, null, 2));
-  console.log('Cache updated.');
 }
-// // get all images from the articles
-// function retreiveImages() {
-//   const images = [];
-//   articles.forEach((article, index) => {
-//     images.push(article.image);
-//   });
-//   return images;
-// }
 
-// const images = retreiveImages();
-// console.log(images.length);
+function retreiveImages() {
+  return articles.map(article => article.image);
+}
