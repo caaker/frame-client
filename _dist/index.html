@@ -147,8 +147,24 @@ React
 
 
   <div id="app"></div>
-  <script src="bundle.js"></script>
 
+  <script type="text/javascript">
+
+    (function() {
+  
+      const script = document.createElement('script');
+      const cacheBuster = new Date().getTime(); 
+      script.src = "bundle.js?v=" + cacheBuster;
+    
+      // Optional: helps with page load speed
+      script.async = true;
+      document.head.appendChild(script);
+      console.log("Loading bundle with version: " + cacheBuster);
+  
+    })();
+
+  </script>
+    
 
 <!--------------------------------------------------------------------------------------------------
 Close tags
