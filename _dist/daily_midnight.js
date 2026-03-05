@@ -1,9 +1,9 @@
 import fs from 'fs';
 
-// const url = "https://frame-server-x8qw.onrender.com/articles/get";
+const url = "https://frame-server-x8qw.onrender.com/articles/get";
 
 // test outward 
-const url = "https://jsonplaceholder.typicode.com/posts";
+// const url = "https://jsonplaceholder.typicode.com/posts";
 
 const controller = new AbortController();
 
