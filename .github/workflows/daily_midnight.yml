@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: Network Test
-        run: curl -I https://frame-server-x8qw.onrender.com/articles/get
+        run: curl -I https://jsonplaceholder.typicode.com/posts
 
       - name: Run Fetch Script
         run: |
