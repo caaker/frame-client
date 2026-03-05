@@ -1,0 +1,32 @@
+name: daily_midnight
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      
+      - name: Run Fetch Script
+        run: |
+          mkdir -p _dist
+          node _dist/daily_midnight.js
+
+      - name: Commit and Push cache.txt
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: auto-update article cache [skip ci]'
+          file_pattern: '_dist/cache.txt'
