@@ -16,7 +16,7 @@ export default function C1Copy (props) {
   }
 
   return (
-    <SVGCopy id={hash} className={class_name} onClick={onClick} />
+    <SVGCopy className={class_name} onClick={onClick} />
   );
 
 };
