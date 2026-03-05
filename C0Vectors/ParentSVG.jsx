@@ -22,4 +22,5 @@ export default ParentSVG;
 removed -> focusable="false" -> legacy IE code
 removed -> aria-hidden="true" as it should be accessible to screen readers
 fixed default id issue for best practice
+consider moving fontSize to CSS
 */
