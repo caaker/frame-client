@@ -2,7 +2,7 @@
 **
 **
 */
-#article_bar {
+.article_bar {
   height: 17px;
   margin-top: 8px;
 }
@@ -18,7 +18,7 @@
 **
 **
 */
-#article_bar_admin{
+.article_bar_admin{
   height: 17px;
   margin-top: 8px;
 }
