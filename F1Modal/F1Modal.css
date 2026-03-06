@@ -15,7 +15,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10001;
+  z-index: var(--z-a);
 }
 
 .onModal {
