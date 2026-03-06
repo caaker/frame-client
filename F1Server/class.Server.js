@@ -11,7 +11,7 @@ class Server {
 
     // start the test using performance.now() which has a resolution of about 5 us
     const startTime = performance.now();
-    console.logD(`DEBUG: L2 : F1-Server: start:`, color);
+    // console.logD(`DEBUG: L2 : F1-Server: start:`, color);
     try {
       const response = await fetch(url, {signal});
       const responseTime = (performance.now() - startTime).toFixed(2);
