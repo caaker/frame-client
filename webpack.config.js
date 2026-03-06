@@ -26,6 +26,15 @@ const tsx = {
   }
 };
 
+const stats = { warnings: false };
+
+const entry = path.resolve(__dirname, 'index.jsx');
+
+const output = {
+  filename: 'bundle.js',
+  path: path.resolve(__dirname, '_dist')
+}
+
 const file_types = {
   rules: [
     css,
@@ -33,16 +42,6 @@ const file_types = {
     tsx
   ]
 };
-
-const entry = path.resolve(__dirname, 'index.jsx');
-
-// absolute path is required by webpack for the output path
-const output = {
-  filename: 'bundle.js',
-  path: path.resolve(__dirname, '_dist')
-}
-
-const stats = { warnings: false };
 
 const config_obj = {
   stats:          stats,
