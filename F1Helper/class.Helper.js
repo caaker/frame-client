@@ -29,7 +29,6 @@ class Helper {
       const response = await fetch(url, options);
       const json = await response.json();
       onsuccess(json);
-      console.logD(('DEBUG: Helper: fetching path: ' + url), 'green');
     } catch (error) {
       onfailure(error);
       console.logD('DEBUG: Helper: fetch failed: ' + url, 'red');
