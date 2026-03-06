@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 
 export default () => {
   let User = useSelector(state => state.User.current);
-  const hostname = window.location.hostname;
   const baseURL = Helper.getBaseURL();
 
   return (
