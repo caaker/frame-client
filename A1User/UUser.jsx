@@ -1,18 +1,12 @@
 import './UUser.css';
+import Helper from '../F1Helper/class.Helper.js';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 export default () => {
   let User = useSelector(state => state.User.current);
   const hostname = window.location.hostname;
-  let baseURL;
-  if ( hostname === 'caaker.github.io' ) {
-    baseURL = 'https://frame-server-x8qw.onrender.com';
-  } else if ( hostname === 'localhost' ) {
-    baseURL = 'http://localhost:3000';
-  } else {
-    baseURL = '';
-  }
+  const baseURL = Helper.getBaseURL();
 
   return (
     <div id = "user-container">
