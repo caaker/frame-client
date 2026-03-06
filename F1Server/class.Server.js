@@ -1,13 +1,13 @@
 class Server {
   static async test(url) {
     console.logD('DEBUG: L2 : F1-Server');
-    const color = '#888888'
+    const color = 'orange';
 
-    // fetch does not have a default timeout so we will abort it after 1 min using the AbortController idiom below
-    // AbortController is a built in class
+    // fetch does not have a default timeout so we will abort it after 2 min using the AbortController idiom below
+    // wake up time for free tier servers can take a while
     const controller = new AbortController();
     const signal = controller.signal;
-    const timeoutId = setTimeout(() => controller.abort(), 60000);
+    const timeoutId = setTimeout(() => controller.abort(), 120000);
 
     // start the test using performance.now() which has a resolution of about 5 us
     const startTime = performance.now();
@@ -16,16 +16,16 @@ class Server {
       const response = await fetch(url, {signal});
       const responseTime = (performance.now() - startTime).toFixed(2);
       console.logD(`DEBUG: L2 : F1-Server: response: ${response.ok ? 'ok' : '!ok'}: ${responseTime} ms`, color);
+      return true;
     } catch (error) {
       const responseTime = (performance.now() - startTime).toFixed(2);
       console.logD(`DEBUG: L2 : F1-Server: fetch error (${error.name}): ${responseTime} ms`, color);
+      return false;
     } finally {
+      // even with return statements above, this will run
       clearTimeout(timeoutId);
     }  
   }
 }
 Server.test('https://frame-server-x8qw.onrender.com');
 export default Server;
-
-// update to use this helper function later
-// const log = (msg) => console.logD(`DEBUG: L2 : F1-Server: ${msg}`, color);
