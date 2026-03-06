@@ -11,7 +11,6 @@ function getLocation(options = defaults) {
     navigator.geolocation.getCurrentPosition(resolveInternal, rejectInternal, options)
   );
 }
-
-module.exports = getLocation;
+export default getLocation;
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition

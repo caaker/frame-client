@@ -16,7 +16,6 @@ export default () => {
       id="pdiv-form-input"
       value={current}
       onChange={onChange}
-      type="text"
       placeholder="message"
       name="link"
     />
