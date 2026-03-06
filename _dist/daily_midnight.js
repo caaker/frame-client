@@ -37,3 +37,8 @@ if (articles) {
 function retreiveImages() {
   return articles.map(article => article.image);
 }
+
+const images = retreiveImages()
+if(retreiveImages()) {
+  fs.writeFileSync('_dist/images.txt', JSON.stringify(images, null, 2));
+}
