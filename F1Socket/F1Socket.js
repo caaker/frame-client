@@ -14,17 +14,17 @@ function createWebSocket() {
   store.dispatch({ type: 'initializeWebSocket', socket });
 
   socket.addEventListener('open', () => {
-    console.logD('DEBUG: L2 : F1-Socket: Event: open', 'green');
+    // console.logD('DEBUG: L2 : F1-Socket: Event: open', 'green');
     sendFingerPrint(socket);
   });
 
   socket.addEventListener('message', (event) => {
-    console.logD('DEBUG: L2 : F1-Socket: Event: message', 'green');
+    // console.logD('DEBUG: L2 : F1-Socket: Event: message', 'green');
     parseMessages(event.data);
   });
 
   socket.addEventListener('close', () => {
-    console.logD('DEBUG: L2 : F1-Socket: Event: close', 'green');
+    // console.logD('DEBUG: L2 : F1-Socket: Event: close', 'green');
   });
 
 }
