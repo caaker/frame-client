@@ -4,7 +4,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 export default () => {
-  let User = useSelector(state => state.User.current);
+  const User = useSelector(state => state.User.current);
   const baseURL = Helper.getBaseURL();
 
   return (
