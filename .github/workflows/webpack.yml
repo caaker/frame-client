@@ -1,6 +1,6 @@
 # webpack.yml
 
-name: Build Frontend
+name: webpack
 
 on:
   push:
