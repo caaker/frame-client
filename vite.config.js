@@ -1,13 +1,23 @@
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+
 export default {
+  plugins: [
+    cssInjectedByJsPlugin()
+  ],
   build: {
+    minify: false,
+    outDir: '_dist-vite',
     emptyOutDir: false,
-    outDir: '_dist', // Sets the folder to _dist
+    cssCodeSplit: false,
     lib: { 
       entry: './index.jsx', 
-      formats: ['es'], 
-      fileName: 'bundle_vite' // Sets the file name to bundle_vite.js
+      formats: ['iife'],
+      name: 'myApp'
     },
-    emptyOutDir: true,
-    minify: false
+    rollupOptions: {
+      output: {
+        entryFileNames: 'bundle.js'
+      }
+    }
   }
 }
