@@ -1,7 +1,7 @@
 .left-bar {
   z-index: var(--z-a);
   position: absolute;
-  top: 50px;
+  top: 53px;
   left: -50px;
   width: 50px;
   height: 100px;
