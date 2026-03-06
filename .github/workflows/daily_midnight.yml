@@ -34,8 +34,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'chore: auto-update article cache [skip ci]'
-          file_pattern: '_dist/cache.txt'
-
+          file_pattern: '_dist/*'
       - name: Trigger Build Workflow
         run: gh workflow run webpack.yml 
         env:
