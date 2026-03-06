@@ -30,7 +30,7 @@
   height:100%;
   top:0;
   left: 0;
-  z-index: 01;
+  z-index: var(--z-a);
 }
 #auth-google-image{
   width: 38px;
