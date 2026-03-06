@@ -10,7 +10,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 1001;
+  z-index: var(--z-a);
   width: 100%;
 }
 
