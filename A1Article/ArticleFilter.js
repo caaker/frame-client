@@ -25,4 +25,4 @@ function Search(val, search_string) {
   return false;
 }
 
-module.exports = Search;
+export default Search;
