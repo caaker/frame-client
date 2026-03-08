@@ -1,7 +1,7 @@
 
 // currently the fingerprint is just the user agent
 export const sendFingerPrint = function(socket) {
-  sendType('fingerprint', window.navigator.userAgent, socket);
+  sendMessage('fingerprint', window.navigator.userAgent, socket);
 };
 
 export const parseMessages = function(json) {
@@ -14,7 +14,7 @@ export const parseMessages = function(json) {
   return obj;
 };
 
-export const sendType = function(type, message, socket) {
+export const sendMessage = function(type, message, socket) {
   const send = {
     type: type,
     message: message
@@ -22,4 +22,4 @@ export const sendType = function(type, message, socket) {
   socket.send(JSON.stringify(send));
 };
 
-export default {parseMessages, sendFingerPrint, sendType};
+export default {parseMessages, sendFingerPrint, sendMessage};
