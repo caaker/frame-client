@@ -4,7 +4,7 @@ export const sendFingerPrint = function(socket) {
   sendMessage('fingerprint', window.navigator.userAgent, socket);
 };
 
-export const parseMessages = function(json) {
+export const receiveMessage = function(json) {
 
   // this is a stub to fill out later
   let obj = JSON.parse(json);
@@ -22,4 +22,4 @@ export const sendMessage = function(type, message, socket) {
   socket.send(JSON.stringify(send));
 };
 
-export default {parseMessages, sendFingerPrint, sendMessage};
+export default {receiveMessage, sendFingerPrint, sendMessage};
