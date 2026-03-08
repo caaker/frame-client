@@ -1,6 +1,6 @@
 import React, { useEffect }               from    'react';
 import { useDispatch }                    from    'react-redux';
-import { sendFingerPrint, parseMessages } from    './F1SocketFunctions.js';
+import { sendFingerPrint, receiveMessage } from    './F1SocketFunctions.js';
 import Helper                             from    '../F1Helper/class.Helper.js';
 import store                              from    '../_redux/store';
 
@@ -20,7 +20,7 @@ function createWebSocket() {
 
   socket.addEventListener('message', (event) => {
     // console.logD('DEBUG: L2 : F1-Socket: Event: message', 'green');
-    parseMessages(event.data);
+    receiveMessage(event.data);
   });
 
   socket.addEventListener('close', () => {
