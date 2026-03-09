@@ -1,7 +1,5 @@
-import React from 'react';
 import './Sphere.css';
-
-function Sphere() {
+const Sphere = () => {
     return (
         <div className="sphere">
             <div className="ring"></div>
@@ -9,6 +7,5 @@ function Sphere() {
             <div className="ring"></div>
         </div>
     );
-}
-
+};
 export default Sphere;
