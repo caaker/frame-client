@@ -4,7 +4,7 @@ import                          './F1ApexLeft.css';
 
 import C1Logo           from    '../C1Logo/C1Logo.jsx';
 import C1Search         from    '../C1Search/C1Search.jsx';
-import C1MenuLeft       from    '../C1MenuLeft/C1MenuLeft.tsx';
+import C1MenuLeft       from    '../C1MenuLeft/C1MenuLeft.jsx';
 
 import config           from     '../F1Customize/config_all.js';
 
