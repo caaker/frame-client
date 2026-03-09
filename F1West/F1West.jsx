@@ -2,8 +2,6 @@ import React             from 'react';
 import { useSelector }   from  'react-redux';
 import Sphere            from  './Sphere.jsx';
 import                         './F1West.css';
-import React             from 'react';
-
 
 const F1West = () => {
   const isMoved = useSelector(state => state.MenuLeft.on);
