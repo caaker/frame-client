@@ -1,17 +1,12 @@
-import React                              from      'react';
-import { useSelector, useDispatch }       from      'react-redux';
-import                                              './C1MenuLeft.css';
+import React               from 'react';
+import { useDispatch }     from 'react-redux';
+import                     './C1MenuLeft.css';
 
-// define a react functional component
-
-const C1MenuLeft: React.FC = () => {
-  
+const C1MenuLeft = () => {
   const dispatch = useDispatch();
-
-  const handleClick = (): void => {
+  const handleClick = () => {
     dispatch({ type: 'toggleMenuLeft' });
   };
-
   return (
     <div id="menu_left_div">
       <svg 
@@ -23,11 +18,10 @@ const C1MenuLeft: React.FC = () => {
         viewBox="0 -960 960 960" 
         fill="#1f1f1f"
       >
-      <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
       </svg>
     </div>
   );
 };
 
 export default C1MenuLeft;
-
