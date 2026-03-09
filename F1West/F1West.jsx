@@ -1,8 +1,6 @@
-import React                        from  'react';
-import { useSelector, useDispatch } from  'react-redux';
-import                                    './F1West.css';
-import Sphere                       from  './Sphere.jsx';
-
+import { useSelector }   from  'react-redux';
+import Sphere            from  './Sphere.jsx';
+import                         './F1West.css';
 
 const F1West = () => {
   const isMoved = useSelector(state => state.MenuLeft.on);
@@ -14,6 +12,3 @@ const F1West = () => {
 };
 
 export default F1West;
-
-// older sphere
-// <div id="light3"></div>
