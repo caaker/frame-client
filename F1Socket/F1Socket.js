@@ -1,5 +1,3 @@
-import React, { useEffect }               from    'react';
-import { useDispatch }                    from    'react-redux';
 import { sendFingerPrint, receiveMessage } from    './F1SocketFunctions.js';
 import Helper                             from    '../F1Helper/class.Helper.js';
 import store                              from    '../_redux/store';
