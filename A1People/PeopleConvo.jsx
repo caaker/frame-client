@@ -1,8 +1,7 @@
 import                                              './PeopleConvo.css';
-import React                          from          'react';
 import { useDispatch, useSelector }   from          'react-redux';
 
-export default ({people}) => {
+export default function PeopleConvo({people}) {
 
   const dispatch = useDispatch();
 

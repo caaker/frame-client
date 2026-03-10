@@ -1,15 +1,14 @@
-import './PeopleForm.css';
-import React                          from   'react';
-import { useSelector, useDispatch }   from   'react-redux';
+import { useSelector, useDispatch }   from    'react-redux';
 import PeopleFormInput                from    './PeopleFormInput.jsx';
+import                                        './PeopleForm.css';
 
-export default () => {
+export default function PeopleForm() {
 
   const dispatch = useDispatch();
   const current = useSelector((state) => state.PeopleInput.current);
   const socket = useSelector((state) => state.WebSocket.socket);
 
-  function sendMessage() {
+  function sendMessage(event) {
     event.preventDefault();
 
     const user_message = {

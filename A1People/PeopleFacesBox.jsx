@@ -1,15 +1,11 @@
-import                                './PeopleFacesBox.css';
+import PeopleFacesBoxCircle from './PeopleFacesBoxCircle.jsx';
+import                            './PeopleFacesBox.css';
 
-import React                from      'react';
-import PeopleFacesBoxCircle from      './PeopleFacesBoxCircle.jsx';
-
-export default (props) => {
-  let id = props.id;
-  // console.log('ID: ', id)
+export default function PeopleFacesBox({ id, src, name }) {
   return (
     <div className='people_box'>
-      <PeopleFacesBoxCircle key={id} src={props.src} />
-      <p className='people_box_title'>{props.name} </p>
+      <PeopleFacesBoxCircle key={id} src={src} />
+      <p className='people_box_title'>{name}</p>
     </div>
   );
 };

@@ -1,12 +1,9 @@
 import './PeopleFacesBoxCircle.css';
 
-import React from 'react';
-import { useSelector } from 'react-redux';
-
-export default (props) => {
+export default function PeopleFacesBoxCircle({ src }) {
   return (
     <div id="zimage-wrapper">
-      <img id="zimage" src={props.src}/>
+      <img id="zimage" src={src}/>
     </div>
   );
 };

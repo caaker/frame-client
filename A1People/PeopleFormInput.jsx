@@ -1,15 +1,12 @@
 import './PeopleFormInput.css';
-import React                          from   'react';
 import { useSelector, useDispatch }   from   'react-redux';
 
-export default () => {
+export default function PeopleFormInput() {
   const dispatch = useDispatch();
   const current = useSelector((state) => state.PeopleInput.current);
-
   function onChange(event) {
     dispatch({type: 'updatePeopleInput', current: event.target.value});
   };
-
   return (
     <input
       type='text'
@@ -19,6 +16,5 @@ export default () => {
       placeholder="message"
       name="link"
     />
-
   );
 };

@@ -1,5 +1,4 @@
-import React                        from          'react';
-import { connect, useSelector }     from          'react-redux';
+import {useSelector }     from                    'react-redux';
 
 import                                            './A1People.css';
 
@@ -7,7 +6,7 @@ import PeopleFaces                  from          './PeopleFaces.jsx';
 import PeopleConvo                  from          './PeopleConvo.jsx';
 import PeopleForm                   from          './PeopleForm.jsx';
 
-export default () => {
+export default function A1People() {
 
   const people = useSelector((state) => state.People.people);
 
