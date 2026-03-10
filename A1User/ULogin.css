@@ -7,6 +7,8 @@
 #box-container-inner{
   transition: transform 1s;
   transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
 }
 #box-container-front, #box-container-back {
   position: absolute;
@@ -35,6 +37,18 @@
 }
 
 #box-container-back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /**/
+  padding:  10px;
+  background: var(--opa);
+  transition: background 2s;
+  box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.4);
+  border-radius: 2px;
+  /**/
+  font-weight: bold;
 }
 
 .title{
