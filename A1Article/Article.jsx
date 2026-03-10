@@ -4,13 +4,11 @@ import                        './Article.css';
 import ArticleBar       from  './ArticleBar.jsx';
 
 const image_not_found = '/images/medical-symbol.jpeg';
-export default ({ article }) => {
-  console.logD('DEBUG: L3 : F1-Page-A1Article-Article');  
 
-  // create hash from the article title
+export default function Article ({ article }) {
+  
   const hash = arc.makeAnchorHash(article.title);
-
-  // return the article component
+  
   return (
     <article id={hash} className='__article'>
       <a className="article_link" href={article.link} target="_blank">
@@ -36,8 +34,6 @@ export default ({ article }) => {
       <p className="article_domain">
         {article.domain}
       </p>
-
-      {/* article has component ArticleBar which contains the Update and Delete operations */}
 
       <ArticleBar article={article}/>
     </article>
