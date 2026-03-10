@@ -151,15 +151,13 @@ React
 
   <div id="app"></div>
 
-  <script type="text/javascript">
+  <script>
 
     (function() {
   
       const script = document.createElement('script');
       const timestamp = new Date().toLocaleTimeString('en-GB');
       script.src = 'bundle.js?timestamp=' + timestamp;
-    
-      // optional: helps with page load speed
       script.async = true;
       document.head.appendChild(script);
       console.logD('DEBUG: START : index.html loaded bundle.js at: ' + timestamp, 'green');

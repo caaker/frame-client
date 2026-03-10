@@ -5,9 +5,6 @@
   opacity: 0;
 }
 
-/* move
-*/
-
 @media screen and (max-width: 701px) {
   #page-people {
     width: 100%;
