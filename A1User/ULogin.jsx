@@ -16,9 +16,9 @@ export default function ULogin () {
           <ULoginGoogle/>
         </div>
 
-        <div id ="box-container-back">
+        {/* <div id ="box-container-back">
           <p>hello</p>
-        </div>
+        </div> */}
 
       </div>
     </div>
