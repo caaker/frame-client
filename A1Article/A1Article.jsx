@@ -1,14 +1,12 @@
-import                      './A1Article.css';
-import React, { useEffect }   from 'react';
+import { useEffect }          from 'react';
 import { useSelector }        from 'react-redux';
 import arc                    from 'frame-arc';
 import Article                from './Article.jsx';
 import ArticleFilter          from './ArticleFilter.js';
+import                        './A1Article.css';
 
-export default () => {
-
+export default function A1Article () {
   console.logD('DEBUG: L3 : F1-Page-Article ');
-
   useEffect(() => {
     arc.scrollToHash(0);
   });
@@ -17,12 +15,11 @@ export default () => {
   let search = useSelector((state) => state.SearchInput.current);
 
   function makeArticles() {
-    if(articles) {
-      if(search) {
-        articles = articles.filter((val) => {
-          return ArticleFilter(val, search);
-        });
-      };
+    if (!articles) return "empty set";
+    if(search) {
+      articles = articles.filter((val) => {
+        return ArticleFilter(val, search);
+      });
       articles = articles.map((article, index) => {
         article.index = index;
         return <Article key={index} article={article}/>;
