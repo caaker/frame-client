@@ -1,7 +1,6 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 
-export default (props) => {
+export default function MenuBoxItemAdd (props) {
   const dispatch = useDispatch();
   function menuItemClicked() {
     dispatch({type: 'toggleModalOn', config: false});

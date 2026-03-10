@@ -1,6 +1,4 @@
 import                                      './F1ApexRight.css';
-import React                          from  'react';
-import { useSelector }                from  'react-redux';
 import C1Avatar                       from  '../C1Avatar/C1Avatar.jsx';
 import C1MenuRight                    from  '../C1MenuRight/C1MenuRight.jsx';
 

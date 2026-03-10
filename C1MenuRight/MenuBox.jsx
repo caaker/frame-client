@@ -1,7 +1,5 @@
-import React, { useEffect }           from 'react';
+import { useEffect }                  from 'react';
 import { useDispatch, useSelector }   from 'react-redux';
-
-import                                './MenuBox.css';
 
 // SVG Containers
 import MenuBoxItem                    from './MenuBoxItem.jsx';
@@ -13,6 +11,8 @@ import SVGUser                        from '../C0Vectors/SVGUser.jsx';
 import SVGHome                        from '../C0Vectors/SVGHome.jsx';
 import SVGBookmark                    from '../C0Vectors/SVGBookmark.jsx';
 import SVGClock                       from '../C0Vectors/SVGClock.jsx';
+
+import                                './MenuBox.css';
 
 export default function MenuBox () {
   const dispatch = useDispatch();

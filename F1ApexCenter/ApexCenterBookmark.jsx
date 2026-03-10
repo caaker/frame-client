@@ -1,4 +1,3 @@
-import React                        from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import SVGBookmark                  from '../C0Vectors/SVGBookmark.jsx';
 

@@ -1,8 +1,8 @@
-import React, { useState }    from        'react';
+import { useState }           from        'react';
 import                                    './C1Logo.css';
 import config                 from        '../F1Customize/config_all.js';
 
-export default function Logo() {
+export default function C1Logo() {
   
   // initial rotation state is 0 degrees
   const [rotation, setRotation] = useState(true);

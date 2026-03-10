@@ -1,9 +1,8 @@
-import React from 'react';
-import './MenuBoxItem.css';
 import { useDispatch } from 'react-redux';
+import './MenuBoxItem.css';
 
 // name is displayed on the menu and used by dispatch
-export default ({name, children}) => {
+export default function MenuBoxItem ({name, children}) {
   const dispatch = useDispatch();
 
   function menuItemClicked() {

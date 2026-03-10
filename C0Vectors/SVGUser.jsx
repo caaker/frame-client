@@ -1,4 +1,3 @@
-import React from 'react';
 import ParentSVG from './ParentSVG.jsx';
 
 export default ( props ) => {

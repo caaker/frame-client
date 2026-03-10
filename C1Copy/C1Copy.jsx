@@ -1,5 +1,4 @@
 import arc from           'frame-arc';
-import React from         'react';
 import                    './C1Copy.css';
 import SVGCopy from       '../C0Vectors/SVGCopy.jsx';
 

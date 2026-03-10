@@ -1,9 +1,8 @@
 import './UUser.css';
 import Helper from '../F1Helper/class.Helper.js';
-import React from 'react';
 import { useSelector } from 'react-redux';
 
-export default () => {
+export default function UUser () {
   const User = useSelector(state => state.User.current);
   const baseURL = Helper.getBaseURL();
 

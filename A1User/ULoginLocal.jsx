@@ -1,8 +1,6 @@
 import './ULoginLocal.css';
-import React from 'React';
-import BoxUserForm from './BoxUserForm.jsx';
 
-export default () => {
+export default function ULoginLocal () {
   return (
     <div className ="box-inner">
       <form>

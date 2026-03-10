@@ -3,7 +3,7 @@ import Helper                        from '../F1Helper/class.Helper.js';
 
 const openweather = '78fd50d70e6c6a18205f31af5ff95107';
 
-const StationWeather = ({lat, lon}) => {
+export default function StationWeather({lat, lon}) {
   
   console.logD('DEBUG: L4 : F1-Page-Station-Weather ');
 
@@ -33,5 +33,3 @@ const StationWeather = ({lat, lon}) => {
       </>
   );
 };
-
-export default StationWeather;

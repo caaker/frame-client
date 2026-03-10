@@ -1,8 +1,7 @@
-import React               from 'react';
 import { useDispatch }     from 'react-redux';
 import                     './C1MenuLeft.css';
 
-const C1MenuLeft = () => {
+export default function C1MenuLeft() {
   const dispatch = useDispatch();
   const handleClick = () => {
     dispatch({ type: 'toggleMenuLeft' });
@@ -23,5 +22,3 @@ const C1MenuLeft = () => {
     </div>
   );
 };
-
-export default C1MenuLeft;

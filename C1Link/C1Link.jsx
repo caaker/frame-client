@@ -1,4 +1,3 @@
-import React from 'react';
 import './C1Link.css';
 
 export default function C1Link({ value }) {

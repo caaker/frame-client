@@ -1,4 +1,3 @@
-import React                          from 'react';
 import { useDispatch, useSelector }   from 'react-redux';
 import SVGUser                        from '../C0Vectors/SVGUser.jsx';
 

@@ -1,11 +1,9 @@
 import './A1User.css';
-
-import React              from 'react';
 import { useSelector }    from 'react-redux';
 import ULogin             from './ULogin.jsx';
 import UUser              from './UUser.jsx';
 
-export default () => {
+export default function A1User () {
   const user = useSelector((state)=>state.User.current);
   console.logD('DEBUG: L3 : F1-Page-User ');
   return (

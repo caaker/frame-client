@@ -1,18 +1,16 @@
 .sphere {
-    width: 32px;
-    height: 32px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: rotate 20s infinite linear;
+	width: 32px;
+	height: 32px;
+	transform-style: preserve-3d;
+	animation: rotate 5s infinite linear;
 }
 
 .ring {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(74, 144, 226, 0.7);
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(74, 144, 226, 0.3);
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	border: 1px solid rgba(74, 144, 226, 0.7);
+	border-radius: 50%;
 }
 
 .ring:nth-child(1) { transform: rotateY(0deg); }
@@ -20,10 +18,10 @@
 .ring:nth-child(3) { transform: rotateX(90deg); }
 
 @keyframes rotate {
-    from {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    to {
-        transform: rotateX(360deg) rotateY(360deg);
-    }
+	from {
+			transform: rotateX(0deg) rotateY(0deg);
+	}
+	to {
+			transform: rotateX(360deg) rotateY(360deg);
+	}
 }

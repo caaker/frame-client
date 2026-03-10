@@ -1,4 +1,3 @@
-import React                        from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import SVGHome                      from '../C0Vectors/SVGHome.jsx';
 

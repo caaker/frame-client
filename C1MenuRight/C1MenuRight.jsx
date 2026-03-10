@@ -1,12 +1,9 @@
-import React                             from     'react';
 import { useDispatch, useSelector }      from     'react-redux';
-
-import                                            './C1MenuRight.css';
-
 import SVGMenu                           from     '../C0Vectors/SVGMenu.jsx';
 import MenuBox                           from     './MenuBox.jsx';
+import                                            './C1MenuRight.css';
 
-export default () => {
+export default function C1MenuRight() {
   const dispatch = useDispatch();
   const menu_on = useSelector((state)=>state.MenuPage.on);
   function menuClicked() {

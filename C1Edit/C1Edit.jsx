@@ -1,4 +1,3 @@
-import React            from  'react';
 import { useDispatch }  from  'react-redux';
 import SVGEdit          from  '../C0Vectors/SVGEdit.jsx';
 import                        './C1Edit.css';

@@ -1,6 +1,4 @@
 import './F1ApexCenter.css';
-import React from 'react';
-import { useSelector }              from 'react-redux';
 import ApexCenterHome               from './ApexCenterHome.jsx';
 import ApexCenterUser               from './ApexCenterUser.jsx';
 import ApexCenterPeople             from './ApexCenterPeople.jsx';
@@ -21,8 +19,6 @@ export default function F1ApexCenter () {
 
 
 /*   
-
   This will be the chat / AI integration later
   {<ApexCenterPeople/>}
-
 */
