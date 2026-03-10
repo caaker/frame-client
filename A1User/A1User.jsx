@@ -9,18 +9,9 @@ export default () => {
   const user = useSelector((state)=>state.User.current);
   console.logD('DEBUG: L3 : F1-Page-User ');
   return (
-    <div id='page-user-outer'>
-      <div id='page-user-inner'>
-        
-        <div id='page-user'>
-          {!user && <ULogin></ULogin>}
-          {user  && <UUser></UUser>}
-        </div>
-        <div id='page-user-back'>
-          <p>test</p>
-        </div>
-      
-      </div>
+    <div id='page-user'>
+      {!user && <ULogin></ULogin>}
+      {user  && <UUser></UUser>}
     </div>
   );
 };

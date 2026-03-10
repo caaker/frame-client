@@ -1,11 +1,10 @@
-import './ULogin.css';
+import ULoginGoogle       from  './ULoginGoogle.jsx';
+import config             from  '../F1Customize/config_all.js';
+import                          './ULogin.css';
 
-import React from 'react';
-import ULoginGoogle from './ULoginGoogle.jsx';
-import config             from      '../F1Customize/config_all.js';
-
-export default () => {
+export default function ULogin () {
   return (
+
     <div id ="box-container">
       <div id ="box-container-2">
         <p className="title">
@@ -14,5 +13,6 @@ export default () => {
         <ULoginGoogle/>
       </div>
     </div>
+
   );
 };
