@@ -8,6 +8,8 @@ function fetchData() {
   
   Helper.fetchJSON(urls.articles, undefined, (articles) => {
     articles.reverse();
+    console.logD('DEBUG', 'orange')
+    console.logD(articles.length);
     store.dispatch({ type: 'initializeArticles', articles });
   });
   
