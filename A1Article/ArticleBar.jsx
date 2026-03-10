@@ -9,7 +9,7 @@ import                          './ArticleBar.css';
 export default function ArticleBar({article}) {
 
   const email = useSelector((state) => state.User.current.email);
-  const admin = (email === 'caaker.0@gmail.com') || (window.location.hostname === 'localhost');
+  const admin = (email === 'caaker.0@gmail.com');
 
   return (
     <div className='article_bar' >

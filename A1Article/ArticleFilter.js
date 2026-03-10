@@ -1,28 +1,16 @@
-// search these 4 values
-function Search(val, search_string) {
-
-  // title
-  if( val.title.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
+export default function Search (article, search_string) {
+  if( article.title.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
     return true;
   }
-
-  // summary
-  if( val.summary.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
+  if( article.summary.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
     return true;
   }
-
-  // tag
-  if( val.tag.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
+  if( article.tag.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
     return true;
   }
-
-  // domain
-  if( val.domain.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
+  if( article.domain.toLowerCase().search(search_string.toLowerCase()) !== -1 ) {
     return true;
   }
-
-  // search term not found, return false to Array.filter()
   return false;
 }
-
-export default Search;
+git 

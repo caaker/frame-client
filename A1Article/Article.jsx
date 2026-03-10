@@ -1,7 +1,6 @@
 import arc              from  'frame-arc';
-import React            from  'react';
-import                        './Article.css';
 import ArticleBar       from  './ArticleBar.jsx';
+import                        './Article.css';
 
 const image_not_found = '/images/medical-symbol.jpeg';
 
