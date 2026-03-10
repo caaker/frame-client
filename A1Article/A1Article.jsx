@@ -14,6 +14,10 @@ export default function A1Article () {
   let articles = useSelector((state) => state.Articles.articles);
   let search = useSelector((state) => state.SearchInput.current);
 
+  console.logD('DEBUG:', 'red');
+  console.logD(articles);
+
+
   function makeArticles() {
     if(articles && search) {     
       articles = articles.filter((val) => {
