@@ -1,5 +1,5 @@
-// Downloads images from cache.json, saves to images-articles/ with slugified titles
-// Utilizes github lfs to store images in the repo without bloating it
+// Downloads images from cache.txt, saves to images-articles/ with slugified titles
+// Utilizes github lfs to store image references in the repo and not the entire file
 
 const https = require("https");
 const fs = require("fs");
