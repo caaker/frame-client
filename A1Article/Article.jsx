@@ -5,6 +5,7 @@ import ArticleBar       from  './ArticleBar.jsx';
 
 const image_not_found = '/images/medical-symbol.jpeg';
 export default ({ article }) => {
+  console.logD('DEBUG: L3 : F1-Page-A1Article-Article');  
 
   // create hash from the article title
   const hash = arc.makeAnchorHash(article.title);
