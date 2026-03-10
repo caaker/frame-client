@@ -1,5 +1,4 @@
 import './F1Page.css';
-import React                from 'react';
 import { useSelector }      from 'react-redux';
 
 // app pages
@@ -11,7 +10,7 @@ import A1People             from              '../A1People/A1People.jsx';
 // framework pages
 import A1User from                    '../A1User/A1User.jsx';
 
-export default () => {
+export default function F1Page () {
   const page = useSelector( (state) => state.MenuPage.current );
   console.logD('DEBUG: L2 : F1-Page');
   return (

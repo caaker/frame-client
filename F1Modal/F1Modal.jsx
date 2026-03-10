@@ -1,4 +1,3 @@
-import React                                from   'react';
 import { useSelector, useDispatch }         from   'react-redux';
 import './F1Modal.css';
 import F1M1                                 from   './M1.jsx';

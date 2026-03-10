@@ -1,4 +1,3 @@
-import React              from      'react';
 import                              './F1.css';
 import config             from      '../F1Customize/config_all.js';
 

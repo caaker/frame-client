@@ -1,10 +1,8 @@
 import './F1Footer.css';
 
-import React from 'react';
 import { useSelector } from 'react-redux';
 
-export default ({config}) => {
-
+export default function F1Footer({config})  {
   console.logD('DEBUG: L2 : F1-Footer ');
 
   const mailer = `mailto:${ config.email }?subject=${ config.subject }`;
@@ -20,5 +18,3 @@ export default ({config}) => {
     </div>
   );
 };
-
-
