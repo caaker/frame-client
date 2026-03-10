@@ -132,14 +132,13 @@ Global JavaScript
 
   <script>
 
-    window.console.logD = function(arg1, arg2) {
-      const on = true;
-      if(on) {
-        let color = arg2 || '#0000ff';
-        let str = '%c' + arg1;
-        console.log(str, 'color: ' + color);
+    window.console.logD = (message, color = '#0000ff') => {
+      const isEnabled = true;
+      if (isEnabled) {
+        const formattedMessage = `%c${message}`;
+        console.log(formattedMessage, `color: ${color}`);
       }
-    }
+    };
 
   </script>
 
