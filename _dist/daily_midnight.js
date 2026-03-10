@@ -31,8 +31,5 @@ async function fetchData(url) {
 const articles = await fetchData(url);
 if (articles) {
   fs.writeFileSync('_dist/cache.txt', JSON.stringify(articles, null, 2));
-  console.log('------------------------------------_dist/cache.txt updated!')
-  const images = articles.map(article => article.image);
-  fs.writeFileSync('_dist/images.txt', JSON.stringify(images, null, 2));
-  console.log('------------------------------------_dist/images.txt updated!')
+  console.log('------------------------------------_dist/cache.txt updated!');
 }
