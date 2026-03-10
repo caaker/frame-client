@@ -1,14 +1,13 @@
 import                                  './A1Bookmark.css';
-import React, { useEffect, useState }   from 'react';
+import { useState }                     from 'react';
 import { useSelector }                  from 'react-redux';
 import C1Link                           from '../C1Link/C1Link.jsx'
 
-export default () => {
+export default function A1Bookmark() {
   const [tag, setTag] = useState('Nutrition');
   const articles = useSelector((state) => state.Articles.articles);
   const top_hash = {};
 
-  // top hash models an n-ary tree with only 2 levels - tags and domains
   function makeTopHash() {
     articles.forEach((article) => {
       if(!(article.tag in top_hash)) {

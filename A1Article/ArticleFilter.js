@@ -13,4 +13,3 @@ export default function Search (article, search_string) {
   }
   return false;
 }
-git 
