@@ -13,38 +13,34 @@
 #box-container:hover #box-container-inner {
   transform: rotateY(180deg);
 }
-
 #box-container-front {
+  border: 1px solid black;
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-
-  border: 1px solid black;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   padding:  10px;
   background: var(--opa);
   transition: background 2s;
   box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.4);
   border-radius: 2px;
-
   font-weight: bold;
+
 }
 #box-container-back {
+  border: 1px solid blue;
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  
-  transform: rotateY(180deg); /* Starts the back face already flipped */
-  border: 1px solid blue;
-}
 
+  transform: rotateY(180deg); 
+}
 
 
 
@@ -59,13 +55,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   padding:  10px;
   background: var(--opa);
   transition: background 2s;
   box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.4);
   border-radius: 2px;
-
   font-weight: bold;
 }
 
