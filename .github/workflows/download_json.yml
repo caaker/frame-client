@@ -1,4 +1,4 @@
-name: daily_run
+name: download_json
 
 # run daily or manually
 on:
@@ -33,7 +33,7 @@ jobs:
       - name: Run Fetch Script
         run: |
           mkdir -p _dist
-          node daily_midnight.js
+          node download_json.js
 
       # commits and pushes fromm the runner to the current repository; only files that have changed
       - name: Commit and Push cache.txt
