@@ -1,41 +1,51 @@
-name: daily_midnight
+name: daily_run
 
+# run daily or manually
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '11 1 * * *'
   workflow_dispatch:
 
+# permission to write to the repository and manage actions
 permissions:
   contents: write
   actions: write
 
 jobs:
+
+  # cancel the job if it takes more than 1 minute
   run-script:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
+
+      # clones repository into the github action runner
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # installs node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Network Test
-        run: curl -I https://jsonplaceholder.typicode.com/posts
-
+      # create a directory if it does not exist and run the daily script
       - name: Run Fetch Script
         run: |
           mkdir -p _dist
           node _dist/daily_midnight.js
 
+      # commits and pushes fromm the runner to the current repository; only files that have changed
       - name: Commit and Push cache.txt
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
+
+          # [skip cli] is functional; it ensures the commit does not trigger another workflow
           commit_message: 'chore: auto-update article cache [skip ci]'
           file_pattern: '_dist/*'
+      
+      # triggers a webpack build
       - name: Trigger Build Workflow
-        run: gh workflow run webpack.yml 
+        run: gh workflow run webpack.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
