@@ -12,7 +12,7 @@ const livelong = {
   logo: "images/favicon.png",
 
   // background
-  background: "images/bg-hex.jpg",
+  background: "images/bg-wood.jpg",
 
   // title
   title: "livelong",
