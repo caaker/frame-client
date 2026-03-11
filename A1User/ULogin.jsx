@@ -10,7 +10,8 @@ export default function ULogin () {
       <div id ="box-container-inner">
 
         <div id ="box-container-front">
-          <p className="title"> {config.title} </p>        
+          <p className="title"> {config.title} </p>
+          <ULoginGoogle/>
         </div>
 
         <div id ="box-container-back">
