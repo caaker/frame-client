@@ -33,7 +33,7 @@ jobs:
       - name: Run Fetch Script
         run: |
           mkdir -p _dist
-          node _dist/daily_midnight.js
+          node daily_midnight.js
 
       # commits and pushes fromm the runner to the current repository; only files that have changed
       - name: Commit and Push cache.txt
