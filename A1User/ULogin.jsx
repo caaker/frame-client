@@ -15,7 +15,7 @@ export default function ULogin () {
         </div>
 
         <div id ="box-container-back">
-          <p>test-0</p>
+          <p>Hi there!</p>
         </div>
 
       </div>
