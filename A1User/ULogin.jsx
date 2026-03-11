@@ -2,7 +2,6 @@ import ULoginGoogle       from  './ULoginGoogle.jsx';
 import config             from  '../F1Customize/config_all.js';
 import                          './ULogin.css';
 
-// <ULoginGoogle/>
 export default function ULogin () {
   return (
 
