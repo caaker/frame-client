@@ -7,7 +7,8 @@ const path = require("path");
 
 const items = JSON.parse(fs.readFileSync("cache.txt", "utf8"));
 const outDir = "images-articles";
-fs.mkdirSync(outDir);
+
+fs.mkdirSync('images-articles', { recursive: true });
 
 items.forEach(({ title, image }) => {
   const ext = path.extname(image);
