@@ -13,13 +13,13 @@
 #box-container:hover #box-container-inner {
   transform: rotateY(180deg);
 }
-#box-container-front, #box-container-back {
+
+#box-container-front {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-}
-#box-container-front {
+
   border: 1px solid black;
 
   display: flex;
@@ -36,6 +36,11 @@
   font-weight: bold;
 }
 #box-container-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  
   transform: rotateY(180deg); /* Starts the back face already flipped */
   border: 1px solid blue;
 }
