@@ -1,13 +1,13 @@
-# webpack.yml
-
 name: webpack
 
+# run this file on a push to main or manually
 on:
   push:
     branches:
-      - main          # on push to branch main -> trigger
-  workflow_dispatch:  # on GUI button push -> trigger
+      - main
+  workflow_dispatch:
 
+# a new run will cancel the previous run, this avoids collisions
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -17,22 +17,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      #clones into the github actions runner
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
+      
+      # installs node into runner
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # installs packages via package-lock.json
       - name: Install dependencies
         run: npm ci
 
+      # runs build script defined in package.json
       - name: Run Webpack build
         run: npm run build-dev
 
+      # pushes everthing in _dist to caaker.github.io
       - name: Push to caaker.github.io
         uses: cpina/github-action-push-to-another-repository@main
         env:
