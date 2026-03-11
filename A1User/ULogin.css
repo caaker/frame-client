@@ -21,6 +21,19 @@
 }
 #box-container-front {
   border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding:  10px;
+  background: var(--opa);
+  transition: background 2s;
+  box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.4);
+  border-radius: 2px;
+
+  font-weight: bold;
 }
 #box-container-back {
   transform: rotateY(180deg); /* Starts the back face already flipped */
