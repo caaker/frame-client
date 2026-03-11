@@ -10,9 +10,11 @@
   transition: transform 1s;
   transform-style: preserve-3d;
 }
+/* 
 #box-container:hover #box-container-inner {
   transform: rotateY(180deg);
 }
+ */
 #box-container-front {
   position: absolute;
   width: 100%;
