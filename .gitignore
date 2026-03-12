@@ -1,13 +1,6 @@
-#
-# created by user
-#
 
-# begings with private
-private*
-
-#
-# created by apps+
-#
+# begings with _private
+_private*
 
 # created by MacOS
 *.DS_Store
