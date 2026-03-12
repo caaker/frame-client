@@ -1,6 +1,8 @@
 name: webpack
 
 # run this file on a push to main or manually
+# this file has the net effect of running webpack for frame-client
+
 on:
   push:
     branches:
