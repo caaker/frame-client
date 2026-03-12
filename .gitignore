@@ -19,7 +19,7 @@ private*
 # created by javac
 **/classes/
 
-# created python
+# created by python
 __pycache__
 
 # created by c and cpp
