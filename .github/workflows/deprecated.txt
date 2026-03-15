@@ -1,0 +1,25 @@
+# method 1 - pushes everything in _dist to caaker.github.io, deprecated
+- name: Push to caaker.github.io
+  uses: cpina/github-action-push-to-another-repository@main
+  env:
+    API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+  with:
+    source-directory: '_dist'
+    destination-github-username: 'caaker'
+    destination-repository-name: 'caaker.github.io'
+    target-branch: 'main'
+
+# method 2
+# GitHub knows where your repo/branch is for Pages, a token is not required.
+# We need to update permissions in this file and the deployment method in the GUI.
+# This only works in one repo (not repo-to-repo), so stash.
+
+# the packer
+- name: Upload artifact
+  uses: actions/upload-pages-artifact@v4
+  with:
+    path: _dist
+
+# the mover
+- name: Deploy to GitHub Pages
+  uses: actions/deploy-pages@v4
