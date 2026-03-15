@@ -1,13 +1,10 @@
 import arc              from  'frame-arc';
 import ArticleBar       from  './ArticleBar.jsx';
 import                        './Article.css';
-
-const image_not_found = '/images/medical-symbol.jpeg';
+import config           from  '../F1Customize/config_all.js';
 
 export default function Article ({ article }) {
-  
   const hash = arc.makeAnchorHash(article.title);
-  
   return (
     <article id={hash} className='__article'>
 
@@ -23,7 +20,7 @@ export default function Article ({ article }) {
           src={article.image}
           alt={article.title}
           onError={(error) => {
-            error.currentTarget.src = image_not_found;
+            error.currentTarget.src = config.fallback;
             console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'red');
 
             // prevents infinite loops if the fallback image fails
