@@ -1,0 +1,12 @@
+# old method
+      # pushes everthing in _dist to caaker.github.io
+      # deprecated
+      # - name: Push to caaker.github.io
+      #   uses: cpina/github-action-push-to-another-repository@main
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #   with:
+      #     source-directory: '_dist'
+      #     destination-github-username: 'caaker'
+      #     destination-repository-name: 'caaker.github.io'
+      #     target-branch: 'main'
