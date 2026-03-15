@@ -14,6 +14,9 @@ const livelong = {
   // background
   background: "images/bg-white.jpg",
 
+  // fallback
+  fallback: "images/medical-symbol.jpeg",
+
   // title
   title: "livelong",
   title_on: true,
