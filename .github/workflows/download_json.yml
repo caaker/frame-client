@@ -12,22 +12,20 @@ permissions:
   actions: write
 
 jobs:
-
   # cancel the job if it takes more than 1 minute
   run-script:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
-
       # clones repository into the github action runner
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      # installs node.js
+      # installs node.js 24 (Active LTS as of March 2026)
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       # create a directory if it does not exist and run the daily script
       - name: Run Fetch Script
@@ -35,12 +33,11 @@ jobs:
           mkdir -p _dist
           node download_json.js
 
-      # commits and pushes fromm the runner to the current repository; only files that have changed
+      # commits and pushes from the runner to the current repository
       - name: Commit and Push cache.txt
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
-
-          # [skip cli] is functional; it ensures the commit does not trigger another workflow
+          # [skip ci] ensures the commit does not trigger another workflow
           commit_message: 'chore: auto-update article cache [skip ci]'
           file_pattern: '_dist/*'
       
