@@ -2,7 +2,8 @@ import './C1Favicon.css';
 
 export default function C1Favicon (props) {
 
-  // does not fire on a "404 error", as this is a valid response that shows up as an error in the console
+  // failed sub-requests that show up in the dev tools are not accessible here
+  // only the final request has the capability to trigger an error
   function errorHandler (event) {
     event.target.src = '/images/medical-symbol.jpeg';
     console.logD('DEBUG: Google Favicon API: failed', 'red');
