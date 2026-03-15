@@ -44,19 +44,18 @@ jobs:
       - name: Run Webpack build
         run: npm run build-dev
 
-# new method
-# github knows where you repo/branch is for pages, a token is not required
-# we need to update permissions in this file and the deployment method in the GUI
-      
-      # the packer
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+# method 3
+      - name: Deploy to Remote Repo
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: _dist
-      
-      # the mover
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+          # This token is your "Master Key"
+          personal_token: ${{ secrets.MY_DEPLOY_TOKEN }}
+          
+          # The destination
+          external_repository: caaker/caaker.github.io
+          publish_dir: ./_dist
+          publish_branch: main
+    
 
 
 
