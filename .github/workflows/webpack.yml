@@ -48,9 +48,8 @@ jobs:
       - name: Deploy to Remote Repo
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # This token is your "Master Key"
-          personal_token: ${{ secrets.MY_DEPLOY_TOKEN }}
-          
+          # created and named in the GUI
+          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
           # The destination
           external_repository: caaker/caaker.github.io
           publish_dir: ./_dist
