@@ -45,13 +45,16 @@ jobs:
         run: npm run build-dev
 
 # new method
-
-      # github knows where you repo/branch is for pages, a token is not required
+# github knows where you repo/branch is for pages, a token is not required
+# we need to update permissions in this file and the deployment method in the GUI
+      
+      # the packer
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: _dist
-
+      
+      # the mover
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
 
