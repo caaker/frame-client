@@ -35,17 +35,30 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+# new method
       # runs build script defined in package.json
       - name: Run Webpack build
         run: npm run build-dev
 
-      # pushes everthing in _dist to caaker.github.io
-      - name: Push to caaker.github.io
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      # github knows where you repo/branch is for pages, a token is not required
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          source-directory: '_dist'
-          destination-github-username: 'caaker'
-          destination-repository-name: 'caaker.github.io'
-          target-branch: 'main'
+          path: _dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
+
+# old method
+      # pushes everthing in _dist to caaker.github.io
+      # deprecated
+      # - name: Push to caaker.github.io
+      #   uses: cpina/github-action-push-to-another-repository@main
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #   with:
+      #     source-directory: '_dist'
+      #     destination-github-username: 'caaker'
+      #     destination-repository-name: 'caaker.github.io'
+      #     target-branch: 'main'
