@@ -1,7 +1,8 @@
 name: webpack
 
 # run this file on a push to main or manually
-# this file has the net effect of running webpack for frame-client
+# this file has the net effect of running webpack for frame-client and pushing the result to github pages
+# it is very efficient, if bundle.js does not change there is no change at the destination repository
 
 on:
   push:
@@ -50,12 +51,11 @@ jobs:
         with:
           # created and named in the GUI
           personal_token: ${{ secrets.API_TOKEN_GITHUB }}
-          # The destination
-          external_repository: caaker/caaker.github.io
+          # the source
           publish_dir: ./_dist
+          # the destination
+          external_repository: caaker/caaker.github.io
           publish_branch: main
     
-
-
 
 
