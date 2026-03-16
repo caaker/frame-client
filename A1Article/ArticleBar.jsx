@@ -5,7 +5,6 @@ import C1Delete         from    '../C1Delete/C1Delete.jsx';
 import C1Favicon        from    '../C1Favicon/C1Favicon.jsx';
 import                          './ArticleBar.css';
 
-
 export default function ArticleBar({article}) {
 
   const email = useSelector((state) => state.User.current.email);
