@@ -10,6 +10,17 @@
 
 /* Used in - F1Apex */
 
-.apex_height {
-  
+:root {
+  --z-apex-height: 50px;
+}
+
+/* Used ... */
+
+:root {
+  --z-a: 10;
+  --z-b: 20;
+  --z-c: 30;
+  --z-d: 40;
+  --z-e: 50;
+  --z-f: 60;
 }
