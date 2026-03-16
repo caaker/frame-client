@@ -23,3 +23,19 @@
 # the mover
 - name: Deploy to GitHub Pages
   uses: actions/deploy-pages@v4
+
+# not good, probably discard
+
+      # commits and pushes from the runner to the current repository
+      - name: Commit and Push cache.txt
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          # [skip ci] ensures the commit does not trigger another workflow
+          commit_message: 'chore: auto-update article cache [skip ci]'
+          file_pattern: '_dist/*'
+      
+      # triggers a webpack build
+      - name: Trigger Build Workflow
+        run: gh workflow run webpack.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
