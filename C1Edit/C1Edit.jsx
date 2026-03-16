@@ -12,5 +12,5 @@ export default function C1Edit({ article, admin }) {
     dispatch({ type: 'toggleModalOn', config: true });
     dispatch({ type: 'setArticleForm', data: article });
   }
-  return <SVGEdit className="medd_edit" onClick={editClicked} />;
+  return <SVGEdit className="article_icons_right" onClick={editClicked} />;
 }
