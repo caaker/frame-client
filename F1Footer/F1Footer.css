@@ -26,11 +26,11 @@
   transition: background 2s;
 }
 
-.footer_item{
+.footer_item {
   position: relative;
   top: 6px;
   margin-left: 20px;
-  color: rgba(128, 128, 128, .99);
+  background-color: var(--bg-white-90);
   text-decoration: none;
   font-size:  12px;
 }

@@ -8,12 +8,10 @@ export default function C1Logo() {
   const [rotation, setRotation] = useState(true);
   
   // on each click we toggle the global opacity
-  function setGlobalOpacity() {
-    if(rotation) {
-      document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .1)');
-    } else {
-      document.documentElement.style.setProperty('--opa', 'rgba(255, 255, 255, .9)');
-    }
+  if (rotation) {
+    document.documentElement.style.setProperty('--opa', 'var(--bg-white-10)');
+  } else {
+    document.documentElement.style.setProperty('--opa', 'var(--bg-white-90)');
   }
   
   function onClick() {
