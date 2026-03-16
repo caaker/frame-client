@@ -6,7 +6,7 @@ import ArticleFilter          from './ArticleFilter.js';
 import                        './A1Article.css';
 
 export default function A1Article () {
-  console.logD('DEBUG: L3 : F1-Page-A1Article ');
+  console.logD('DEBUG: L3 : F1-Page-A1Article : Hello World');
   
   useEffect(() => {
     arc.scrollToHash(0);
