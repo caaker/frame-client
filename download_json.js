@@ -15,7 +15,7 @@ async function fetchData(url) {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
-    console.error('fetchData failed:', error.name === 'TimeoutError' ? 'timeout' : error.message);
+    console.error('fetchData failed:', error.message);    
     return null;
   }
 }
