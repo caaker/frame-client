@@ -1,5 +1,6 @@
 .c1_copy {
   filter: grayscale(100%);
+  margin-left: 3px;
   opacity: .3;
   float: right;
   height: 100%;
