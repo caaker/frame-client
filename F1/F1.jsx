@@ -13,7 +13,7 @@ import                              '../F1Data/F1Data.js';
 import                              '../F1Socket/F1Socket.js';
 
 import                              './F1.css';
-
+import                              '../F1Customize/global.css';
 
 export default function F1 () {
   console.logD('DEBUG: L1 : F1');
