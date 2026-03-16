@@ -45,8 +45,10 @@
 
 /* glass system*/
 :root {
-  --bg-white-90: rgb(255 255 255 / 0.9);
-  --bg-white-10: rgb(255 255 255 / 0.10);
+  --bg-white-100: rgb(255 255 255 / 1);
+  --bg-white-90:  rgb(255 255 255 / 0.90);
+  --bg-white-50:  rgb(255 255 255 / 0.50);
+  --bg-white-10:  rgb(255 255 255 / 0.10);
 }
 
 /* filter from JS */
