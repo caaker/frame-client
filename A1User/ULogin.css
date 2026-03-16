@@ -28,7 +28,7 @@
   padding:  10px;
   background: var(--opa);
   transition: background 2s;
-  box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.4);
+  box-shadow: var(--shadow-sm);
   border-radius: 2px;
   font-weight: bold;
 
@@ -48,7 +48,7 @@
   padding:  10px;
   background: var(--opa);
   transition: background 2s;
-  box-shadow: 0px 1px 3px rgba(25, 25, 25, 0.4);
+  box-shadow: var(--shadow-sm);  
   border-radius: 2px;
   font-weight: bold;
 }
