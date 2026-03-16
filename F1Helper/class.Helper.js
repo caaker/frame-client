@@ -1,13 +1,10 @@
 class Helper {
 
   constructor() {
-    // use later
     // const origin = window.location.origin;
     // if ( origin === 'https://caaker.github.io' ) {}
-
   }
 
-  // move to environment variable
   static getWebSocketURL() {
     return 'wss://frame-server-x8qw.onrender.com';
   }
@@ -31,19 +28,22 @@ class Helper {
       onsuccess(json);
     } catch (error) {
       onfailure(error);
-      console.logD('DEBUG: Helper: fetch failed: ' + url, 'red');
-      console.logD(error);
     }
   }
   
-  static onFailureDefault() { 
-
+  static onFailureDefault(error) {
+    console.logD('DEBUG: Helper: fetch failed: ' + url, 'red');
+    console.logD(error);
   }
 
-  static onSuccessDefault() { 
-
+  static onSuccessDefault(json) { 
   }
 
 }
 
 export default Helper;
+
+
+
+
+
