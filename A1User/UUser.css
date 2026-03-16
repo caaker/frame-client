@@ -53,15 +53,16 @@
     width: 100px;
     height:  100px;
     border-radius: 50px;
-    border: 1px solid rgba(0, 0, 0, .1);
+    border: 2px solid rgb(0 0 0 / 0.2);
     box-sizing: border-box;
 }
 #user-image-wrapper {
     width: 110px;
     border-radius: 55px;
-    border: 2px solid rgba(0, 0, 0, .2);
+    border: 2px solid rgb(0 0 0 / 0.2);
     box-sizing: border-box;
 }
+
 #user-button{
   border: none;
   margin: 20px 0px 0px 0px;

@@ -48,3 +48,15 @@
   --bg-white-90: rgb(255 255 255 / 0.9);
   --bg-white-10: rgb(255 255 255 / 0.10);
 }
+
+/* filter from JS */
+:root {
+
+  --height: 30px;
+  --left: 20px;
+
+  --color-blue: #4285f3;
+  --color-grey: #444444;
+
+  --opa: rgb(255 255 255 / 0.90);
+}
