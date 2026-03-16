@@ -1,7 +1,5 @@
 import fs from 'fs';
-
 const url = "https://frame-server-x8qw.onrender.com/articles/get";
-
 const controller = new AbortController();
 
 const browser = {
