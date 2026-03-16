@@ -6,7 +6,7 @@ export default function C1Copy (props) {
   }
 
   return (
-    <SVGCopy className='article_icons_right' onClick={onClick} />
+    <SVGFlip className='article_icons_right' onClick={onClick} />
   );
 
 };
