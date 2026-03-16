@@ -1,17 +1,13 @@
 import fs from 'fs';
 const url = "https://frame-server-x8qw.onrender.com/articles/get";
-const controller = new AbortController();
-
 const browser = {
-  signal: controller.signal,
   headers: {
-
-    // this agent mimics a modern Chrome browser, required when running from github actions
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'application/json',
     'Cache-Control': 'no-cache'
-  }
-}
+  },
+  signal: AbortSignal.timeout(10000)
+};
 
 async function fetchData(url) {
   try {
@@ -19,7 +15,7 @@ async function fetchData(url) {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
-    console.error('fetchData failed:', error.message);
+    console.error('fetchData failed:', error.name === 'TimeoutError' ? 'timeout' : error.message);
     return null;
   }
 }
