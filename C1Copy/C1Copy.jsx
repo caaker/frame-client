@@ -7,7 +7,7 @@ export default function C1Copy (props) {
 
   // todo - move this to arc - makeAnchorHashLink
   const hash_link = window.location.origin + '#' + hash;
-  const class_name = props.className || 'c1_copy';
+  const class_name = props.className || 'article_icons_right';
 
   function onClick(event) {
     arc.copyToClipboard(hash_link);
