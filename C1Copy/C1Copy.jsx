@@ -7,7 +7,6 @@ export default function C1Copy (props) {
 
   // todo - move this to arc - makeAnchorHashLink
   const hash_link = window.location.origin + '#' + hash;
-  const class_name = props.className || 'article_icons_right';
 
   function onClick(event) {
     arc.copyToClipboard(hash_link);
@@ -15,7 +14,7 @@ export default function C1Copy (props) {
   }
 
   return (
-    <SVGCopy className={class_name} onClick={onClick} />
+    <SVGCopy className='article_icons_right' onClick={onClick} />
   );
 
 };
