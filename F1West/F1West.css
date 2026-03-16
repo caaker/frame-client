@@ -7,7 +7,7 @@
   width: 50px;
   height: calc(100vh - var(--z-apex-height));
   background: var(--opa);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-sm);   
   display: flex;
   justify-content: center;
   align-items: center;
