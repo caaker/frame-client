@@ -31,5 +31,5 @@ export default function C1Delete({ article, admin }) {
     Helper.fetchJSON(`${Helper.getBaseURL()}/articles/delete/${id}`, options);
   }
 
-  return <SVGDelete className="medd_delete" onClick={deleteClicked} />;
+  return <SVGDelete className="article_icons_right" onClick={deleteClicked} />;
 }
