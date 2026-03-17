@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 require('./webpack.global');
 
 const css = {
@@ -27,29 +28,31 @@ const tsx = {
 };
 
 const stats = { warnings: false };
-
 const entry = path.resolve(__dirname, 'index.jsx');
-
 const output = {
   filename: 'bundle.js',
   path: path.resolve(__dirname, '_dist')
-}
-
-const file_types = {
-  rules: [
-    css,
-    jsx,
-    tsx
-  ]
 };
 
-const config_obj = {
-  stats:          stats,
-  entry:          entry,
-  output:         output,
-  module:         file_types
+const file_types = {
+  rules: [css, jsx, tsx]
 };
 
 module.exports = (env) => {
-  return config_obj;
+  const isProduction = env && env.production;
+
+  const plugins = [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
+      'process': 'undefined' 
+    })
+  ];
+
+  return {
+    stats:   stats,
+    entry:   entry,
+    output:  output,
+    module:  file_types,
+    plugins: plugins
+  };
 };
