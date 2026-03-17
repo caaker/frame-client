@@ -1,5 +1,4 @@
 .apex_hold_hold{
-  display: flex;
   z-index: var(--z-a);
   background: var(--opa);
   transition: background 2s;
