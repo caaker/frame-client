@@ -8,10 +8,12 @@
   cursor: pointer;
 }
 
-/* Used in - F1Apex */
+/* used in ... */
 
 :root {
   --z-apex-height: 50px;
+  --height-logo: 30px;
+  --left: 20px;
 }
 
 /* used ... */
@@ -25,7 +27,7 @@
   --z-f: 60;
 }
 
-/* elevation system; shadow casts south  */
+/* shadows, cast south with elevation system  */
 :root {
   --shadow-sm: 
     0 1px 2px rgb(0 0 0 / 0.1), 
@@ -51,14 +53,13 @@
   --bg-white-10:  rgb(255 255 255 / 0.10);
 }
 
-/* filter from JS */
+/* colors */
 :root {
-
-  --height: 30px;
-  --left: 20px;
-
   --color-blue: #4285f3;
   --color-grey: #444444;
+}
 
+/* ... */
+:root {
   --opa: rgb(255 255 255 / 0.90);
 }
