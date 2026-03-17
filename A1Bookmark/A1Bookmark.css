@@ -34,7 +34,7 @@
 .tag_ovals{
   padding: 4px;
   margin: 4px;
-  background-color: rgba(255, 255 ,255 , .7);
+  background-color: rgb(255 255 255 / .7);
   border: 1px solid #dddddd;
   border-radius: 4px;
   font-size: 11px;
