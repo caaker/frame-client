@@ -1,0 +1,6 @@
+// test url 
+const url = "https://jsonplaceholder.typicode.com/posts";
+
+// link
+const mailer = `mailto:${ config.email }?subject=${ config.subject }`;
+<a className="footer_item" href={mailer}>contact</a>
