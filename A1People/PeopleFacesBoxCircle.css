@@ -3,7 +3,7 @@
     width: 40px;
     height: 40px;
     border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgb(0 0 0 / .2);
 }
 #zimage {
     position:relative;
@@ -13,10 +13,7 @@
     width: 36px;
     height: 36px;
     border-radius: 18px;
-    border: 1px solid rgba(0, 0, 0, .1);
+    border: 1px solid rgb(0 0 0 / .1);
 }
 #zimage:hover {
 }
-
-/*    border: 1px solid var(--color-blue);
-*/
