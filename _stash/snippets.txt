@@ -4,3 +4,29 @@ const url = "https://jsonplaceholder.typicode.com/posts";
 // link
 const mailer = `mailto:${ config.email }?subject=${ config.subject }`;
 <a className="footer_item" href={mailer}>contact</a>
+
+
+
+// try 1 - prefer ESM, remove this
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+export default {
+  plugins: [
+    cssInjectedByJsPlugin()
+  ],
+  build: {
+    minify: false,
+    outDir: '_dist-vite',
+    emptyOutDir: false,
+    cssCodeSplit: false,
+    lib: { 
+      entry: './index.jsx', 
+      formats: ['iife'],
+      name: 'myApp'
+    },
+    rollupOptions: {
+      output: {
+        entryFileNames: 'bundle.js'
+      }
+    }
+  }
+}

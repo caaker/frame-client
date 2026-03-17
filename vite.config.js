@@ -1,23 +1,21 @@
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-export default {
-  plugins: [
-    cssInjectedByJsPlugin()
-  ],
+export default defineConfig({
+
+  // required boilerplate for react 
+  plugins: [react()],
   build: {
-    minify: false,
-    outDir: '_dist-vite',
-    emptyOutDir: false,
-    cssCodeSplit: false,
-    lib: { 
-      entry: './index.jsx', 
-      formats: ['iife'],
-      name: 'myApp'
-    },
+    outDir: '_dist',
     rollupOptions: {
       output: {
-        entryFileNames: 'bundle.js'
-      }
-    }
-  }
-}
+
+        // tells vite to create one file
+        manualChunks: undefined,
+
+        // this is the output file
+        entryFileNames: 'bundles.js',
+      },
+    },
+  },
+});
