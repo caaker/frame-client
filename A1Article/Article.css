@@ -15,26 +15,26 @@
   line-height: 1.3;
   width: 100%;
   text-decoration: none;
-  color: rgb(24 26 29 / 1); 
+  color: var(--color-black-32);
 }
 .article_summary {
   margin-top: 6px;
   line-height: 1.3;
   font-size: 14px;
   width: 100%;
-  color: rgb(68 68 68 / 1); 
+  color: var(--color-black-64);
 }
 .article_tag {
   margin-top: 6px;
   font-size: 12px;
   width: 100%;
-  color: rgb(128 128 128 / 1);
+  color: var(--color-black-128);
 }
 .article_domain {
   margin-top: 6px;
   font-size: 10px;
   width: 100%;
-  color: rgb(128 128 128 / 1);
+  color: var(--color-black-128);
 }
 
 
