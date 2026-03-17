@@ -1,27 +1,34 @@
+/* updated by gemeni */
+
 .sphere {
-	width: 32px;
-	height: 32px;
-	transform-style: preserve-3d;
-	animation: rotate 5s infinite linear;
+  width: 32px;
+  height: 32px;
+  transform-style: preserve-3d;
+  animation: rotate 5s infinite linear;
 }
 
 .ring {
-	position: absolute;
-	width: 32px;
-	height: 32px;
-	border: 1px solid rgba(74, 144, 226, 0.7);
-	border-radius: 50%;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgb(74 144 226 / 0.7);
+  border-radius: 50%;
+  /* Enhancement: Add a soft glow and fade animation */
+  box-shadow: 0 0 8px rgb(74 144 226 / 0.4);
+  animation: pulse 2s ease-in-out infinite alternate;
 }
 
-.ring:nth-child(1) { transform: rotateY(0deg); }
-.ring:nth-child(2) { transform: rotateY(90deg); }
-.ring:nth-child(3) { transform: rotateX(90deg); }
+.ring:nth-child(1) { transform: rotateY(0deg); animation-delay: 0s; }
+.ring:nth-child(2) { transform: rotateY(90deg); animation-delay: 0.5s; }
+.ring:nth-child(3) { transform: rotateX(90deg); animation-delay: 1s; }
 
 @keyframes rotate {
-	from {
-			transform: rotateX(0deg) rotateY(0deg);
-	}
-	to {
-			transform: rotateX(360deg) rotateY(360deg);
-	}
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Enhancement: Subtle breathing effect */
+@keyframes pulse {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
 }

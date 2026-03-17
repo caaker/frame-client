@@ -38,9 +38,10 @@ const file_types = {
   rules: [css, jsx, tsx]
 };
 
+// node 24 broke my webpack build and this was added by gemeni/2026
+// try vite asap 
 module.exports = (env) => {
   const isProduction = env && env.production;
-
   const plugins = [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
