@@ -3,7 +3,7 @@
 
 /****************************************************************************************************/
 
-const basePath = "/";
+const basePath = "/images/";
 
 const livelong = {
   path: basePath,
