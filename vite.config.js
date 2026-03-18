@@ -10,12 +10,8 @@ export default defineConfig({
     outDir: '_dist-vite',
     rollupOptions: {
       output: {
-
-        // tells vite to create one file
         manualChunks: undefined,
-
-        // this is the output file
-        entryFileNames: 'bundles.js',
+        entryFileNames: 'bundle.js',
       },
     },
   },
