@@ -25,28 +25,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #clones into the github actions runner
-      - name: Checkout code
+      - name: Clone repository into the github runner
         uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       
-      # installs node into runner
-      - name: Set up Node.js
+    
+      - name: Install node 24 into the runner
         uses: actions/setup-node@v6
         with:
           node-version: 24
 
-      # installs packages via package-lock.json
-      - name: Install dependencies
+      - name: Install dependencies in package-lock.json
         run: npm ci
 
-      # runs build script defined in package.json
-      - name: Run Webpack build
+      - name: Run build script
         run: npm run vite-dev
 
 # method 3
-      - name: Deploy to Remote Repo
+      - name: Deploy to remote repository
         uses: peaceiris/actions-gh-pages@v4
         with:
           # created and named in the GUI
