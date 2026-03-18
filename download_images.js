@@ -5,7 +5,7 @@ const path = require("path");
 const inputPath = path.join("_dist", "cache.txt");
 const items = JSON.parse(fs.readFileSync(inputPath, "utf8"));
 
-fs.mkdirSync("_dist/images-articles", { recursive: true });
+fs.mkdirSync("_public-vite/images-articles", { recursive: true });
 
 // loop through each json entry
 items.forEach(({ title, image }) => {
