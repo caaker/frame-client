@@ -1,19 +1,11 @@
-const https = require("https");
-const fs = require("fs");
+const fs = require("fs/promises");
 const path = require("path");
+const inputPath = path.join("_public-vite", "cache.txt");
+const items = JSON.parse(await fs.readFile(inputPath, "utf8"));
 
-const inputPath = path.join("_dist", "cache.txt");
-const items = JSON.parse(fs.readFileSync(inputPath, "utf8"));
-
-fs.mkdirSync("_public-vite/images-articles", { recursive: true });
-
-// loop through each json entry
-items.forEach(({ title, image }) => {
-
-  // only keep letters and numbers and replace the rest with dashes for the filename
+items.forEach(async ({ title, image }) => {
   const filename = title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + path.extname(image);
-  const outputPath = path.join("_dist/images-articles", filename);
-  
-  // get the image and save it to the output
-  https.get(image, (res) => res.pipe(fs.createWriteStream(outputPath)));
+  const outputPath = path.join("_public-vite/images-articles", filename);
+  const res = await fetch(image);
+  if (res.ok) await fs.writeFile(outputPath, res.body);
 });
