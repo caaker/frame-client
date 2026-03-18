@@ -43,7 +43,7 @@ jobs:
 
       # runs build script defined in package.json
       - name: Run Webpack build
-        run: npm run build-dev
+        run: npm run webpack-dev
 
 # method 3
       - name: Deploy to Remote Repo
