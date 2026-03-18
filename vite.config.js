@@ -2,8 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-
-  // required boilerplate for react 
   plugins: [react()],
   publicDir: '_public-vite',
   build: {
