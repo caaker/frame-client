@@ -3,19 +3,22 @@
 
 /****************************************************************************************************/
 
+const basePath = "/";
+
 const livelong = {
+  path: basePath,
 
   // favicon
-  favicon: "images/favicon.png",
+  favicon: `${basePath}favicon.png`,
 
   // logo
-  logo: "images/favicon.png",
+  logo: `${basePath}favicon.png`,
 
   // background
-  background: "images/bg-white.jpg",
+  background: `${basePath}bg-white.jpg`,
 
   // fallback
-  fallback: "images/medical-symbol.jpeg",
+  fallback: `${basePath}medical-symbol.jpeg`,
 
   // title
   title: "livelong",
@@ -26,32 +29,6 @@ const livelong = {
 
   // footer
   email: "chris@livelong.ai",
-  subject: "inquiry",
-  github: "https://github.com/caaker"
-};
-
-/****************************************************************************************************/
-
-const livestrong = {
-
-  // favicon
-  favicon: "images/livestrong.png",
-
-  // logo
-  logo: "images/livestrong.png",
-
-  // background
-  background: "images/bg-hex.jpg",
-
-  // title
-  title: "livestrong",
-  title_on: true,
-
-  // page
-  start_page: "User",
-
-  // footer
-  email: "chris@livestrong.ai",
   subject: "inquiry",
   github: "https://github.com/caaker"
 };
