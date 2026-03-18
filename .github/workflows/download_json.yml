@@ -1,39 +1,31 @@
 name: download_json
 
-# run daily or manually
 on:
   schedule:
     - cron: '11 1 * * *'
   workflow_dispatch:
 
-# permission to write to the repository and manage actions
 permissions:
   contents: write
   actions: write
 
 jobs:
-  # cancel the job if it takes more than 1 minute
   run-script:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      # clones repository into the github action runner
-      - name: Checkout Repository
+      - name: Clone repository into the runner
         uses: actions/checkout@v6
 
-      # installs node.js 24 (Active LTS as of March 2026)
-      - name: Setup Node.js
+      - name: Install Node 24
         uses: actions/setup-node@v6
         with:
           node-version: 24
 
-      # create a directory if it does not exist and run the daily script
-      - name: Run Fetch Script
-        run: |
-          mkdir -p _dist
-          node download_json.js
+      - name: Run download_json.mjs
+        run: node download_json.mjs
 
-# peace iris - highly efficient
+      # peace iris - highly efficient
       - name: Deploy to Remote Repo
         uses: peaceiris/actions-gh-pages@v4
         with:
