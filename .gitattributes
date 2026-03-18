@@ -1,2 +1,0 @@
-_dist/images-articles/* filter=lfs diff=lfs merge=lfs -text
-_dist/images/** binary
