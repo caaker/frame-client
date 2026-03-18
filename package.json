@@ -1,10 +1,8 @@
 {
   "name": "test-1",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js",
-    "build-dev": "webpack --config ./webpack.config.js --mode development",
-    "client": "webpack --config ./webpack.config.js -w",
-    "client-dev": "webpack --config ./webpack.config.js -w --mode development",
+    "webpack": "webpack --config ./webpack.config.js",
+    "webpack-dev": "webpack --config ./webpack.config.js --mode development",
     "vite-dev": "vite build --mode development",
     "vite-prod": "vite build --mode production"
   },
