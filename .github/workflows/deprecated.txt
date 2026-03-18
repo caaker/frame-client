@@ -1,3 +1,8 @@
+# cron job to run at 1:11 AM
+
+  schedule:
+    - cron: '11 1 * * *'
+
 # method 2 - for one repo, not repo to repo, pack and deploy is boilerplate
 
 - name: Pack for github pages, one repo only
