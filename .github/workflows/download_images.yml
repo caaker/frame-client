@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 24
 
-      - name: Run download_images.js
-        run: node download_images.js
+      - name: Run download_images.mjs
+        run: node download_images.mjs
       
       - name: Commit and push to current repository
         uses: stefanzweifel/git-auto-commit-action@v7
