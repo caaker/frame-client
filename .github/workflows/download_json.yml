@@ -32,7 +32,7 @@ jobs:
           # created and named in the GUI
           personal_token: ${{ secrets.API_TOKEN_GITHUB }}
           # the source
-          publish_dir: ./_dist
+          publish_dir: ./_public-vite
           # the destination
           external_repository: caaker/caaker.github.io
           publish_branch: main
