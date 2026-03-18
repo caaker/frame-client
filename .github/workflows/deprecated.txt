@@ -1,3 +1,46 @@
+# method 2 - for one repo, not repo to repo, pack and deploy is boilerplate
+
+- name: Pack for github pages, one repo only
+  uses: actions/upload-pages-artifact@v4
+  with:
+    path: _dist
+
+- name: Deploy for github pages, one repo only
+  uses: actions/deploy-pages@v4
+
+
+# commits and pushes from the runner to the current repository
+
+
+- name: Commit and push to current repository
+  uses: stefanzweifel/git-auto-commit-action@v7
+  permissions:
+    contents: write
+  with:
+    commit_message: 'automated script [skip ci]'
+    file_pattern: '_dist/*'
+
+
+- name: Trigger Build Workflow
+  run: gh workflow run webpack.yml
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # method 1 - pushes everything in _dist to caaker.github.io, deprecated
 - name: Push to caaker.github.io
   uses: cpina/github-action-push-to-another-repository@main
@@ -9,33 +52,7 @@
     destination-repository-name: 'caaker.github.io'
     target-branch: 'main'
 
-# method 2
-# GitHub knows where your repo/branch is for Pages, a token is not required.
-# We need to update permissions in this file and the deployment method in the GUI.
-# This only works in one repo (not repo-to-repo), so stash.
 
-# the packer
-- name: Upload artifact
-  uses: actions/upload-pages-artifact@v4
-  with:
-    path: _dist
 
-# the mover
-- name: Deploy to GitHub Pages
-  uses: actions/deploy-pages@v4
 
-# not good, probably discard
 
-      # commits and pushes from the runner to the current repository
-      - name: Commit and Push cache.txt
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          # [skip ci] ensures the commit does not trigger another workflow
-          commit_message: 'chore: auto-update article cache [skip ci]'
-          file_pattern: '_dist/*'
-      
-      # triggers a webpack build
-      - name: Trigger Build Workflow
-        run: gh workflow run webpack.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
