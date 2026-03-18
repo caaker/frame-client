@@ -5,7 +5,7 @@ export default defineConfig({
 
   // required boilerplate for react 
   plugins: [react()],
-  publicDir: '_public',
+  publicDir: '_public-vite',
   build: {
     outDir: '_dist-vite',
     rollupOptions: {
