@@ -5,8 +5,7 @@ const browser = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'application/json',
     'Cache-Control': 'no-cache'
-  },
-  signal: AbortSignal.timeout(10000)
+  }
 };
 
 async function fetchData(url) {
@@ -23,5 +22,4 @@ async function fetchData(url) {
 const articles = await fetchData(url);
 if (articles) {
   fs.writeFileSync('_public-vite/cache.txt', JSON.stringify(articles, null, 2));
-  console.log('------------------------------------_dist/cache.txt updated!');
 }
