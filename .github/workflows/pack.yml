@@ -30,7 +30,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       
-    
       - name: Install node 24 into the runner
         uses: actions/setup-node@v6
         with:
