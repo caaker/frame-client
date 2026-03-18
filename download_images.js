@@ -7,7 +7,7 @@ const items = JSON.parse( await fs.readFile(inputPath, "utf8"));
 for (const { title, image } of items) {
   try {
     const filename = title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + path.extname(image);
-    const outputPath = path.join("_public-vite/images-articles", filename);   
+    const outputPath = path.join("_test", filename);   
     const res = await fetch(image);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     await fs.writeFile(outputPath, res.body);
