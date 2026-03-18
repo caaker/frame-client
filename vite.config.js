@@ -5,6 +5,7 @@ export default defineConfig({
 
   // required boilerplate for react 
   plugins: [react()],
+  publicDir: '_public',
   build: {
     outDir: '_dist',
     rollupOptions: {
