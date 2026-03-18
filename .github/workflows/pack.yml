@@ -1,4 +1,4 @@
-name: webpack
+name: pack
 
 # run this file on a push to main or manually
 # this file has the net effect of running a build for frame-client and pushing the result to github pages
