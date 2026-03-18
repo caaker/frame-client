@@ -1,0 +1,30 @@
+name: download_json
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v6
+
+      - name: Installs node 24 (Active LTS as of March 2026)
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Run download_images.js
+        run: node download_images.js
+      
+      - name: Commit and push to current repository
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'automated script [skip ci]'
+          file_pattern: '_test/*'
+
