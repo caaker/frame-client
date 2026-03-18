@@ -1,4 +1,4 @@
-name: download_json
+name: download_images
 
 on:
   workflow_dispatch:
