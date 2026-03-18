@@ -26,6 +26,9 @@
     file_pattern: '_dist/*'
 
 
+# chain a work flow requires ...
+  permissions:
+    actions: write
 - name: Trigger Build Workflow
   run: gh workflow run webpack.yml
   env:
