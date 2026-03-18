@@ -1,6 +1,7 @@
 // requires node 22+
-const fs = require("fs/promises");
-const path = require("path");
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
 const inputPath = path.join("_public-vite", "cache.txt");
 const items = JSON.parse( await fs.readFile(inputPath, "utf8"));
 
