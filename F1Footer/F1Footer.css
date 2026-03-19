@@ -5,6 +5,7 @@
   width: 100%;
   text-align: center;
   box-shadow: var(--shadow-sm);
+  transition: height 2s;
 }
 #footer_inner {
   height: 100%;
@@ -23,10 +24,8 @@
 
 .footer_show{
   height: 30px;
-  transition: height 2s; 
 }
 
 .footer_hide{
   height: 0px;
-  transition: height 2s;
 }
