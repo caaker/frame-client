@@ -6,11 +6,12 @@
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: height 2s;
-}
-#footer_inner {
+
   height: 100%;
   background: var(--opa);
   transition: background 2s;
+}
+#footer_inner {
 
 }
 .footer_item {
