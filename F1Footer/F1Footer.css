@@ -1,10 +1,13 @@
-#footer_hold {
+#footer_outer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
   box-shadow: var(--shadow-sm);
+}
+#footer_inner {
+  height: 100%;
 }
 
 .footer_show{
@@ -15,10 +18,6 @@
 .footer_hide{
   height: 0px;
   transition: height 2s;
-}
-
-#footer_inner {
-  height: 100%;
 }
 
 .footer_style_90 {
