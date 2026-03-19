@@ -9,8 +9,8 @@ export default function F1Footer({config})  {
   const style = (page === 'User') ? 'footer_show ' : 'footer_hide';
 
   return (
-    <div id="footer_hold" className={style}>
-      <div id="footer_inner" className='footer_style_90'>
+    <div id="footer_outer" className={style}>
+      <div id="footer_inner" >
         <a className="footer_item" target="_blank" href={config.github}>github</a>
       </div>
     </div>
