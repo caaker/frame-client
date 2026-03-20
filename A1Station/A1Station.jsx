@@ -12,27 +12,23 @@ export default function A1Station() {
   const [lat, setLat] = useState(30.2827813);
   const [lon, setLong] = useState(-97.7384504);
 
-  // dependency array is empty, so only run on initial mount
   useEffect(() => {
-    getLocation()
-      .then((location) => {
-        setLat(location.coords.latitude);
-        setLong(location.coords.longitude);
-        console.logD('DEBUG: navigator.geolocation: location found ' + location.coords.latitude, '#888888');
-      })
-      .catch((error) => {
-        console.logD('DEBUG: navigator.geolocation error: no access to location', 'red');
-      });
-  }, []); 
+    getLocation().then((location) => {
+      setLat(location.coords.latitude);
+      setLong(location.coords.longitude);
+      console.logD('DEBUG: navigator.geolocation: location found ' + location.coords.latitude, '#888888');
+    }).catch((error) => {
+      console.logD('DEBUG: navigator.geolocation error: no access to location', 'red');
+      console.logD('DEBUG: using default location for Austin - lat - 30.2827813', 'red');
+    });
+  }, []);
 
   return (
     <div className="page_generic">
-      <div id='station'>
-        <div id="box_weather">
-          <StationClock />
-          <StationWeather lat={lat} lon={lon} />
-          <StationAir lat={lat} lon={lon} />
-        </div>
+      <div id="station">
+        <StationClock />
+        <StationWeather lat={lat} lon={lon} />
+        <StationAir lat={lat} lon={lon} />
       </div>
     </div>
   );
