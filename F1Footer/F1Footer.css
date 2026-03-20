@@ -1,4 +1,4 @@
-#footer_outer {
+.footer_outer {
 
   /* centers content both horizontally and vertically */
   display: flex;
@@ -27,5 +27,5 @@
   bottom: 0px;
 }
 .footer_hide{
-  bottom: 25px;
+  bottom: -25px;
 }
