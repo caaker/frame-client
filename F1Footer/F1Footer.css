@@ -10,12 +10,13 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 25px;
 
   /* rest */
   box-shadow: var(--shadow-sm);
   background: var(--opa);
   transition: background 2s;
-  transition: height 2s;
+  transition: bottom 2s;
 }
 .footer_item {
   text-decoration: none;
@@ -23,8 +24,8 @@
   color: black;
 }
 .footer_show{
-  height: 25px;
+  bottom: 0px;
 }
 .footer_hide{
-  height: 0px;
+  bottom: 25px;
 }
