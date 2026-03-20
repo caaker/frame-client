@@ -10,7 +10,7 @@ export default function F1Footer({config})  {
 
   return (
     <div className={`footer_outer ${style}`}>
-      <a className="footer_item" target="_blank" href={config.github}>github-4</a>
+      <a className="footer_item" target="_blank" href={config.github}>github</a>
     </div>
   );
 };
