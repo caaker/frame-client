@@ -1,5 +1,4 @@
 .footer_outer {
-
   /* centers content both horizontally and vertically */
   display: flex;
   justify-content: center;
@@ -12,20 +11,24 @@
   width: 100%;
   height: 25px;
 
+  /* invokes GPU and is more efficient then changing position directly via top */
+  transition: background 2s, transform 2s;
+
   /* rest */
   box-shadow: var(--shadow-sm);
-  background: var(--opa);
-  transition: background 2s;
-  transition: bottom 2s;
+  background: var(--opa);  
 }
+
 .footer_item {
   text-decoration: none;
-  font-size:  12px;
+  font-size: 12px;
   color: black;
 }
-.footer_show{
-  bottom: 0px;
+
+.footer_show {
+  transform: translateY(0);
 }
-.footer_hide{
-  bottom: -25px;
+
+.footer_hide {
+  transform: translateY(100%);
 }
