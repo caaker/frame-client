@@ -5,7 +5,7 @@ import                         './F1West.css';
 export default function F1West () {
   const isMoved = useSelector(state => state.MenuLeft.on);
   return (
-    <div className={isMoved ? 'left-bar move' : 'left-bar'} id="left-bar">
+    <div className={isMoved ? 'left-bar move' : 'left-bar'} >
       <Sphere />
     </div>
   );

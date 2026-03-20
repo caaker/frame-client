@@ -15,6 +15,7 @@
   flex-direction: column;
 }
 
+/* with no space, the element must have both classes */
 .left-bar.move {
   transform: translateX(0);
 }
