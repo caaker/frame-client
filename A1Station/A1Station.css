@@ -17,6 +17,7 @@
   align-items: center;
   background: var(--opa);
   box-shadow: var(--shadow-sm);
+  transition: background 2s;
 }
 
 #box_weather {
