@@ -6,12 +6,8 @@
   text-align: center;
   box-shadow: var(--shadow-sm);
   transition: height 2s;
-}
-#footer_inner {
-  height: 100%;
   background: var(--opa);
   transition: background 2s;
-
 }
 .footer_item {
   position: relative;
@@ -23,5 +19,5 @@
   height: 25px;
 }
 .footer_hide{
-  height: 0px;
+  height: 25px;
 }
