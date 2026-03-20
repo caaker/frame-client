@@ -1,16 +1,23 @@
 #footer_outer {
+
+  /* centers content both horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* stick bar to bottom of the page and make it the width of the page */
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  text-align: center;
+
+  /* rest */
   box-shadow: var(--shadow-sm);
-  transition: height 2s;
   background: var(--opa);
   transition: background 2s;
+  transition: height 2s;
 }
 .footer_item {
-  position: relative;
   text-decoration: none;
   font-size:  12px;
   color: black;
