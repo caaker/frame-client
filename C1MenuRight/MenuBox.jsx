@@ -18,7 +18,7 @@ export default function MenuBox () {
   const dispatch = useDispatch();
 
   function bodyClicked(event) {
-    if((event.target.id !== 'menu_top') && (event.target.id !== 'menu_path')) {
+    if((event.target.id !== 'menu_top') && (event.target.id !== 'menu_path1')) {
       dispatch({type: 'toggleMenuPageOff'});
     }
   }
