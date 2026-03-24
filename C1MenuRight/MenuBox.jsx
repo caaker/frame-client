@@ -1,9 +1,9 @@
-import { useEffect }                  from 'react';
-import { useDispatch, useSelector }   from 'react-redux';
+import { useEffect }                      from 'react';
+import { useDispatch, useSelector }       from 'react-redux';
 
 // SVG Containers
-import MenuBoxItem                    from './MenuBoxItem.jsx';
-import MenuBoxItemAdd                 from './MenuBoxItemAdd.jsx';
+import MenuBoxItem                        from './MenuBoxItem.jsx';
+import MenuBoxItemAdd                     from './MenuBoxItemAdd.jsx';
 
 // SVG
 import { SVGAdd }                         from '../C0Vectors/SVGAdd.jsx';
@@ -12,23 +12,26 @@ import { SVGHome }                        from '../C0Vectors/SVGHome.jsx';
 import { SVGBookmark }                    from '../C0Vectors/SVGBookmark.jsx';
 import { SVGClock }                       from '../C0Vectors/SVGClock.jsx';
 
-import                                './MenuBox.css';
+import                                    './MenuBox.css';
 
 export default function MenuBox () {
   const dispatch = useDispatch();
 
   function bodyClicked(event) {
-    if((event.target.id !== 'menu_top') && (event.target.id !== 'menu_path1')) {
-      dispatch({type: 'toggleMenuPageOff'});
+    const isMenuClick = event.target.closest('#menu_top');
+    if (!isMenuClick) {
+      dispatch({ type: 'toggleMenuPageOff' });
     }
-  }
+}
+
+
 
   useEffect(() => {
     document.body.addEventListener('click', bodyClicked);
     return () => {
       document.body.removeEventListener('click', bodyClicked);
     };
-  });
+  }, []);
 
   return (
 
