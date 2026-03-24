@@ -1,5 +1,7 @@
-import { useDispatch }     from 'react-redux';
-import                     './C1MenuLeft.css';
+import { useDispatch }     from     'react-redux';
+import { SVGMenuBurger }   from     '../C0Vectors/SVGMenuBurger.jsx';
+import                              './C1MenuLeft.css';
+
 
 export default function C1MenuLeft() {
   const dispatch = useDispatch();
@@ -8,6 +10,12 @@ export default function C1MenuLeft() {
   };
   return (
     <div id="menu_left_div">
+      <SVGMenuBurger onClick={handleClick} id='menu_left_svg'/>
+    </div>
+  );
+};
+
+/*
       <svg 
         id="menu_left_svg"
         onClick={handleClick}
@@ -19,6 +27,4 @@ export default function C1MenuLeft() {
       >
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
       </svg>
-    </div>
-  );
-};
+*/
