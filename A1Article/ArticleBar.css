@@ -1,7 +1,10 @@
-/* 
-**
-**
-*/
+.article_icons_right {
+  filter: grayscale(100%);
+  opacity: .5;
+  height: 100%;
+  float: right;
+  cursor: pointer;
+}
 
 .article_bar {
   height: 17px;

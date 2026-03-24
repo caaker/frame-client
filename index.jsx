@@ -4,7 +4,7 @@ import store        from './_redux/store';
 
 // imports produce side effects
 import './F1Customize/class.Header.js';
-import './F1Customize/class.GlobalCSS.js';
+import './F1Customize/class.MobileFix.js';
 
 // top level component
 import F1           from './F1/F1.jsx';

@@ -51,14 +51,6 @@
   --opa: rgb(255 255 255 / 0.90);
 }
 
-.article_icons_right {
-  filter: grayscale(100%);
-  opacity: .5;
-  height: 100%;
-  float: right;
-  cursor: pointer;
-}
-
 :root {
   --z-apex-height: 50px;
   --height-logo: 30px;

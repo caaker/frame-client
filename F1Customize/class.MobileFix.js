@@ -1,10 +1,9 @@
-class Global {
+class MobileFix {
   constructor() {
-    console.logD('DEBUG: L2 : F1-GlobalCSS');
+    console.logD('DEBUG: L2 : MobileFix');
     this.setCSSHeight();
   }
 
-  // an arrow function guarantees correct this binding
   _updateVh = () => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -19,4 +18,4 @@ class Global {
 
 // all imports use the same Global instance due to ES module caching
 // this effectiveley creates a singleton
-export default new Global();
+export default new MobileFix();
