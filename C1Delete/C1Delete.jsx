@@ -1,6 +1,6 @@
 import                                    './C1Delete.css';
 import { useDispatch }              from  'react-redux';
-import SVGDelete                    from  '../C0Vectors/SVGDelete.jsx';
+import { SVGDelete }                from  '../C0Vectors/SVGDelete.jsx';
 import Helper                       from  '../F1Helper/class.Helper.js';
 
 export default function C1Delete({ article, admin }) {

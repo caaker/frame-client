@@ -1,6 +1,6 @@
 import arc from           'frame-arc';
 import                    './C1Copy.css';
-import SVGCopy from       '../C0Vectors/SVGCopy.jsx';
+import { SVGCopy } from   '../C0Vectors/SVGCopy.jsx';
 
 export default function C1Copy (props) {
   const hash = arc.makeAnchorHash(props.title);

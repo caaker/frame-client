@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import SVGPeople                    from '../C0Vectors/SVGPeople.jsx';
+import { SVGPeople }                from '../C0Vectors/SVGPeople.jsx';
 
 export default function ApexCenterPeople () {
   const dispatch = useDispatch();

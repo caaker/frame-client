@@ -1,5 +1,5 @@
 import { useDispatch, useSelector }      from     'react-redux';
-import SVGMenu                           from     '../C0Vectors/SVGMenu.jsx';
+import { SVGMenu }                       from     '../C0Vectors/SVGMenu.jsx';
 import MenuBox                           from     './MenuBox.jsx';
 import                                            './C1MenuRight.css';
 

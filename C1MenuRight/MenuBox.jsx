@@ -6,11 +6,11 @@ import MenuBoxItem                    from './MenuBoxItem.jsx';
 import MenuBoxItemAdd                 from './MenuBoxItemAdd.jsx';
 
 // SVG
-import SVGAdd                         from '../C0Vectors/SVGAdd.jsx';
-import SVGUser                        from '../C0Vectors/SVGUser.jsx';
-import SVGHome                        from '../C0Vectors/SVGHome.jsx';
-import SVGBookmark                    from '../C0Vectors/SVGBookmark.jsx';
-import SVGClock                       from '../C0Vectors/SVGClock.jsx';
+import { SVGAdd }                         from '../C0Vectors/SVGAdd.jsx';
+import { SVGUser }                        from '../C0Vectors/SVGUser.jsx';
+import { SVGHome }                        from '../C0Vectors/SVGHome.jsx';
+import { SVGBookmark }                    from '../C0Vectors/SVGBookmark.jsx';
+import { SVGClock }                       from '../C0Vectors/SVGClock.jsx';
 
 import                                './MenuBox.css';
 

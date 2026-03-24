@@ -1,6 +1,6 @@
 import { useDispatch, useSelector }   from    'react-redux';
 import                                        './C1Avatar.css';
-import SVGAvatar                      from    '../C0Vectors/SVGAvatar.jsx';
+import { SVGAvatar }                      from    '../C0Vectors/SVGAvatar.jsx';
 
 export default function C1Avatar (props) {
 

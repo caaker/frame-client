@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import SVGHome                      from '../C0Vectors/SVGHome.jsx';
+import { SVGHome }                      from '../C0Vectors/SVGHome.jsx';
 
 export default function ApexCenterHome() {
   const dispatch = useDispatch();

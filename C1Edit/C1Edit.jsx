@@ -1,5 +1,5 @@
 import { useDispatch }  from  'react-redux';
-import SVGEdit          from  '../C0Vectors/SVGEdit.jsx';
+import { SVGEdit }          from  '../C0Vectors/SVGEdit.jsx';
 import                        './C1Edit.css';
 
 export default function C1Edit({ article, admin }) {
