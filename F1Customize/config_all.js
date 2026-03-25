@@ -15,7 +15,7 @@ const livelong = {
   logo: `${basePath}favicon.png`,
 
   // background
-  background: `${basePath}bg-white.jpg`,
+  background: `${basePath}grid.svg`,
 
   // fallback
   fallback: `${basePath}medical-symbol.jpeg`,
