@@ -25,7 +25,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding:  10px;
   background: var(--opa);
   transition: background 2s;
   box-shadow: var(--shadow-sm);
@@ -45,7 +44,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding:  10px;
   background: var(--opa);
   transition: background 2s;
   box-shadow: var(--shadow-sm);  
