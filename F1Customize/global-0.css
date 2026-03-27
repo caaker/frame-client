@@ -1,0 +1,43 @@
+
+    html{
+      height: 100%;
+      width: 100%;
+    }
+    /* attempt to isolate */
+    body{
+      font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
+    }
+    body{
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+
+      /* default background */
+      background-color: transparent;
+      background-size: auto;
+      background-repeat: repeat;
+
+      /* modified background */
+      background-attachment: fixed;
+    }
+    #app{
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    p{
+      margin: 0px;
+      padding: 0px;
+      line-height: 100%;
+      font-size: 11px; 
+    }
+    input[type=text]{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+    }

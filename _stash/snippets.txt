@@ -47,3 +47,19 @@ export default {
   </svg>
 
 */
+
+
+  <script>
+
+    (function() {
+  
+      const script = document.createElement('script');
+      const timestamp = new Date().toLocaleTimeString('en-GB');
+      script.src = 'bundle.js?timestamp=' + timestamp;
+      script.async = true;
+      document.head.appendChild(script);
+      console.logD('DEBUG: START : index.html loaded bundle.js at: ' + timestamp, 'green');
+
+    })();
+
+  </script>
