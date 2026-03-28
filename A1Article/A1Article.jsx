@@ -22,8 +22,8 @@ export default function A1Article () {
       articles = articles.filter(val => ArticleFilter(val, search));
     }
 
-    articles = articles.map((article, index) => {
-      return <Article key={index} article={article._id}/>;
+    articles = articles.map((article) => {
+      return <Article key={article._id} article={article}/>;
     });
 
     return articles;
