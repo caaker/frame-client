@@ -22,20 +22,14 @@ jobs:
       - name: Run download_json.mjs
         run: node download_json.mjs
 
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          git add _dist/
 
+          # The '|| echo' ensures the workflow doesn't fail if the data is identical.  Consider to remove
+          git commit -m "Automated update of _dist [skip ci]" || echo "No changes to commit"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          git push origin main
