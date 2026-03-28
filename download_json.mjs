@@ -22,4 +22,6 @@ async function fetchData(url) {
 const articles = await fetchData(url);
 if (articles) {
   fs.writeFileSync('_public-vite/cache.txt', JSON.stringify(articles, null, 2));
+  console.log("download_json script succeeded");
+  console.log("_public-vite/cache.txt udpated");
 }
