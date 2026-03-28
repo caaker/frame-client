@@ -6,19 +6,12 @@ import C1Link                           from '../C1Link/C1Link.jsx'
 export default function A1Bookmark() {
   const [tag, setTag] = useState('Nutrition');
   const articles = useSelector((state) => state.Articles.articles);
-  const top_hash = {};
 
-  function makeTopHash() {
-    articles.forEach((article) => {
-      if(!(article.tag in top_hash)) {
-        top_hash[article.tag] = {};
-      }
-      if(!(article.domain in top_hash[article.tag])) {
-        top_hash[article.tag][article.domain] = {};
-      }
-    });
-  }
-  makeTopHash();
+  const top_hash = articles.reduce((hash, { tag, domain }) => {
+    hash[tag] ??= {};
+    hash[tag][domain] ??= {};
+    return hash;
+  }, {});
 
   function makeTags() {
     const tags = (Object.keys(top_hash)).sort();
