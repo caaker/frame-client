@@ -41,7 +41,7 @@ jobs:
       - name: Run build script
         run: npm run vite-dev
 
-# method 3
+      # step 5
       - name: Deploy to remote repository
         uses: peaceiris/actions-gh-pages@v4
         with:
