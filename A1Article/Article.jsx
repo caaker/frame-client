@@ -14,7 +14,7 @@ export default function Article ({ article }) {
 
   return (
       <article id={hash} className='__article'>
-      {console.logD(article)}
+      {console.log(article)}
       <a className="article_link" href={link} target="_blank" rel="noreferrer">
         <img className="article_link_image" rel="noreferrer" src={image} alt={title} onError={handleImageError} />
       </a>
