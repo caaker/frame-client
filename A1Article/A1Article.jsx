@@ -16,21 +16,18 @@ export default function A1Article () {
   let search = useSelector((state) => state.SearchInput.current);
 
   function makeArticles() {
-    if(articles) {
-      
-      if (search) {
-        articles = articles.filter((val) => {
-          return ArticleFilter(val, search);
-        });
-      }
-    
-      articles = articles.map((article, index) => {
-        article.index = index;
-        return <Article key={index} article={article}/>;
-      });
+    if (!articles) return null;
 
-      return articles;
+    if (search) {
+      articles = articles.filter(val => ArticleFilter(val, search));
     }
+
+    articles = articles.map((article, index) => {
+      article.index = index;
+      return <Article key={index} article={article}/>;
+    });
+
+    return articles;
   }
 
   return (
