@@ -22,17 +22,6 @@ jobs:
       - name: Run download_json.mjs
         run: node download_json.mjs
 
-      # peace iris - highly efficient
-      - name: Deploy to Remote Repo
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          # created and named in the GUI
-          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
-          # the source
-          publish_dir: ./_public-vite
-          # the destination
-          external_repository: caaker/caaker.github.io
-          publish_branch: main
 
 
 
