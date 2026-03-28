@@ -23,7 +23,6 @@ export default function A1Article () {
     }
 
     articles = articles.map((article, index) => {
-      article.index = index;
       return <Article key={index} article={article}/>;
     });
 
