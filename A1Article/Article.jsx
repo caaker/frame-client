@@ -4,49 +4,33 @@ import                        './Article.css';
 import config           from  '../F1Customize/config_all.js';
 
 export default function Article ({ article }) {
-  const hash = arc.makeAnchorHash(article.title);
+  const { title, link, image, summary, tag, domain } = article;
+  const hash = arc.makeAnchorHash(title);
+  const handleImageError = (error) => {
+    error.currentTarget.onerror = null; 
+    error.currentTarget.src = config.fallback;   
+    console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'red');
+  };
+
   return (
-    <article id={hash} className='__article'>
-
-      <a 
-        className="article_link" 
-        href={article.link} 
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img
-          className="article_link_image"
-          rel="noreferrer"
-          src={article.image}
-          alt={article.title}
-          onError={(error) => {
-            error.currentTarget.src = config.fallback;
-            console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'red');
-
-            // prevents infinite loops if the fallback image fails
-            e.currentTarget.onerror = null;
-          }}
-        />
+      <article id={hash} className='__article'>
+      {console.logD(article)}
+      <a className="article_link" href={link} target="_blank" rel="noreferrer">
+        <img className="article_link_image" rel="noreferrer" src={image} alt={title} onError={handleImageError} />
       </a>
-
       <p className="article_heading">
-        <a className="article_heading_link" href={article.link} target="_blank">{article.title}</a>
+        <a className="article_heading_link" href={link} target="_blank">{title}</a>
       </p>
-
       <p className="article_summary">
-        {article.summary}
+        {summary}
       </p>
-
       <p className="article_tag">
-        {article.tag}
+        {tag}
       </p>
-
       <p className="article_domain">
-        {article.domain}
+        {domain}
       </p>
-
       <ArticleBar article={article}/>
-
     </article>
   );
 };
