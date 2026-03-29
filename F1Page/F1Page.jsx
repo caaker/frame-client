@@ -3,7 +3,7 @@ import { useSelector }      from 'react-redux';
 
 // app pages
 import A1Article            from              '../A1Article/A1Article.jsx';
-import A1Bookmark           from              '../A1Bookmark/A1Bookmark.jsx';
+import { A1Bookmark }       from              '../A1Bookmark/A1Bookmark.jsx';
 import A1Station            from              '../A1Station/A1Station.jsx';
 import A1People             from              '../A1People/A1People.jsx';
 
