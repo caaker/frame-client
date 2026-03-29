@@ -1,7 +1,7 @@
 import { useEffect }          from 'react';
 import { useSelector }        from 'react-redux';
 import arc                    from 'frame-arc';
-import Article                from './Article.jsx';
+import { Article }            from './Article.jsx';
 import ArticleFilter          from './ArticleFilter.js';
 import                        './A1Article.css';
 
