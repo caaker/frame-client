@@ -4,7 +4,7 @@ import C1Link                           from '../C1Link/C1Link.jsx'
 import                                  './A1Bookmark.css';
 
 
-export default function A1Bookmark() {
+export function A1Bookmark() {
   const [tag, setTag] = useState('Nutrition');
   const articles = useSelector((state) => state.Articles.articles);
 
