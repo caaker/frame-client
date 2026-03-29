@@ -1,6 +1,6 @@
 .left-logo{
   margin-left: var(--left);
-  height:      var(--height-logo) !important;
+  height:      var(--height-logo);
   cursor:      pointer;
 }
 
