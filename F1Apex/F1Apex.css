@@ -12,11 +12,12 @@
   box-sizing: border-box
 }
 
+/* review_later */
 .apex_hold{
   display: flex;
   justify-content: space-between;
   height: 100%;
-  padding:  0px 20px;
+  padding:  0px 10px;
   transition: background 2s;
 }
 
