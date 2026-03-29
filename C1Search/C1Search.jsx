@@ -1,8 +1,6 @@
 import { useDispatch, useSelector }   from 'react-redux';
 import                                './C1Search.css';
 
-
-// implement1 - refactor this
 export default function C1Search () {
 
   const dispatch = useDispatch();
@@ -10,13 +8,11 @@ export default function C1Search () {
   const search_current = useSelector((state) => state.SearchInput.current);
   const css_id = (page === 'Articles') ? 'left_input_show' : 'left_input_hide';
 
-  // this is a controlled component
   function onChange(event) {
     dispatch({type: 'updateSearchInput', current: event.target.value});
   }
 
   return (
-    <div className="apex-input-div">
       <input
         type="text"
         className="left_input"
@@ -26,7 +22,6 @@ export default function C1Search () {
         value={search_current}
         onChange={onChange}
       />
-    </div>
   );
 
 };
