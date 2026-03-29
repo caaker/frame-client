@@ -39,7 +39,7 @@ jobs:
         run: npm ci
 
       - name: Run build script
-        run: npm run vite-prod
+        run: npm run vite-dev
 
       # step 5
       - name: Deploy to remote repository
