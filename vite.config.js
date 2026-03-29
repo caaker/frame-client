@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [react()],
   publicDir: '_public-vite',
   build: {
+    sourcemap: true,
     outDir: '_dist-vite',
     rollupOptions: {
       output: {
