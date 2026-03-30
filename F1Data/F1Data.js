@@ -7,7 +7,6 @@ function fetchData() {
   const urls = Helper.getURLs(true);
   
   Helper.fetchJSON(urls.articles, undefined, (articles) => {
-    articles.reverse();
     store.dispatch({ type: 'initializeArticles', articles });
   });
   
