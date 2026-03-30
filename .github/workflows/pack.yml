@@ -1,9 +1,5 @@
 name: pack
 
-# run this file on a push to main or manually
-# this file has the net effect of running a build for frame-client and pushing the result to github pages
-# regarding webpack, it is very efficient, if bundle.js does not change there is no change at the destination repository
-
 on:
   push:
     branches:
@@ -27,13 +23,12 @@ jobs:
     steps:
       - name: Clone repository into the github runner
         uses: actions/checkout@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Install node 24 into the runner
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          cache: 'npm'
 
       - name: Install dependencies in package-lock.json
         run: npm ci
@@ -53,5 +48,3 @@ jobs:
           external_repository: caaker/caaker.github.io
           publish_branch: main
     
-
-
