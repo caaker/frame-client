@@ -1,16 +1,14 @@
-const Environment = (state = {online: false, hostname: false}, action) => {
-  const newState = { ...state };
-  switch(action.type) {
+const Environment = (state = { online: false, hostname: false }, action) => {
+  switch (action.type) {
     case 'setOnline':
-      newState.online = action.boolean;
-      return newState;
+      return { ...state, online: action.boolean };
+
     case 'setHostname':
-      newState.hostname = action.hostname;
-      return newState;
+      return { ...state, hostname: action.hostname };
+
+    default:
+      return state;
   }
-  return state;
 };
 
-export default {
-  Environment
-};
+export default Environment;

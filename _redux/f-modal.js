@@ -1,24 +1,18 @@
-
 const defaults = { on: false, data: { }, config: false };
 
+// spread operator creates a new state object
 const Modal = (state = defaults , action) => {
-
-  const newState = { ...state };
-
   switch(action.type) {
     
-    // called on clicking or add or edit, which updates config
     case 'toggleModalOn':
-      newState.on = true;
-      newState.config = action.config;
-      return newState;
+      return { ...state, on: true, config: action.config }
     
-    // called on submission or clicking away from the modal, does not effect config
     case 'toggleModalOff':
-      newState.on = false;
-      return newState;
+      return { ...state, on: false };
+  
+    default:
+      return state;
   }
-  return state;
 };
 
 export default {
