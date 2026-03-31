@@ -1,5 +1,5 @@
 {
-  "notes": "file created on 03-31-2026",
+  "notes-0": "file created on 03-31-2026",
   "scripts": {
       "dev": "vite",
       "build": "vite build",
@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
-    "vite": "^8.0.3",
-    "vite-plugin-css-injected-by-js": "^4.0.1"
+    "vite": "^8.0.3"
   }
 }
