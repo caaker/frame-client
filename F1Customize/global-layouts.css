@@ -1,11 +1,11 @@
 #app{
   height: 100%;
   width: 100%;
+
   display: flex;
   padding: 0px;
   margin: 0px;
 }
-
 #app_hold{
   width: 100%;
   height: 100%;
@@ -15,4 +15,19 @@
   position: relative;
   margin: 0px;
   padding: 0px;
+}
+
+#page_hold {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+#page_hold_hold {
+  height: 100%;
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
 }
