@@ -4,8 +4,7 @@
   width: 400px;
 }
 
-/*
-  tag bar
+/* tag bar
 */
 
 #tags_wrapper{
@@ -27,8 +26,7 @@
   border: 1px solid #000000;
 }
 
-/*
-  domains
+/* domains
 */
 
 #domain_wrapper {
@@ -38,11 +36,7 @@
   cursor: pointer;
 }
 
-
-/*
-**
-**
-*/
+/**/
 @media screen and (max-width: 701px) {
   #big_wrapper {
     width: 100%;
