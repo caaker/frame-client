@@ -9,6 +9,9 @@ body{
   font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
 }
 body{
+  height: 100%;
+  width: 100%;
+
   display: flex;
   padding: 0px;
   margin: 0px;
