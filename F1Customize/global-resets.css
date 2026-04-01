@@ -4,7 +4,7 @@ html{
   width: 100%;
 }
 
-/* helps isolate the way this cascades */
+/* helps isolate the way this cascades - leave separate */
 body{
   font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
 }
@@ -13,10 +13,13 @@ body{
   padding: 0px;
   margin: 0px;
 
-  /* default background */
+  /* default background properties no need to uncomment 
+
   background-color: transparent;
   background-size: auto;
   background-repeat: repeat;
+
+  */
 
   /* modified background */
   background-attachment: fixed;

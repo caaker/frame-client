@@ -7,7 +7,7 @@ import F1Page             from      '../F1Page/F1Page.jsx';
 import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';
 
-// non react logic
+// non react logic - refactor later
 import                              '../F1Server/class.Server.js';
 import                              '../F1Data/F1Data.js';
 import                              '../F1Socket/F1Socket.js';
@@ -15,8 +15,6 @@ import                              '../F1Socket/F1Socket.js';
 import                              '../F1Customize/global-resets.css';
 import                              '../F1Customize/global-layouts.css';
 import                              '../F1Customize/global-themes.css';
-
-import                              './F1.css';
 
 export default function F1 () {
   console.logD('DEBUG: L1 : F1');
