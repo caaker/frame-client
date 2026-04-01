@@ -2,7 +2,7 @@ import config from './config_all.js';
 
 class Header {
   constructor() {
-    console.logD('DEBUG: L2 : F1-Header');
+    console.logD('DEBUG: L2 : F1-Header', 'purple');
     this.setFavicon();
     this.setBackground();
     this.setTitle();
