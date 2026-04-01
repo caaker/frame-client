@@ -1,9 +1,3 @@
-#people-pad{
-  box-sizing: border-box;
-  height: 50px;
-  background: white;
-  opacity: 0;
-}
 
 @media screen and (max-width: 701px) {
   #page-people {

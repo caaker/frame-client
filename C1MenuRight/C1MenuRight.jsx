@@ -15,5 +15,4 @@ export default function C1MenuRight() {
       {menu_on && <MenuBox/>}
     </div>
   );
-
 };

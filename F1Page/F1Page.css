@@ -1,7 +1,5 @@
-/**   defaults
-  *   flex-direction: row
-  *   flex-wrap: nowrap
-***/
+/*   flexdefaults - flex-direction: row, flex-wrap: nowrap  */
+
 #page_hold {
   width: 100%;
   height: 100%;
@@ -13,6 +11,7 @@
   width: 90%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 #page_article{
   width: 100%;
@@ -34,6 +33,15 @@
   position: relative;
   top: 100px;
 }
+#page-people{
+  width:  100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  top: 100px;
+}
 #page-user{
   width: 100%;
   height: 100%;
@@ -41,14 +49,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#page-people{
-  width:  100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
 }
 
 /* media queries with magic constants 301 and 701

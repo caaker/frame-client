@@ -11,6 +11,7 @@ import { SVGUser }                        from '../C0Vectors/SVGUser.jsx';
 import { SVGHome }                        from '../C0Vectors/SVGHome.jsx';
 import { SVGBookmark }                    from '../C0Vectors/SVGBookmark.jsx';
 import { SVGClock }                       from '../C0Vectors/SVGClock.jsx';
+import { SVGPeople }                      from '../C0Vectors/SVGPeople.jsx';
 
 import                                    './MenuBox.css';
 
@@ -23,8 +24,6 @@ export default function MenuBox () {
       dispatch({ type: 'toggleMenuPageOff' });
     }
 }
-
-
 
   useEffect(() => {
     document.body.addEventListener('click', bodyClicked);
@@ -61,3 +60,9 @@ export default function MenuBox () {
 
   );
 };
+
+
+
+// {<MenuBoxItem name='People'>
+//   <SVGPeople/>
+// </MenuBoxItem>}
