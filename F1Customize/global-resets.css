@@ -3,14 +3,13 @@
       height: 100%;
       width: 100%;
     }
-    /* attempt to isolate */
+
+    /* helps isolate the way this cascades */
     body{
       font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
     }
     body{
       display: flex;
-      height: 100%;
-      width: 100%;
       padding: 0px;
       margin: 0px;
 
@@ -21,13 +20,6 @@
 
       /* modified background */
       background-attachment: fixed;
-    }
-    #app{
-      display: flex;
-      height: 100%;
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
     }
     p{
       margin: 0px;

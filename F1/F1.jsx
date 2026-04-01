@@ -12,8 +12,10 @@ import                              '../F1Server/class.Server.js';
 import                              '../F1Data/F1Data.js';
 import                              '../F1Socket/F1Socket.js';
 
-import                              '../F1Customize/global-0.css';
-import                              '../F1Customize/global.css';
+import                              '../F1Customize/global-resets.css';
+import                              '../F1Customize/global-layouts.css';
+import                              '../F1Customize/global-themes.css';
+
 import                              './F1.css';
 
 export default function F1 () {
