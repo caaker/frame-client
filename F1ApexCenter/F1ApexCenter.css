@@ -16,10 +16,6 @@
   color:  var(--color-blue) !important;
 }
 
-:root {
-  --max-width: 701px;
-}
-
 /* media query will turn the center navigation off when the screen is too small
 */
 
