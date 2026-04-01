@@ -31,6 +31,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  position: relative;
+  top: 100px;
 }
 #page-user{
   width: 100%;
