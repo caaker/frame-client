@@ -15,7 +15,7 @@ export default function F1Page () {
   console.logD('DEBUG: L2 : F1-Page');
   return (
     <div id='page_hold'>
-      <div id='page_hold_hold'>
+      <div className='page_container'>
 
         {(page === 'User')                    &&   <A1User/>}
         {(page === 'Articles')                &&   <A1Article/>}
