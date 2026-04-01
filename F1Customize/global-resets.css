@@ -1,34 +1,47 @@
 
-    html{
-      height: 100%;
-      width: 100%;
-    }
+html{
+  height: 100%;
+  width: 100%;
+}
 
-    /* helps isolate the way this cascades */
-    body{
-      font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
-    }
-    body{
-      display: flex;
-      padding: 0px;
-      margin: 0px;
+/* helps isolate the way this cascades */
+body{
+  font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
+}
+body{
+  display: flex;
+  padding: 0px;
+  margin: 0px;
 
-      /* default background */
-      background-color: transparent;
-      background-size: auto;
-      background-repeat: repeat;
+  /* default background */
+  background-color: transparent;
+  background-size: auto;
+  background-repeat: repeat;
 
-      /* modified background */
-      background-attachment: fixed;
-    }
-    p{
-      margin: 0px;
-      padding: 0px;
-      line-height: 100%;
-      font-size: 11px; 
-    }
-    input[type=text]{
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
+  /* modified background */
+  background-attachment: fixed;
+}
+p{
+  margin: 0px;
+  padding: 0px;
+  line-height: 100%;
+  font-size: 11px; 
+}
+input[type=text]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}

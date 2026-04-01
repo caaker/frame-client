@@ -1,5 +1,15 @@
-    #app{
-      display: flex;
-      padding: 0px;
-      margin: 0px;
-    }
+#app{
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+#app_hold{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
