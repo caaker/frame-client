@@ -1,5 +1,6 @@
 #menu_left_svg {
   cursor: pointer;
   display: block;
+  font-size: var(--height-logo);
 }
 
