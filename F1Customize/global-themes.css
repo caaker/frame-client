@@ -1,14 +1,8 @@
-/* colors */
+/* filter or remove */
 :root {
-  --color-blue: #4285f3;
-  --color-grey: #444444;
-}
-
-/* colors-black */
-:root {
-  --color-black-32: rgb(32 32 32 / 1);
-  --color-black-64: rgb(64 64 64 / 1);
-  --color-black-128: rgb(128 128 128 / 1);
+  --z-apex-height: 50px;
+  --height-logo: 30px;
+  --left: 20px;
 }
 
 /* z-indices */
@@ -19,6 +13,33 @@
   --z-d: 40;
   --z-e: 50;
   --z-f: 60;
+}
+
+/* colors */
+:root {
+  --color-blue: #4285f3;
+  --color-grey: #444444;
+}
+
+/* blacks */
+:root {
+  --color-black-32: rgb(32 32 32 / 1);
+  --color-black-64: rgb(64 64 64 / 1);
+  --color-black-128: rgb(128 128 128 / 1);
+}
+
+/* whites */
+:root {
+  --bg-white-100: rgb(255 255 255 / 1);
+  --bg-white-90:  rgb(255 255 255 / 0.90);
+  --bg-white-50:  rgb(255 255 255 / 0.50);
+  --bg-white-10:  rgb(255 255 255 / 0.10);
+}
+
+/* opacities */
+
+:root {
+  --opa: rgb(255 255 255 / 0.90);
 }
 
 /* shadows, cast south, elevations  */
@@ -38,26 +59,3 @@
     0 20px 40px rgb(0 0 0 / 0.1), 
     0 30px 60px rgb(0 0 0 / 0.05);
 }
-
-/* whites */
-:root {
-  --bg-white-100: rgb(255 255 255 / 1);
-  --bg-white-90:  rgb(255 255 255 / 0.90);
-  --bg-white-50:  rgb(255 255 255 / 0.50);
-  --bg-white-10:  rgb(255 255 255 / 0.10);
-}
-
-:root {
-  --opa: rgb(255 255 255 / 0.90);
-}
-
-:root {
-  --z-apex-height: 50px;
-  --height-logo: 30px;
-  --left: 20px;
-}
-
-
-
-
-

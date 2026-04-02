@@ -6,9 +6,7 @@ import                                            './C1MenuRight.css';
 export default function C1MenuRight() {
   const dispatch = useDispatch();
   const menu_on = useSelector((state) => state.MenuPage.on);
-  function menuClicked() {
-    dispatch({ type: 'toggleMenuPage' });
-  }
+  const menuClicked = () => dispatch({ type: 'toggleMenuPage' });
   return (
     <>
       <SVGMenu onClick={menuClicked} id="menu_top" />

@@ -15,8 +15,7 @@
   color:  var(--color-blue)
 }
 
-/* media query will turn the center navigation off when the screen is too small
-*/
+/* media query will turn the center navigation off when the screen is too small */
 
 @media screen and (max-width: 701px) {
   .apex-center {
