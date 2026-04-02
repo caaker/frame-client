@@ -6,4 +6,5 @@
   cursor: pointer;
   margin-left: 20px;
   border-radius: 15px;
+  font-size: var(--height-logo);
 }

@@ -9,6 +9,6 @@ export default function C1Avatar () {
   const clicked = () => dispatch({ type: 'updateMenuPage', current: 'User' });
   return pic
     ? <img src={pic} onClick={clicked} className="user_pic" alt="avatar" />
-    : <SVGAvatar fontSize="30px" onClick={clicked} className="user_pic light" />;
+    : <SVGAvatar onClick={clicked} className="user_pic light" />;
 
 };

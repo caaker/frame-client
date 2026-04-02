@@ -9,6 +9,6 @@ export default function C1MenuLeft() {
     dispatch({ type: 'toggleMenuLeft' });
   };
   return (
-      <SVGMenuBurger onClick={handleClick} id='menu_left_svg'/>
+    <SVGMenuBurger onClick={handleClick} id='menu_left_svg'/>
   );
 };
