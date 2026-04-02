@@ -1,5 +1,5 @@
 .theme-height {
-  height: var(--height-logo);
+  font-size: var(--height-logo);
 }
 .apex-center {
    display: flex;
