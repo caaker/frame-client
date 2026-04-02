@@ -7,9 +7,9 @@ export default function ApexCenterBookmark() {
   function clicked() {
     dispatch({type: 'updateMenuPage', current: 'Bookmarks' });
   }
-  const style = (page === 'Bookmarks') ? 'apex-option apex-option-on' : 'apex-option';
+  const classes = (page === 'Bookmarks') ? 'apex-option apex-option-on' : 'apex-option';
   return (
-    <div onClick={clicked} className={style}>
+    <div onClick={clicked} className={classes}>
       <SVGBookmark className='theme-height'/>
     </div>
   );

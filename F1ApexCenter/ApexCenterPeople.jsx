@@ -1,16 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { SVGPeople }                from '../C0Vectors/SVGPeople.jsx';
 
-
 export default function ApexCenterPeople () {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
   function clicked() {
     dispatch({type: 'updateMenuPage', current: 'People' });
   }
-  const style = (page === 'People') ? 'apex-option apex-option-on' : 'apex-option';
+  const classes = (page === 'People') ? 'apex-option apex-option-on' : 'apex-option';
   return (
-    <div onClick={clicked} className={style}>
+    <div onClick={clicked} className={classes}>
       <SVGPeople className='theme-height'/>
     </div>
   );
