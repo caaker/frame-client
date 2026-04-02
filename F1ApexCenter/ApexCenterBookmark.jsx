@@ -10,7 +10,7 @@ export default function ApexCenterBookmark() {
   const style = (page === 'Bookmarks') ? 'apex-option apex-option-on' : 'apex-option';
   return (
     <div onClick={clicked} className={style}>
-      <SVGBookmark fontSize='30px'/>
+      <SVGBookmark className='theme-height'/>
     </div>
   );
 }

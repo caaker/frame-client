@@ -10,7 +10,7 @@ export default function ApexCenterHome() {
   const classes = (page === 'Articles') ? 'apex-option apex-option-on' : 'apex-option';
   return (
     <div onClick={clicked} className={classes}>
-      <SVGHome fontSize='30px'/>
+      <SVGHome className='theme-height'/>
     </div>
   );
 }
