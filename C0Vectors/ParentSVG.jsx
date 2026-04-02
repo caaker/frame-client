@@ -1,4 +1,3 @@
-import React           from 'react';
 import                      './ParentSVG.css';
 
 const ParentSVG = ({ path, fontSize = '25px', onClick = () => {}, id, className = '' }) => {

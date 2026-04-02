@@ -11,7 +11,7 @@ export default function C1MenuRight() {
   }
   return (
     <>
-      <SVGMenu onClick={menuClicked} id="menu_top" />
+      <SVGMenu fontSize="30px" onClick={menuClicked} id="menu_top" />
       {menu_on && <MenuBox />}
     </>
   );
