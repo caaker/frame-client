@@ -1,7 +1,7 @@
 
 import { useDispatch, useSelector } from 'react-redux';
 
-export function useMenuNavigation(pageName) {
+export function useNavigation(pageName) {
   const dispatch = useDispatch();
   const page = useSelector(state => state.MenuPage.current);
 
