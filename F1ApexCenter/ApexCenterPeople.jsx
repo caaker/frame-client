@@ -1,16 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { SVGPeople }                from '../C0Vectors/SVGPeople.jsx';
+import { useNavigation }        from './useNavigation.js';
+import { SVGPeople }            from '../C0Vectors/SVGPeople.jsx';
 
-export default function ApexCenterPeople () {
-  const dispatch = useDispatch();
-  const page = useSelector( state => state.MenuPage.current );
-  
-  const handleClick = () => dispatch({ type: 'updateMenuPage', current: 'People' });
-  const classes = (page === 'People') ? 'apex-option apex-option-on' : 'apex-option';
-  
+export default function ApexCenterUser() {
+  const { handleClick, classes } = useNavigation('People');
   return (
     <div onClick={handleClick} className={classes}>
-      <SVGPeople className='theme-height'/>
+      <SVGPeople className='theme-height' />
     </div>
   );
 }
