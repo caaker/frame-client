@@ -9,10 +9,10 @@ const livelong = {
   path: basePath,
 
   // favicon
-  favicon: `${basePath}favicon.png`,
+  favicon: `${basePath}favicon.svg`,
 
   // logo
-  logo: `${basePath}favicon.png`,
+  logo: `${basePath}favicon.svg`,
 
   // background
   background: `${basePath}grid-1.svg`,
