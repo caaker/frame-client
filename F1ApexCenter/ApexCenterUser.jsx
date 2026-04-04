@@ -1,17 +1,11 @@
-import { useDispatch, useSelector }   from 'react-redux';
-import { SVGUser }                    from '../C0Vectors/SVGUser.jsx';
+import { useNavigation }        from './useNavigation.js';
+import { SVGUser }              from '../C0Vectors/SVGUser.jsx';
 
-export default function ApexCenterUser () {
-  const dispatch = useDispatch();
-  const page = useSelector( state => state.MenuPage.current );
-  function clicked() {
-    dispatch({type: 'updateMenuPage', current: 'User' });
-  }
-  const classes = (page === 'User') ? 'apex-option apex-option-on' : 'apex-option';
+export default function ApexCenterUser() {
+  const { handleClick, classes } = useNavigation('User');
   return (
-    <div onClick={clicked} className={classes}>
-      <SVGUser className='theme-height'/>
+    <div onClick={handleClick} className={classes}>
+      <SVGUser className='theme-height' />
     </div>
   );
-
 }
