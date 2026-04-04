@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector }     from 'react-redux';
 import { SVGBookmark }                  from '../C0Vectors/SVGBookmark.jsx';
 
 export default function ApexCenterBookmark() {
