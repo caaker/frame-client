@@ -4,12 +4,12 @@ import { SVGPeople }                from '../C0Vectors/SVGPeople.jsx';
 export default function ApexCenterPeople () {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
-  function clicked() {
-    dispatch({type: 'updateMenuPage', current: 'People' });
-  }
+  
+  const handleClick = () => dispatch({ type: 'updateMenuPage', current: 'People' });
   const classes = (page === 'People') ? 'apex-option apex-option-on' : 'apex-option';
+  
   return (
-    <div onClick={clicked} className={classes}>
+    <div onClick={handleClick} className={classes}>
       <SVGPeople className='theme-height'/>
     </div>
   );

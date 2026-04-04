@@ -4,12 +4,12 @@ import { SVGHome }                      from '../C0Vectors/SVGHome.jsx';
 export default function ApexCenterHome() {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
-  function clicked() {
-    dispatch({type: 'updateMenuPage', current: 'Articles' });
-  }
+
+  const handleClick = () => dispatch({ type: 'updateMenuPage', current: 'Articles' });
   const classes = (page === 'Articles') ? 'apex-option apex-option-on' : 'apex-option';
+  
   return (
-    <div onClick={clicked} className={classes}>
+    <div onClick={handleClick} className={classes}>
       <SVGHome className='theme-height'/>
     </div>
   );
