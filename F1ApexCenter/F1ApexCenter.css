@@ -2,9 +2,9 @@
   font-size: var(--height-logo);
 }
 .apex-center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .apex-option {
   display: flex;
@@ -19,9 +19,7 @@
   color:  var(--color-blue)
 }
 
-/* media query will turn the center navigation off when the screen is too small
-*/
-
+/* media query will turn the center navigation off when the screen is too small */
 @media screen and (max-width: 701px) {
   .apex-center {
     display:  none;
