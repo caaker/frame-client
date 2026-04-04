@@ -4,12 +4,12 @@ import { SVGUser }                    from '../C0Vectors/SVGUser.jsx';
 export default function ApexCenterUser () {
   const dispatch = useDispatch();
   const page = useSelector( state => state.MenuPage.current );
-  function clicked() {
-    dispatch({type: 'updateMenuPage', current: 'User' });
-  }
+
+  const handleClick = () => dispatch({ type: 'updateMenuPage', current: 'User' });
   const classes = (page === 'User') ? 'apex-option apex-option-on' : 'apex-option';
+
   return (
-    <div onClick={clicked} className={classes}>
+    <div onClick={handleClick} className={classes}>
       <SVGUser className='theme-height'/>
     </div>
   );
