@@ -5,7 +5,7 @@
 #menu_box {
   display: flex;
   position: absolute;
-  top: 45px;
+  top: var(--z-apex-height);
   right: 0px;
   box-shadow: var(--shadow-sm);
   background: var(--opa);
