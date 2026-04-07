@@ -21,8 +21,6 @@ export default function C1Logo() {
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       xmlSpace="preserve" 
-      width="60" 
-      height="60" 
       viewBox="0 0 60 60"
       className='left-logo' 
       id={rotation ? 'rotate_00' : 'rotate_90'} 
