@@ -13,6 +13,11 @@
   background-color: white;
 }
 
+.left_input::placeholder {
+  color: currentColor;
+  /* opacity: 1;  ensures the color isn't faded/transparent */
+}
+
 #left_input_show {
 }
 
