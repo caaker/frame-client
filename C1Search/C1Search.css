@@ -3,7 +3,10 @@
   margin-left: var(--left);
   border-radius: 8px;
   box-sizing: border-box;
+
+  color: inherit;
   border: 1px solid currentColor;
+
   outline-width: 0;
   padding-left: 10px;
   height: var(--height-logo);
