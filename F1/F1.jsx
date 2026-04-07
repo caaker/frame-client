@@ -1,4 +1,4 @@
-import config             from      '../F1Customize/config_all.js';
+import config             from      '../F1All/config_all.js';
 
 // rendered components
 import F1Apex             from      '../F1Apex/F1Apex.jsx';
@@ -8,16 +8,16 @@ import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';
 
 // non-react files
-import                              '../F1Customize/class.Header.js';
-import                              '../F1Customize/class.MobileFix.js';
-import                              '../F1Server/class.Server.js';
-import                              '../F1Data/F1Data.js';
+import                              '../F1All/class.Header.js';
+import                              '../F1All/class.MobileFix.js';
+import                              '../F1All/class.Server.js';
+import                              '../F1All/F1Data.js';
 import                              '../F1Socket/F1Socket.js';
 
 // global css
-import                              '../F1Customize/global-resets.css';
-import                              '../F1Customize/global-layouts.css';
-import                              '../F1Customize/global-themes.css';
+import                              '../F1All/global-resets.css';
+import                              '../F1All/global-layouts.css';
+import                              '../F1All/global-themes.css';
 
 export default function F1 () {
   console.logD('DEBUG: L1 : F1');

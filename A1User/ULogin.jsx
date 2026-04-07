@@ -1,5 +1,5 @@
 import ULoginGoogle       from  './ULoginGoogle.jsx';
-import config             from  '../F1Customize/config_all.js';
+import config             from  '../F1All/config_all.js';
 import                          './ULogin.css';
 
 export default function ULogin () {

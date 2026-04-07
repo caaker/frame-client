@@ -1,4 +1,4 @@
-import config from '../F1Customize/config_all.js';
+import config from '../F1All/config_all.js';
 
 export const MenuPage = (state = { current: config.start_page, on: false }, action) => {
   const newState = { ...state };

@@ -1,7 +1,7 @@
 import arc              from  'frame-arc';
 import ArticleBar       from  './ArticleBar.jsx';
 import                        './Article.css';
-import config           from  '../F1Customize/config_all.js';
+import config           from  '../F1All/config_all.js';
 
 const handleImageError = (error) => {
   error.currentTarget.onerror = null; 

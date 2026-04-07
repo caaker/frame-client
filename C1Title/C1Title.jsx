@@ -1,4 +1,4 @@
-import config                         from  '../F1Customize/config_all.js';
+import config                         from  '../F1All/config_all.js';
 import                                      './C1Title.css';
 
 export default function C1Title () {

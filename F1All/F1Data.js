@@ -1,5 +1,5 @@
 import Helper from          '../F1Helper/class.Helper.js';
-import config_people from   '../F1Customize/config_people.js';
+import config_people from   '../F1All/config_people.js';
 import store from           '../_redux/store';
 
 function fetchData() {
