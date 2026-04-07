@@ -32,7 +32,7 @@ class Helper {
   }
   
   static onFailureDefault(error) {
-    console.logD('DEBUG: Helper: fetch failed: ' + url, 'red');
+    console.logD('DEBUG: Helper: fetch failed: ', 'red');
     console.logD(error);
   }
 

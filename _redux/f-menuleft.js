@@ -1,7 +1,10 @@
-const MenuLeft = (state = { on: false }, action) => {
+// f-menuleft.js
+
+export const MenuLeft = (state = { on: false }, action) => {
   switch (action.type) {
     case 'toggleMenuLeftOff':
-      return { on: false };
+
+    return { on: false };
 
     case 'toggleMenuLeft':
       return { on: !state.on };
@@ -10,8 +13,3 @@ const MenuLeft = (state = { on: false }, action) => {
       return state;
   }
 };
-
-export default {
-  MenuLeft
-};
-

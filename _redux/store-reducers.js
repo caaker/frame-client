@@ -1,36 +1,27 @@
-// frame
+import { combineReducers } from '@reduxjs/toolkit';
 
-import Menu              from  './f-menu';
-import MenuLeft          from  './f-menuleft';
+import { MenuPage } from './f-menu';
+import { MenuLeft } from './f-menuleft';
+import { Modal } from './f-modal';
+import { User } from './f-user';
+import { WebSocket } from './f-websocket';
 
-import Modal             from  './f-modal';
-import User              from  './f-user';
-import WebSocket         from  './f-websocket';
+import { Articles, ArticleForm, SearchInput } from './a-articles';
+import { People, PeopleInput } from './a-people';
+import { Bookmarks } from './a-bookmarks';
 
-// apps
-import Articles          from  './a-articles';
-import People            from  './a-people';
-import Bookmarks         from  './a-bookmarks';
+const rootReducer = combineReducers({
+  MenuPage: MenuPage,
+  MenuLeft: MenuLeft,
+  Modal: Modal,
+  User: User,
+  WebSocket: WebSocket,
+  Articles: Articles,
+  ArticleForm: ArticleForm,
+  SearchInput: SearchInput,
+  Bookmarks: Bookmarks,
+  People: People,
+  PeopleInput: PeopleInput,
+});
 
-const combiner = {
-
-  // frame
-  ...Menu,
-  ...MenuLeft,
-  ...Modal,
-  ...User,
-  ...WebSocket,
-
-  // app - articles
-  ...Articles,
-
-  // app - people
-  ...People,
-
-  // app - bookmarks
-  ...Bookmarks
-
-};
-
-import {combineReducers} from 'redux';
-export default combineReducers(combiner);
+export default rootReducer;

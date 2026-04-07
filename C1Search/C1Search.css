@@ -10,7 +10,7 @@
   outline-width: 0;
   padding-left: 10px;
   height: var(--height-logo);
-  background-color: white;
+  background-color: inherit;
 }
 
 .left_input::placeholder {

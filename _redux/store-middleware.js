@@ -1,20 +1,12 @@
-import { applyMiddleware } from 'redux';
-
-
-const logger = store => next => action => {
-  // console.logD('REDUX: action: ' + action.type, 'brown');
-  next(action);
-  // console.log('REDUX: state: ', store.getState());
+export const logger = store => next => action => {
+  return next(action);
 };
 
-
-const error = store => next => action => {
+export const errorMiddleware = store => next => action => {
   try {
-    next(action);
-  } catch (error) {
-    console.error('REDUX: MIDLEWARE: ERROR', error);
+    return next(action);
+  } catch (err) {
+    console.error('REDUX: MIDDLEWARE: ERROR', err);
+    throw err;
   }
 };
-
-
-export default applyMiddleware(logger, error);

@@ -1,29 +1,30 @@
-const People = (state = {people: false}, action) => {
+// a-people.js
+
+export const People = (state = { people: false }, action) => {
   let newState = { ...state };
-  switch(action.type) {
+  switch (action.type) {
     case 'initializePeople':
       newState.people = action.people;
       return newState;
 
     case 'addMessage':
+      // logic for addMessage would go here
+      return newState;
 
+    default:
+      return state;
   }
-  return state;
 };
 
-const PeopleInput = (state = {current: ''}, action) => {
+export const PeopleInput = (state = { current: '' }, action) => {
   const newState = { ...state };
-  switch(action.type) {
-
+  switch (action.type) {
     // called along with addMessage
     case 'updatePeopleInput':
       newState.current = action.current;
       return newState;
-  }
-  return state;
-};
 
-export default {
-  People,
-  PeopleInput
+    default:
+      return state;
+  }
 };
