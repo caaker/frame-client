@@ -1,8 +1,6 @@
 class Helper {
 
   constructor() {
-    // const origin = window.location.origin;
-    // if ( origin === 'https://caaker.github.io' ) {}
   }
 
   static getWebSocketURL() {
@@ -33,7 +31,6 @@ class Helper {
   
   static onFailureDefault(error) {
     console.logD('DEBUG: Helper: fetch failed: ', 'red');
-    console.logD(error);
   }
 
   static onSuccessDefault(json) { 

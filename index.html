@@ -82,14 +82,17 @@ Global JavaScript
 
   <script>
 
-    window.console.logD = (message, color = '#0000ff') => {
-      const isEnabled = true;
-      if (isEnabled) {
-        const formattedMessage = `%c${message}`;
-        console.log(formattedMessage, `color: ${color}`);
+    window.console.logD = (message, color = '#8888ff') => {
+      const config = 0;
+      if (config === 0) {
+        console.groupCollapsed(`%c${message}`, `color: ${color}`);
+        console.trace(); 
+        console.groupEnd();
+      } else if ( config === 1) {
+        console.log(`%c${message}`, `color: ${color}`);
       }
     };
-
+  
   </script>
 
 

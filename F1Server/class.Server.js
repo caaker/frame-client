@@ -6,7 +6,7 @@ console.logD('DEBUG: L2 : F1-Server');
 class Server {
   static logMetric(label, status, startTime) {
     const duration = (performance.now() - startTime).toFixed(2);
-    console.logD(`DEBUG: L2 : F1-Server: ${label}: ${status}: ${duration} ms`);
+    console.logD(`DEBUG: L2 : F1-Server: ${label}: ${status}: ${duration} ms`, 'red');
   }
   static async testServer(url) {
     const startTime = performance.now();
@@ -16,7 +16,7 @@ class Server {
       return response.ok;
     } catch (error) {
       const errorMsg = ( error.name === 'TimeoutError' ) ? 'timeout' : error.name;
-      this.logMetric('fetch errored', errorMsg, startTime);
+      this.logMetric('fetch failed', errorMsg, startTime);
       return false;
     }
   }
