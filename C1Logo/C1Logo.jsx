@@ -1,27 +1,56 @@
-import { useState }           from        'react';
-import                                    './C1Logo.css';
-import config                 from        '../F1Customize/config_all.js';
+import { useState } from 'react';
+import './C1Logo.css';
 
 export default function C1Logo() {
-  
-  // initial rotation state is 0 degrees
   const [rotation, setRotation] = useState(true);
-  
-  function setGlobalOpacity() {
-    if (rotation) {
+
+  function setGlobalOpacity(currentRotation) {
+    if (currentRotation) {
       document.documentElement.style.setProperty('--opa', 'var(--bg-white-10)');
     } else {
       document.documentElement.style.setProperty('--opa', 'var(--bg-white-90)');
     }
   }
-  
+
   function onClick() {
     setGlobalOpacity(rotation);
     setRotation(!rotation);
   }
-  
-  return (
-    <img className='left-logo' id = {rotation ? 'rotate_00' : 'rotate_90'} onClick={onClick} src={config.logo}/>
-  );
 
+  return (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlSpace="preserve" 
+      width="60" 
+      height="60" 
+      viewBox="0 0 60 60"
+      className='left-logo' 
+      id={rotation ? 'rotate_00' : 'rotate_90'} 
+      onClick={onClick}
+      style={{ cursor: 'pointer' }}
+    >
+      <g style={{ display: 'inline' }}>
+        <path 
+          d="M170 102.5a30 30 0 0 0-6 .639v58.754a30 30 0 0 0 6 .607 30 30 0 0 0 6.941-.848V103.35a30 30 0 0 0-6.941-.85m-12.21 2.639A30 30 0 0 0 140 132.5a30 30 0 0 0 17.79 27.375zm25.564.511v53.674A30 30 0 0 0 200 132.5a30 30 0 0 0-16.646-26.85" 
+          style={{ strokeWidth: 1 }} 
+          transform="translate(-140 -102.5)"
+        />
+        <path 
+          d="M27.903 59.887c-.852-.07-2.82-.333-3.344-.445l-.5-.107V29.992c0-16.139.035-29.343.076-29.344.041 0 .579-.087 1.195-.193 3.355-.578 7.04-.503 10.535.214l1.073.22V59.11l-1.073.22a41 41 0 0 1-2.171.372c-1.076.148-4.804.266-5.79.184" 
+          style={{ fill: '#000', strokeWidth: '.00998336', fillOpacity: 1 }}
+        />
+        <path 
+          d="M43.428 29.943V3.231l.773.423a30.4 30.4 0 0 1 6.867 5.131c1.637 1.63 2.732 2.966 3.965 4.842 2.643 4.023 4.273 8.637 4.77 13.51.16 1.566.075 5.64-.148 7.056-1.373 8.726-6.07 16.087-13.282 20.817-1.026.672-2.728 1.646-2.879 1.646-.036 0-.066-12.021-.066-26.713M16.173 56.498a29.68 29.68 0 0 1-12.979-13.27C1.041 38.86.1 34.836.1 30c0-2.886.248-4.853.954-7.567C2.948 15.157 7.76 8.617 14.123 4.667c.862-.535 3.447-1.922 3.583-1.922.035 0 .064 12.265.064 27.255s-.033 27.254-.074 27.252c-.042 0-.727-.34-1.523-.754" 
+          style={{ fill: '#000', fillOpacity: 1, strokeWidth: '.00998336' }}
+        />
+      </g>
+    </svg>
+  );
 };
+
+/*
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="60" height="60" viewBox="0 0 60 60"><g style="display:inline"><path d="M170 102.5a30 30 0 0 0-6 .639v58.754a30 30 0 0 0 6 .607 30 30 0 0 0 6.941-.848V103.35a30 30 0 0 0-6.941-.85m-12.21 2.639A30 30 0 0 0 140 132.5a30 30 0 0 0 17.79 27.375zm25.564.511v53.674A30 30 0 0 0 200 132.5a30 30 0 0 0-16.646-26.85" style="stroke-width:1" transform="translate(-140 -102.5)"/><path d="M27.903 59.887c-.852-.07-2.82-.333-3.344-.445l-.5-.107V29.992c0-16.139.035-29.343.076-29.344.041 0 .579-.087 1.195-.193 3.355-.578 7.04-.503 10.535.214l1.073.22V59.11l-1.073.22a41 41 0 0 1-2.171.372c-1.076.148-4.804.266-5.79.184" style="fill:#000;stroke-width:.00998336;fill-opacity:1"/><path d="M43.428 29.943V3.231l.773.423a30.4 30.4 0 0 1 6.867 5.131c1.637 1.63 2.732 2.966 3.965 4.842 2.643 4.023 4.273 8.637 4.77 13.51.16 1.566.075 5.64-.148 7.056-1.373 8.726-6.07 16.087-13.282 20.817-1.026.672-2.728 1.646-2.879 1.646-.036 0-.066-12.021-.066-26.713M16.173 56.498a29.68 29.68 0 0 1-12.979-13.27C1.041 38.86.1 34.836.1 30c0-2.886.248-4.853.954-7.567C2.948 15.157 7.76 8.617 14.123 4.667c.862-.535 3.447-1.922 3.583-1.922.035 0 .064 12.265.064 27.255s-.033 27.254-.074 27.252c-.042 0-.727-.34-1.523-.754" style="fill:#000;fill-opacity:1;stroke-width:.00998336"/></g></svg>
+
+<img className='left-logo' id = {rotation ? 'rotate_00' : 'rotate_90'} onClick={onClick} src={config.logo}/>
+
+*/
