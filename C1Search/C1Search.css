@@ -15,7 +15,7 @@
 
 .left_input::placeholder {
   color: currentColor;
-  /* opacity: 1;  ensures the color isn't faded/transparent */
+  opacity: .25;
 }
 
 #left_input_show {
