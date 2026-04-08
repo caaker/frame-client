@@ -1,13 +1,14 @@
-// f-user.js
+import { createSlice } from '@reduxjs/toolkit';
 
-export const User = (state = { current: false }, action) => {
-  switch (action.type) {
-    case 'initializeUser':
-      const newState = { ...state };
-      newState.current = action.current;
-      return newState;
+const userSlice = createSlice({
+  name: 'user',
+  initialState: { current: false },
+  reducers: {
+    initializeUser: (state, action) => {
+      state.current = action.payload;
+    },
+  },
+});
 
-    default:
-      return state;
-  }
-};
+export const { initializeUser } = userSlice.actions;
+export const User = userSlice.reducer;
