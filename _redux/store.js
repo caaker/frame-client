@@ -5,12 +5,7 @@ import { logger, errorMiddleware } from './store-middleware';
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => 
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: ['initializeWebSocket'],
-        ignoredPaths: ['WebSocket.socket'],
-      },
-    }).concat(logger, errorMiddleware),
+    getDefaultMiddleware().concat(logger, errorMiddleware),
 });
 
 export default store;

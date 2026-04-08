@@ -6,7 +6,6 @@ export default function PeopleForm() {
 
   const dispatch = useDispatch();
   const current = useSelector((state) => state.PeopleInput.current);
-  const socket = useSelector((state) => state.WebSocket.socket);
 
   function sendMessage(event) {
     event.preventDefault();
@@ -21,7 +20,7 @@ export default function PeopleForm() {
     console.log('DEBUG: message sent: ', current);
 
     // send message to the socket server
-    socket.send(JSON.stringify(user_message));
+    // socket.send(JSON.stringify(user_message));
 
     // send message to redux
     dispatch({type: 'addMessage', message: user_message});

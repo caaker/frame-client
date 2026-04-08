@@ -4,7 +4,6 @@ import { MenuPage } from                  './f-menu';
 import { MenuLeft } from                  './f-menuleft';
 import { Modal } from                     './f-modal';
 import { User } from                      './f-user';
-import { WebSocket } from                 './f-websocket';
 import { SearchInput } from               './f-search';
 
 import { Articles, ArticleForm } from     './a-articles';
@@ -16,7 +15,6 @@ const rootReducer = combineReducers({
   MenuLeft: MenuLeft,
   Modal: Modal,
   User: User,
-  WebSocket: WebSocket,
   Articles: Articles,
   ArticleForm: ArticleForm,
   SearchInput: SearchInput,
