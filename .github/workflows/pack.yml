@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Clone repository into the github runner
         uses: actions/checkout@v6
+        with:
+          lfs: true
       
       - name: Install node 24 into the runner
         uses: actions/setup-node@v6
