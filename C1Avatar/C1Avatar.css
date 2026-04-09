@@ -3,4 +3,5 @@
   margin-left: 20px;
   border-radius: 15px;
   font-size: var(--height-logo);
+  height: var(--height-logo);
 }
