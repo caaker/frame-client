@@ -756,18 +756,6 @@
     "__v": 0
   },
   {
-    "_id": "5f03a007a582e000048a30c7",
-    "tag": "Nutrition",
-    "owner": "5eebf1dc9148400351a49dd0",
-    "link": "https://www.wellandgood.com/good-advice/spices-herbs-brain-health/",
-    "image": "https://i.pinimg.com/564x/34/35/6e/34356e7492d7cfb4ae32507f46814375.jpg",
-    "title": "The 8 best herbs and spices for brain health, according to experts",
-    "summary": "Of all the things to worry about in the world right now, you’d be forgiven if dementia—aka the loss of cognitive function—failed to make the top of your list.",
-    "domain": "wellandgood.com",
-    "timestamp": "2020-07-06T22:04:55.756Z",
-    "__v": 0
-  },
-  {
     "_id": "5efaa1b49e06a6166e00f7f1",
     "tag": "Psychology",
     "owner": "5eebf1dc9148400351a49dd0",
