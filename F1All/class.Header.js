@@ -10,7 +10,6 @@ class Header {
   setFavicon() {
     const existing = document.querySelector("link[rel='shortcut icon']");
     if (existing) existing.remove();
-
     const link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
