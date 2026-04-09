@@ -13,7 +13,11 @@ export default function A1Article () {
 
   // created on every render, but OK for now 
   function makeArticles() {
-    if (!articles) return null;
+    if (!articles) {
+      console.logD('DEBUG: L3 : F1-Page-A1Article: Articles not found');
+      return null;
+    }
+    console.logD('DEBUG: L3 : F1-Page-A1Article: Articles found:');
     if (search) articles = articles.filter(val => ArticleFilter(val, search));
     articles = articles.map(article => <Article key={article._id} article={article} />);
     return articles;
