@@ -1,6 +1,6 @@
 class MobileFix {
   constructor() {
-    console.logD('DEBUG: L2 : MobileFix');
+    console.logD('DEBUG: L2 : F1-MobileFix');
     this.setCSSHeight();
   }
 
