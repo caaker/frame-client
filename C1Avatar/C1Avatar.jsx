@@ -3,7 +3,7 @@ import                                            './C1Avatar.css';
 import { SVGAvatar }                      from    '../C0Vectors/SVGAvatar.jsx';
 
 export default function C1Avatar () {
-  console.logD('DEBUG: L4 : F1-Apex-Right-Avatar');
+  // console.logD('DEBUG: L4 : F1-Apex-Right-Avatar');
   const dispatch = useDispatch();
   const pic = useSelector((state) => state.User.current.pic_url);
   const clicked = () => dispatch({ type: 'updateMenuPage', current: 'User' });

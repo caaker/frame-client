@@ -12,7 +12,7 @@ import validate                       from  './Z1Validate.js';
 
 // this file is a controlled form that delegates validation, style is broken purposefully
 export default function M1FormInputs() {
-  console.logD('DEBUG: L5 : F1-Modal-M1-Form-Inputs');
+  // console.logD('DEBUG: L5 : F1-Modal-M1-Form-Inputs');
   const dispatch = useDispatch();
   const d1 = useSelector((state) => state.ArticleForm);
 

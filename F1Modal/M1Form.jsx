@@ -9,7 +9,7 @@ import Submit                         from './Z1Submit.js';
 import makeObject                     from './M1FormHelper.js';
 
 export default function M1Form () {
-  console.logD('DEBUG: L4 : F1-Modal-M1-Form ');
+  // console.logD('DEBUG: L4 : F1-Modal-M1-Form ');
 
   const dispatch = useDispatch();
   const article_form = useSelector((state) => state.ArticleForm) || {};
