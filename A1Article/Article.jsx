@@ -4,20 +4,18 @@ import                        './Article.css';
 import config           from  '../F1All/config_all.js';
 
 const handleImageError = (error) => {
+  console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'red');
+  console.log('DEBUG:' + error.currentTarget.src);
   error.currentTarget.onerror = null; 
   error.currentTarget.src = config.fallback;   
-  console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'red');
 };
 
 export function Article ({ article }) {
   const { title, link, image, summary, tag, domain } = article;
   const hash = arc.makeAnchorHash(title);
 
-  // move this logic to server and add a hash
   const extension = new URL(image).pathname.split('.').pop();
   const location = '/_images-lfs/' + title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + '.' + extension;
-  
-  console.log(location)
   
   return (
     <article id={hash} className='__article'>
