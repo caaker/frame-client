@@ -1164,18 +1164,6 @@
     "__v": 0
   },
   {
-    "_id": "5ef531cda6bef60914677c82",
-    "tag": "Nutrition",
-    "owner": "5eebf1dc9148400351a49dd0",
-    "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5302255/",
-    "image": "https://i.imgur.com/HnYKNV3.jpg?1",
-    "title": "Brown rice has methionine",
-    "summary": "If you avoid brown rice because of its high glycemic index make sure you get the essential amino acid methionine somewhere else.",
-    "domain": "ncbi.nlm.nih.gov",
-    "timestamp": "2020-06-25T23:22:53.392Z",
-    "__v": 0
-  },
-  {
     "_id": "5ef531cda6bef60914677c81",
     "tag": "Nutrition",
     "owner": "5eebf1dc9148400351a49dd0",
