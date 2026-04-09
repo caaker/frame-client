@@ -12,7 +12,7 @@ import                              '../F1All/class.Header.js';
 import                              '../F1All/class.MobileFix.js';
 import                              '../F1All/class.Server.js';
 import                              '../F1All/F1Data.js';
-import                              '../F1Socket/F1Socket.js';
+import                              '../F1All/F1Socket.js';
 
 // global css
 import                              '../F1All/global-resets.css';
