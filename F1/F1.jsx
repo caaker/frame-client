@@ -20,7 +20,7 @@ import                              '../F1All/global-layouts.css';
 import                              '../F1All/global-themes.css';
 
 export default function F1 () {
-  console.logD('DEBUG: L1 : F1');
+  console.logD('DEBUG: L1 : F1', 'black');
   return (
     <div id="app_hold">
       <F1Apex />
