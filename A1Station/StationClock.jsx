@@ -5,14 +5,14 @@ export default function StationClock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const timerID = setInterval(() => setTime(new Date()), 60000);
+    const timerID = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timerID);
-  })
+  }, []);
 
   return (
     <div id = "box_clock">
       <p id = "box_clock_inner">
-        {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: undefined })}
+        {time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
       </p>
     </div>
   );

@@ -2,24 +2,20 @@ import { useEffect, useState }      from 'react';
 import Helper                       from '../F1Helper/class.Helper.js';
 
 export default function A1Station({lat, lon}) {
+
   console.logD('DEBUG: L4 : F1-Page-Station-Air ');
+
   const [airData, setAirData] = useState(null);
   const baseURL = Helper.getBaseURL();
+
   useEffect(() => {
-    const url = `${baseURL}/api_openweather/api_openweather?lat=${ lat }&lon=${ lon }`;
+    const url = `${baseURL}/api_openweather/air?lat=${ lat }&lon=${ lon }`;
     Helper.fetchJSON(url, null, (json) => {
       setAirData(json);
     });
-
   }, [lat, lon]);
 
-  return (
-    <>
-      {airData && airData.list && (
-        <p id="box_air_inner">Air Quality: {airData.list[0].main.aqi}</p>
-      )}
-    </>
+  return airData?.list && (
+    <p id="box_air_inner">Air Quality: {airData.list[0].main.aqi}</p>
   );
 };
-
-// const url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${ lat }&lon=${ lon }&units=imperial&appid=${ openweather }`;
