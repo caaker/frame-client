@@ -6,7 +6,7 @@ export default function A1Station({lat, lon}) {
   const [airData, setAirData] = useState(null);
   const baseURL = Helper.getBaseURL();
   useEffect(() => {
-    const url = `${baseURL}/openweather/openweather?lat=${ lat }&lon=${ lon }`;
+    const url = `${baseURL}/api_openweather/api_openweather?lat=${ lat }&lon=${ lon }`;
     Helper.fetchJSON(url, null, (json) => {
       setAirData(json);
     });
