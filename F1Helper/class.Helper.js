@@ -31,6 +31,7 @@ class Helper {
   
   static onFailureDefault(error) {
     console.logD('DEBUG: Helper: fetch failed: ', 'red');
+    console.log(error);
   }
 
   static onSuccessDefault(json) { 
