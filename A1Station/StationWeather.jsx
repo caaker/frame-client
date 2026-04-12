@@ -6,23 +6,19 @@ export default function StationWeather({ lat, lon }) {
   const baseURL = Helper.getBaseURL();
 
   useEffect(() => {
-    const url = `${baseURL}/api_openweather/weather?lat=${lat}&lon=${lon}`;
-    Helper.fetchJSON(url, null, setWeatherData);
+    Helper.fetchJSON(`${baseURL}/api_openweather/weather?lat=${lat}&lon=${lon}`, null, setWeatherData);
   }, [lat, lon]);
 
   if (!weatherData) return null;
-
-  const { temp } = weatherData.main;
-  const { icon } = weatherData.weather[0];
 
   return (
     <>
       <img
         id="image_weather"
-        src={`https://openweathermap.org/img/w/${icon}.png`}
+        src={`https://openweathermap.org/img/w/${weatherData.weather[0]}.png`}
         alt="Weather Icon"
       />
-      <p id="box_weather_inner">{Math.round(temp)}°</p>
+      <p id="box_weather_inner">{Math.round(weatherData.main)}°</p>
     </>
   );
 }
