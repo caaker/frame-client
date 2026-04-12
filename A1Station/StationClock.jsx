@@ -5,7 +5,7 @@ export default function StationClock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const timerID = setInterval(() => setTime(new Date()), 1000);
+    const timerID = setInterval(() => setTime(new Date()), 60000);
     return () => clearInterval(timerID);
   }, []);
 
