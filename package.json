@@ -1,6 +1,9 @@
 {
   "notes-0": "file created on 03-31-2026",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
       "dev": "vite",
       "build": "vite build"
