@@ -8,7 +8,7 @@ export default function ULoginGoogle (){
 
   return (
     <div id='auth-google-div'>
-      <a href={baseURL + '/auth/google'}>
+        <a href={`${baseURL}/auth/google`}>
         <span className="auth-google-spanner"></span>
         <img id='auth-google-image' src={logo} />
         <p id="auth-google-text">Log in with google</p>
