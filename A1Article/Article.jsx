@@ -16,7 +16,9 @@ export function Article ({ article }) {
   const location = '/_images-lfs/' + title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + '.' + extension;
   
   return (
-  
+    <div className='__article-outer-outer'>
+      <div className='__article-outer'>
+
         <article id={hash} className='__article'>
           <a className="article_link" href={link} target="_blank" rel="noreferrer">
             <img className="article_link_image" src={location} alt={title} onError={handleImageError} />
@@ -29,12 +31,8 @@ export function Article ({ article }) {
           <p className="article_domain"> {domain} </p>
           <ArticleBar article={article}/>
         </article>
-  
+
+      </div>
+    </div>
   );
 };
-
-
-    // <div className='__article-outer'>
-    // <div className='__article-inner'>
-
-      
