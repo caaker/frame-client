@@ -17,8 +17,8 @@ export function Article ({ article }) {
   
   return (
 
-    <div id='__article-outer'>
-      <div id='__article-inner'>
+    <div className='__article-outer'>
+      <div className='__article-inner'>
         
         <article id={hash} className='__article'>
           <a className="article_link" href={link} target="_blank" rel="noreferrer">
