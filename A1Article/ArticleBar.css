@@ -1,29 +1,17 @@
+.article_bar {
+  height: 17px;
+  margin-top: 8px;
+  display:flex;
+  justify-content: space-between;
+}
+.article_bar_main{
+}
+.article_bar_admin{
+}
 .article_icons_right {
   filter: grayscale(100%);
   opacity: .5;
   height: 100%;
-  float: right;
   cursor: pointer;
-}
-
-.article_bar {
-  height: 17px;
-  margin-top: 8px;
-}
-
-.article_bar_admin{
-  height: 17px;
-  margin-top: 8px;
-}
-
-/*
-**
-**
-*/
-
-.c1_favicon {
-  filter: grayscale(100%);
-  opacity: .5;
-  height: 100%;
-  float: left;
+  margin:0 2px;
 }

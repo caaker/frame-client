@@ -29,6 +29,7 @@ export function Article ({ article }) {
           <p className="article_domain"> {domain} </p>
           <ArticleBar article={article}/>
         </article>
+  
   );
 };
 

@@ -32,16 +32,18 @@
 }
 
 /**/
-.__article-outer{ }
 
 .__article-inner{
 }
 
 .__article{
+  display: flex;
+  flex-direction:column;
 
-  display: inline-block;
   width: 40%;
   margin: 10px 0;
+  padding: 10px;
+
   box-sizing: border-box;
   min-width: 301px;
 
@@ -49,7 +51,6 @@
   background: var(--opa);
   transition: background 2s;
   border-radius: 4px;
-  padding: 10px;
   
 }
 
@@ -65,3 +66,10 @@
     width: 301px;
   }
 } */
+
+
+/* 
+.__article-outer{ }
+
+
+ */
