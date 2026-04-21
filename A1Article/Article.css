@@ -32,7 +32,18 @@
 }
 
 /**/
+.__article-outer{ }
+
+.__article-inner{
+}
+
 .__article{
+
+  display: inline-block;
+  width: 40%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  min-width: 301px;
 
   box-shadow: var(--shadow-sm);  
   background: var(--opa);
@@ -41,18 +52,6 @@
   padding: 10px;
   
 }
-
-.__article-outer{
-  display: inline-block;
-  width: 40%;
-  margin: 10px 0;
-  box-sizing: border-box;
-  min-width: 301px;
-}
-
-.__article-inner{
-}
-
 
 /* media queries */
 @media screen and (max-width: 701px) {
