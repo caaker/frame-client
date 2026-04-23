@@ -1,6 +1,3 @@
-// Options
-// Page - User, Articles, Bookmarks, Clock, People
-
 /****************************************************************************************************/
 
 const basePath = "/images/";

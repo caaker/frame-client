@@ -1,4 +1,6 @@
 import config from './config_all.js';
+// config.favicon, config.background, config.title
+
 class Header {
   constructor() {
     console.logD('DEBUG: L2 : F1-Header');
