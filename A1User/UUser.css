@@ -16,15 +16,6 @@
 /**
 **/
 
-
-/*
-  Put back later when page grows
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-
-*/
-
-
 #user-container{
   display: flex;
   align-items: center;

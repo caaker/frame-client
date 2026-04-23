@@ -6,7 +6,7 @@
   background: var(--opa);
   transition: background 2s;
   border-bottom: 1px dotted #cccccc;
-  height: calc(var(--vh, 1vh) * 100 - 175px);
+  height: calc(100dvh - 175px);
 }
 .sentenceL {
   width: 100%;
