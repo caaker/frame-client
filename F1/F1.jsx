@@ -8,7 +8,7 @@ import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';
 
 // non-react files
-import                              '../F1All/class.Header.js';
+import                              '../F1All/class.Custom.js';
 import                              '../F1All/class.ServerTest.js';
 import                              '../F1All/F1Data.js';
 import                              '../F1All/F1Socket.js';
