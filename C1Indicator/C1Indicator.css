@@ -1,0 +1,14 @@
+#dot-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  margin-left: var(--left);
+}
+
+.dot-indicator {
+  background-color: red;
+}
+
+.dot-indicator-on {
+  background-color: green;
+}

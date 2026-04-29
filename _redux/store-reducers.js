@@ -3,8 +3,10 @@ import { combineReducers } from '@reduxjs/toolkit';
 import { MenuPage } from                  './f-menu';
 import { MenuLeft } from                  './f-menuleft';
 import { Modal } from                     './f-modal';
-import { User } from                      './f-user';
 import { SearchInput } from               './f-search';
+
+import { User } from                      './f-user';
+import { Server } from                    './f-server';
 
 import { Articles, ArticleForm } from     './a-articles';
 import { People, PeopleInput } from       './a-people';
@@ -14,13 +16,16 @@ const rootReducer = combineReducers({
   MenuPage: MenuPage,
   MenuLeft: MenuLeft,
   Modal: Modal,
+  SearchInput: SearchInput,
+
   User: User,
+  Server: Server,
+
   Articles: Articles,
   ArticleForm: ArticleForm,
-  SearchInput: SearchInput,
-  Bookmarks: Bookmarks,
   People: People,
   PeopleInput: PeopleInput,
+  Bookmarks: Bookmarks,
 });
 
 export default rootReducer;

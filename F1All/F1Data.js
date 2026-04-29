@@ -1,5 +1,4 @@
 import Helper from                '../F1Helper/class.Helper.js';
-import config_people from         '../F1All/config_people.js';
 import store from                 '../_redux/store';
 import { initializeUser } from    '../_redux/f-user';
 
@@ -17,8 +16,6 @@ function fetchData() {
     store.dispatch(initializeUser(user));
   });
 
-  // place holder for chat
-  store.dispatch({ type: 'initializePeople', people: config_people });
 }
 
 fetchData();
