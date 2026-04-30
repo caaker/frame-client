@@ -1,14 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const setServerSlice = createSlice({
+const serverSlice = createSlice({
   name: 'server',
-  initialState: { ready: false },
+  initialState: { 
+    ready: false, 
+    heartbeat: 0 
+  },
   reducers: {
     setServer: (state, action) => {
-      state.ready = action.payload;
+      const { ready, heartbeat } = action.payload;
+      state.ready = ready;
+      state.heartbeat = heartbeat;
     },
   },
 });
 
-export const { setServer } = setServerSlice.actions;
-export const Server = setServerSlice.reducer;
+export const { setServer } = serverSlice.actions;
+export const Server = serverSlice.reducer;

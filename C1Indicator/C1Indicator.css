@@ -11,4 +11,5 @@
 
 .dot-indicator-on {
   background-color: green;
+  transition: background-color 2s;
 }
