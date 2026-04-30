@@ -8,7 +8,7 @@ const testServer = async () => {
   let ok = false;
   let status = 'error';
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
+    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
     ok = res.ok;
     status = ok ? 'ok' : '!ok';
   } catch (e) {
@@ -21,6 +21,6 @@ const testServer = async () => {
 };
 
 testServer();
-setInterval(testServer, 10000);
+setInterval(testServer, 30000);
 
 export default { testServer };
