@@ -8,19 +8,21 @@ const testServer = async () => {
   let ok = false;
   let status = 'error';
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+    const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
     ok = res.ok;
     status = ok ? 'ok' : '!ok';
   } catch (e) {
     status = e.name === 'TimeoutError' ? 'timeout' : e.name;
   }
   const duration = (performance.now() - start).toFixed(2);
-  // console.logD(`DEBUG: F1-ServerTest: ${ok ? 'success' : 'failed'}: ${status}: ${duration} ms`, 'brown');
+  if(heartbeat === 0) {
+    console.logD(`DEBUG: F1-ServerTest: ${ok ? 'success' : 'failed'}: ${status}: ${duration} ms`, 'brown');
+  }
   store.dispatch(setServer({ ready: ok, heartbeat: ++heartbeat }));
   return ok;
 };
 
 testServer();
-setInterval(testServer, 30000);
+setInterval(testServer, 10000);
 
 export default { testServer };
