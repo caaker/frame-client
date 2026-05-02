@@ -15,32 +15,24 @@ export default function M1Form () {
 
   function onSubmit(event) {
     event.preventDefault();
-
     if(article_form.valid) {
-
       dispatch({type: 'clearArticleForm'});
       dispatch({type: 'toggleModalOff'});
-
       if(config) {
         Submit.put(makeObject(article_form), dispatch);
-        alert('Aricle Edited.  Thank you.');
-
+        alert('Article Edited.  Thank you.');
       } else {
         Submit.post(makeObject(article_form), dispatch);
-        alert('Aricle Created.  Thank you.');
+        alert('Article Created.  Thank you.');
       }
-
     } else {
       alert('Form has errors.  Please correct.');
     }
-
   }
-
   return (
     <form autoComplete="off" className='modal-form' onSubmit = {onSubmit}>
       <M1FormInputs />
       <M1FormButton config={config}/>
     </form>
   );
-
 };
