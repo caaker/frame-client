@@ -12,7 +12,10 @@ const handleImageError = (error) => {
 export function Article ({ article }) {
   const { title, link, image, summary, tag, domain } = article;
   const hash = arc.makeAnchorHash(title);
-  const extension = new URL(image).pathname.split('.').pop();
+
+  const safeImage = image.startsWith('http') ? image : `https://${image}`;
+  const extension = new URL(safeImage).pathname.split('.').pop();
+
   const location = '/_images-lfs/' + title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + '.' + extension;
   
   return (
