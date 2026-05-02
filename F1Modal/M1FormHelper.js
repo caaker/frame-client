@@ -1,7 +1,7 @@
 
 function makeObject(article_form) {
 
-  // this is the data we will send to the server after validation
+  // created by User
   const res = {};
   res.link = article_form?.link?.value;
   res.image = article_form?.image?.value;
@@ -10,9 +10,8 @@ function makeObject(article_form) {
   res.tag = article_form?.tag?.value;
   res.domain = article_form?.domain?.value;
 
-  // remove ?
+  // created by MongoDB and used to identify article for edit / delete
   res._id = article_form?._id?.value;
-  res.index = article_form?.index?.value;  
   return res;
 }
 

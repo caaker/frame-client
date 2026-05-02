@@ -19,6 +19,10 @@ export default function M1Form () {
       dispatch({type: 'clearArticleForm'});
       dispatch({type: 'toggleModalOff'});
       if(config) {
+
+        console.logD('DEBUG: articled edited-try 0');
+        console.log(article_form);
+    
         Submit.put(makeObject(article_form), dispatch);
         alert('Article Edited.  Thank you.');
       } else {
