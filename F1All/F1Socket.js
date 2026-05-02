@@ -1,5 +1,5 @@
 import { sendFingerPrint, receiveMessage } from    './F1SocketFunctions.js';
-import Helper                             from    '../F1Helper/class.Helper.js';
+import Helper                             from    '../F1All/class.Helper.js';
 
 function createWebSocket() {
   console.logD('DEBUG: L2 : F1-Socket');

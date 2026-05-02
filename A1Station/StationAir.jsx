@@ -1,5 +1,5 @@
 import { useEffect, useState }      from 'react';
-import Helper                       from '../F1Helper/class.Helper.js';
+import Helper                       from '../F1All/class.Helper.js';
 
 export default function A1Station({lat, lon}) {
 

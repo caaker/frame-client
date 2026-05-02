@@ -2,7 +2,6 @@ import { useSelector, useDispatch }         from   'react-redux';
 import './F1Modal.css';
 import F1M1                                 from   './M1.jsx';
 
-// primary purpose is to turn the modal on and off
 export default function F1Modal () {
   console.logD('DEBUG: L2 : F1-Modal');
 

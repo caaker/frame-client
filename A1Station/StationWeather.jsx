@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Helper from '../F1Helper/class.Helper.js';
+import Helper from '../F1All/class.Helper.js';
 
 export default function StationWeather({ lat, lon }) {
   const [weatherData, setWeatherData] = useState(null);

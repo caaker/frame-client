@@ -1,5 +1,5 @@
 import './ULoginGoogle.css';
-import Helper from '../F1Helper/class.Helper.js';   
+import Helper from '../F1All/class.Helper.js';   
 
 export default function ULoginGoogle (){
   

@@ -1,4 +1,4 @@
-import Helper from                '../F1Helper/class.Helper.js';
+import Helper from                '../F1All/class.Helper.js';
 import store from                 '../_redux/store';
 import { initializeUser } from    '../_redux/f-user';
 
