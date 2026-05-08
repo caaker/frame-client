@@ -2,6 +2,9 @@ name: download_json
 
 on:
   workflow_dispatch:
+  schedule:
+    # Runs at 02:22 UTC every day
+    - cron: '22 2 * * *'
 
 permissions:
   contents: write
