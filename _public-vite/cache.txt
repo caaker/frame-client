@@ -3,7 +3,7 @@
     "_id": "64a2f221c0fd9a0481add13e",
     "link": "https://www.health.com/nutrition/is-chipotle-healthy",
     "image": "https://i.pinimg.com/564x/c0/da/90/c0da907a4d3feff319c811a3825ee7b2.jpg",
-    "title": "How Healthy Is Eating at Chipotle?-0",
+    "title": "How Healthy Is Eating at Chipotle?",
     "summary": "These tips can help make your next meal at Chipotle more nutritious.",
     "tag": "Nutrition",
     "domain": "health.com",
