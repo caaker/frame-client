@@ -17,8 +17,13 @@
 
 /* colors */
 :root {
-  --color-blue: #4285f3;
+  --color-blue: #4285f4;
+  --color-green: #34a853;
+  --color-red: #ea4335;
   --color-grey: #444444;
+
+  /* strategy for updating all primary colors */
+  --color-primary: var(--color-green);
 }
 
 /* blacks */

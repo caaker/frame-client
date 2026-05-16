@@ -9,7 +9,7 @@
 .menu_holder:hover{
   border: 1px solid rgb(200 200 200 / 1);
   background: #ffffff;
-  color:  var(--color-blue);
+  color:  var(--color-primary);
 }
 .menu_name{
   margin: 0px;

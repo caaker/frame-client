@@ -18,14 +18,14 @@ import                                    './MenuBox.css';
 export default function MenuBox () {
   const dispatch = useDispatch();
 
-  function bodyClicked(event) {
-    const isMenuClick = event.target.closest('#menu_top');
-    if (!isMenuClick) {
-      dispatch({ type: 'toggleMenuPageOff' });
-    }
-}
-
   useEffect(() => {
+    // if put outside of useEffect; we have a memory leak
+    function bodyClicked(event) {
+      const isMenuClick = event.target.closest('#menu_top');
+      if (!isMenuClick) {
+        dispatch({ type: 'toggleMenuPageOff' });
+      }
+    }
     document.body.addEventListener('click', bodyClicked);
     return () => {
       document.body.removeEventListener('click', bodyClicked);

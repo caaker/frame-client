@@ -1,33 +1,28 @@
-
-html{
+html, body {
   height: 100%;
   width: 100%;
 }
 
-/* helps isolate the way this cascades - leave separate */
+/* helps isolate the way this shows up in the debugger */
 body{
   font-family: system-ui, Roboto, Helvetica, Arial, sans-serif;
 }
+
 body{
-  height: 100%;
-  width: 100%;
   padding: 0px;
   margin: 0px;
-  
   display: flex;
 
-
   /* default background properties no need to uncomment 
-
   background-color: transparent;
   background-size: auto;
   background-repeat: repeat;
-
   */
 
   /* modified background */
   background-attachment: fixed;
 }
+
 p{
   margin: 0px;
   padding: 0px;

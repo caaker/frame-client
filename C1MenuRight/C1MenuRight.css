@@ -1,6 +1,7 @@
 #menu_top {
-  cursor: pointer; 
-  margin-left: 20px;
   position: relative;
   font-size: var(--height-logo); 
+  margin-left: var(--left);
+  cursor: pointer; 
+  
 }
