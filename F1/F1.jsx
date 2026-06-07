@@ -17,7 +17,7 @@ import F1Modal            from      '../F1Modal/F1Modal.jsx';
 import F1Footer           from      '../F1Footer/F1Footer.jsx';
 
 export default function F1 () {
-  console.logD('DEBUG: L1 : F1', '#dddddd');
+  console.logD('DEBUG: L1 : F1', '#000000');
   return (
     <div id="app_hold">
       <F1Apex />
