@@ -6,7 +6,7 @@ import ApexCenterBookmark           from './ApexCenterBookmark.jsx';
 
 
 export default function F1ApexCenter () {
-  console.logD('DEBUG: L3 : F1-Apex-Center ');
+  // console.logD('DEBUG: L3 : F1-Apex-Center ');
   return (
 
     <div className="apex-center">
