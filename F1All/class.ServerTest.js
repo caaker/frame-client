@@ -16,7 +16,7 @@ const testServer = async () => {
   }
   const duration = (performance.now() - start).toFixed(2);
   if(heartbeat === 0) {
-    console.logD(`DEBUG: F1-ServerTest: ${ok ? 'success' : 'failed'}: ${status}: ${duration} ms`, 'brown');
+    console.logD(`DEBUG: F1-ServerTest: ${ok ? 'success' : 'failed'}: ${status}: ${duration} ms`, '#99D4A9');
   }
   store.dispatch(setServer({ ready: ok, heartbeat: ++heartbeat }));
   return ok;

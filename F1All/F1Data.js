@@ -3,7 +3,7 @@ import store from                 '../_redux/store';
 import { initializeUser } from    '../_redux/f-user';
 
 function fetchData() {
-  console.logD('DEBUG: L2 : F1-Data');
+  console.logD('DEBUG: L2 : F1-Data', "#99D4A9");
   const urls = Helper.getURLs(true);
 
   // articles data

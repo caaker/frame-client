@@ -1,8 +1,8 @@
 import './F1Footer.css';
+import { useSelector }    from      'react-redux';
+import config             from      '../F1All/config_all.js';
 
-import { useSelector } from 'react-redux';
-
-export default function F1Footer({config})  {
+export default function F1Footer()  {
   console.logD('DEBUG: L2 : F1-Footer ', "#34A853");
 
   const page = useSelector((state)=>state.MenuPage.current);

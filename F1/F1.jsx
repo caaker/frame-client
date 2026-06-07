@@ -3,8 +3,6 @@ import                              '../F1All/global-resets.css';
 import                              '../F1All/global-layouts.css';
 import                              '../F1All/global-themes.css';
 
-import config             from      '../F1All/config_all.js';
-
 // rendered components
 import F1Apex             from      '../F1Apex/F1Apex.jsx';
 import F1West             from      '../F1West/F1West.jsx';

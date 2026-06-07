@@ -2,7 +2,7 @@ import { sendFingerPrint, receiveMessage } from    './F1SocketFunctions.js';
 import Helper                             from    '../F1All/class.Helper.js';
 
 function createWebSocket() {
-  console.logD('DEBUG: L2 : F1-Socket');
+  console.logD('DEBUG: L2 : F1-Socket', "#99D4A9");
   const URL = Helper.getWebSocketURL();
   const socket = new WebSocket(URL);
   socket.addEventListener('open', () => {
