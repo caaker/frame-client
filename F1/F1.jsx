@@ -3,7 +3,7 @@ import                              '../F1All/global-resets.css';
 import                              '../F1All/global-layouts.css';
 import                              '../F1All/global-themes.css';
 
-// rendered components
+// react components
 import F1Apex             from      '../F1Apex/F1Apex.jsx';
 import F1West             from      '../F1West/F1West.jsx';
 import F1Page             from      '../F1Page/F1Page.jsx';
@@ -24,7 +24,7 @@ export default function F1 () {
       <F1West />
       <F1Page />
       <F1Modal />
-      <F1Footer config={config} />
+      <F1Footer/>
     </div>
   );
 };
