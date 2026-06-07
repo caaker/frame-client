@@ -5,7 +5,7 @@ import                              '../F1All/global-themes.css';
 
 // non-react files
 import                              '../F1All/class.Custom.js';
-import                              '../F1All/class.ServerTest.js';
+import                              '../F1All/class.Server.js';
 import                              '../F1All/F1Data.js';
 import                              '../F1All/F1Socket.js';
 

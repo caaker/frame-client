@@ -1,7 +1,7 @@
 import config from './config_all.js';
 // config.favicon, config.background, config.title
 
-class Header {
+class Custom {
   constructor() {
     console.logD('DEBUG: L2 : F1-Custom', '#34A853');
     this.setFavicon();
@@ -28,4 +28,4 @@ class Header {
   }
 }
 
-export default new Header();
+export default new Custom();

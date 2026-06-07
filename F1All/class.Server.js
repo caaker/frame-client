@@ -3,8 +3,9 @@ import { setServer } from '../_redux/f-server';
 let heartbeat = 0;
 const url = 'https://frame-server-x8qw.onrender.com';
 
-const testServer = async () => {
-    console.logD('DEBUG: F1-ServerTest: ', '#34A853');
+const server = async () => {
+  
+  console.logD('DEBUG: F1-ServerTest: ', '#34A853');
   const start = performance.now();
   let ok = false;
   let status = 'error';
@@ -23,7 +24,7 @@ const testServer = async () => {
   return ok;
 };
 
-testServer();
-setInterval(testServer, 10000);
+server();
+setInterval(server, 10000);
 
-export default { testServer };
+export default { server };
