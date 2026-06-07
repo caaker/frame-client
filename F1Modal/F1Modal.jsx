@@ -4,7 +4,7 @@ import M1                                 from   './M1.jsx';
 
 // consider updating this to use useEffect
 export default function F1Modal () {
-  console.logD('DEBUG: L2 : F1-Modal', "#34A853");
+  console.logD('DEBUG: L2 : F1-Modal', "#4285f4");
   const dispatch = useDispatch();
   const on = useSelector(state => state.Modal.on);
   function offModalClick(event) {

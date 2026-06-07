@@ -6,7 +6,7 @@ import C1Search         from    '../C1Search/C1Search.jsx';
 
 
 export default function F1ApexLeft () {
-  console.logD('DEBUG: L3 : F1-Apex-Left ');
+  // console.logD('DEBUG: L3 : F1-Apex-Left ');
   return (
     <div className="apex-left">
 

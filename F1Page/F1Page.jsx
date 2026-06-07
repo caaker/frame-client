@@ -8,7 +8,7 @@ import                                        './F1Page.css';
 
 export default function F1Page () {
   const page = useSelector( (state) => state.MenuPage.current );
-  console.logD('DEBUG: L2 : F1-Page', "#34A853");
+  console.logD('DEBUG: L2 : F1-Page', "#4285f4");
   return (
     <div id='page_hold'>
       <div className='page_container'>
