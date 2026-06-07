@@ -3,7 +3,7 @@ import './F1Footer.css';
 import { useSelector } from 'react-redux';
 
 export default function F1Footer({config})  {
-  console.logD('DEBUG: L2 : F1-Footer ');
+  console.logD('DEBUG: L2 : F1-Footer ', "#34A853");
 
   const page = useSelector((state)=>state.MenuPage.current);
   const style = (page === 'User') ? 'footer_show ' : 'footer_hide';

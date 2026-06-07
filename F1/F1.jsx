@@ -1,3 +1,8 @@
+// global css
+import                              '../F1All/global-resets.css';
+import                              '../F1All/global-layouts.css';
+import                              '../F1All/global-themes.css';
+
 import config             from      '../F1All/config_all.js';
 
 // rendered components
@@ -12,11 +17,6 @@ import                              '../F1All/class.Custom.js';
 import                              '../F1All/class.ServerTest.js';
 import                              '../F1All/F1Data.js';
 import                              '../F1All/F1Socket.js';
-
-// global css
-import                              '../F1All/global-resets.css';
-import                              '../F1All/global-layouts.css';
-import                              '../F1All/global-themes.css';
 
 export default function F1 () {
   console.logD('DEBUG: L1 : F1', '#dddddd');
