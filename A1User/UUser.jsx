@@ -4,8 +4,12 @@ import { useSelector } from 'react-redux';
 
 export default function UUser () {
   const User = useSelector(state => state.User.current);
-  const baseURL = Helper.getBaseURL();
 
+  const baseURL = Helper.getBaseURL();
+  const URL = window.location.origin + window.location.pathname;
+  const encodedURL = encodeURIComponent(URL);
+  const logoutURL = `${baseURL}/auth/logout?redirect_url=${encodedURL}`;
+  
   return (
     <div id = "user-container">
       <div id = "user-container-2">
@@ -14,7 +18,7 @@ export default function UUser () {
         </div>
         <p id = "user-name">{User.name}</p>
         <p id = "user-email">{User.email}</p>
-        <a id = "user-button" href={baseURL + '/auth/logout'}>Logoff</a>
+        <a id = "user-button" href={logoutURL}>Logoff</a>
       </div>
     </div>
   );
