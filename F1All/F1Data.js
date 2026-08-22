@@ -8,6 +8,7 @@ function fetchData() {
 
   // articles data
   Helper.fetchJSON(urls.articles, undefined, (articles) => {
+    console.log('Helper.fetchJSON() fetching and dispatching to Redux ', 'URL: ' + urls.articles, articles);
     store.dispatch({ type: 'initializeArticles', articles });
   });
 
