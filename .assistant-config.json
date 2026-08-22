@@ -1,0 +1,9 @@
+{
+  "comment": "configuration for copilot",
+  "verbosity": "low",
+  "allow_grounding_search": false,
+  "ignore_statements": [
+    "console.logD*"
+  ],
+  "allow_write": false
+}
