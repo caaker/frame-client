@@ -8,7 +8,8 @@ import { SearchInput } from               './f-search';
 import { User } from                      './f-user';
 import { Server } from                    './f-server';
 
-import { Articles, ArticleForm } from     './a-articles';
+import { ArticleForm } from               './a-article-form';
+import { Articles } from                  './a-articles';
 import { People, PeopleInput } from       './a-people';
 import { Bookmarks } from                 './a-bookmarks';
 
