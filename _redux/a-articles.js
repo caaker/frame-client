@@ -44,12 +44,3 @@ export const ArticleForm = (state = initial_state, action) => {
       return state;
   }
 };
-
-export const SearchInput = (state = { current: '' }, action) => {
-  switch (action.type) {
-    case 'updateSearchInput':
-      return { ...state, current: action.current };
-    default:
-      return state;
-  }
-};
