@@ -1,55 +1,49 @@
+import { createSlice } from '@reduxjs/toolkit';
 import { initial_state, test_state, makeData, isValid } from './a-articles-aux';
 
-export const Articles = (state = { articles: false }, action) => {
-  let newState = { ...state };
-  switch (action.type) {
-    case 'initializeArticles':
-      newState.articles = action.articles;
-      return newState;
-    case 'addArticle':
-      const newArticles1 = [...newState.articles];
-      newArticles1.unshift(action.new_article);
-      newState.articles = newArticles1;
-      return newState;
-    case 'updateArticle':
-      const newArticles2 = [...newState.articles];
-      newArticles2.splice(action.index, 1, action.new_article);
-      newState.articles = newArticles2;
-      return newState;
-    case 'deleteArticle':
-      const newArticles = [...newState.articles];
-      newArticles.splice(action.index, 1);
-      newState.articles = newArticles;
-      return newState;
-    default:
-      return state;
-  }
-};
+const articlesSlice = createSlice({
+  name: 'articles',
+  initialState: { articles: false },
+  reducers: {
+    initializeArticles: (state, action) => {
+      state.articles = action.payload;
+    },
+    addArticle: (state, action) => {
+      if (state.articles) {
+        state.articles.unshift(action.payload);
+      }
+    },
+    updateArticle: (state, action) => {
+      const { index, article } = action.payload;
+      if (state.articles && state.articles[index]) {
+        state.articles[index] = article;
+      }
+    },
+    deleteArticle: (state, action) => {
+      if (state.articles) {
+        state.articles.splice(action.payload, 1);
+      }
+    },
+  },
+});
 
-export const ArticleForm = (state = initial_state, action) => {
-  switch (action.type) {
-    case 'clearArticleForm':
-      return initial_state;
-    case 'testArticleForm':
-      return test_state;
-    case 'setArticleForm':
-      return makeData(action.data);
-    case 'updateArticleForm':
-      let newState = { ...state };
-      const [name, value, valid] = action.data;
-      newState[name] = { value, valid };
-      newState.valid = isValid(newState);
-      return newState;
-    default:
-      return state;
-  }
-};
+const articleFormSlice = createSlice({
+  name: 'articleForm',
+  initialState: initial_state,
+  reducers: {
+    clearArticleForm: () => initial_state,
+    testArticleForm: () => test_state,
+    setArticleForm: (state, action) => makeData(action.payload),
+    updateArticleForm: (state, action) => {
+      const [name, value, valid] = action.payload;
+      state[name] = { value, valid };
+      state.valid = isValid(state);
+    },
+  },
+});
 
-export const SearchInput = (state = { current: '' }, action) => {
-  switch (action.type) {
-    case 'updateSearchInput':
-      return { ...state, current: action.current };
-    default:
-      return state;
-  }
-};
+export const { initializeArticles, addArticle, updateArticle, deleteArticle } = articlesSlice.actions;
+export const Articles = articlesSlice.reducer;
+
+export const { clearArticleForm, testArticleForm, setArticleForm, updateArticleForm } = articleFormSlice.actions;
+export const ArticleForm = articleFormSlice.reducer;
