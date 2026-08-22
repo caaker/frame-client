@@ -23,6 +23,12 @@ class Helper {
   static async fetchJSON(url, options = { credentials: 'include' }, onsuccess = Helper.onSuccessDefault, onfailure = Helper.onFailureDefault) {
     try {
       const response = await fetch(url, options);
+      
+      // idiom for fetch - check for status 200 - 299
+      if (!response.ok) {
+        throw new Error(`HTTP error with status: ${response.status}`);
+      }
+
       const json = await response.json();
       onsuccess(json);
     } catch (error) {
