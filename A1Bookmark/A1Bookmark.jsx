@@ -3,12 +3,12 @@ import { useSelector }                  from 'react-redux';
 import C1Link                           from '../C1Link/C1Link.jsx'
 import                                  './A1Bookmark.css';
 
-
 export function A1Bookmark() {
   const [tag, setTag] = useState('Nutrition');
   const articles = useSelector((state) => state.Articles.articles);
 
   const top_hash = useMemo(() => {
+    if (!articles) return {};
     return articles.reduce((hash, { tag, domain }) => {
       hash[tag] ??= {};
       hash[tag][domain] ??= {};

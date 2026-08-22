@@ -11,10 +11,11 @@ class Helper {
     return 'https://frame-server-x8qw.onrender.com';
   }
 
+  // ./cache.txt vs /cache.txt
   static getURLs(cache = true) {
     const baseURL = this.getBaseURL();
     return {
-      articles: cache ? ('./cache.txt' ) : ( baseURL + '/articles/get' ),
+      articles: cache ? ('/cache.txt' ) : ( baseURL + '/articles/get' ),
       users: ( baseURL + '/users/get' ),
     };
   }

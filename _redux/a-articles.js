@@ -13,6 +13,7 @@ const articlesSlice = createSlice({
         state.articles.unshift(action.payload);
       }
     },
+    
     updateArticle: (state, action) => {
       const { index, article } = action.payload;
       if (state.articles && state.articles[index]) {
