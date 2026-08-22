@@ -1,5 +1,3 @@
-// f-modal.js
-
 const defaults = { on: false, data: { }, config: false };
 
 export const Modal = (state = defaults, action) => {
