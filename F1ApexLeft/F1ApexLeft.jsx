@@ -1,7 +1,7 @@
 import                          './F1ApexLeft.css';
 
 import C1Logo           from    '../C1Logo/C1Logo.jsx';
-import C1Indicator       from    '../C1Indicator/C1Indicator.jsx';
+import C1Indicator      from    '../C1Indicator/C1Indicator.jsx';
 import C1Search         from    '../C1Search/C1Search.jsx';
 
 
