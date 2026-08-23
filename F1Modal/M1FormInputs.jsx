@@ -7,6 +7,8 @@ import C1Copy                         from  '../C1Copy/C1Copy.jsx';
 import addDomain                      from  './Z1AddDomain.jsx';
 import validate                       from  './Z1Validate.js';
 
+import { updateArticleForm }          from '../_redux/a-article-form';
+
 
 export default function M1FormInputs() {
   const dispatch = useDispatch();
@@ -15,7 +17,7 @@ export default function M1FormInputs() {
   function oC(event) {
     const { name, value } = event.target;
     const valid = validate(name, value);
-    dispatch({type: 'updateArticleForm', data: [name, value, valid]});
+    dispatch(updateArticleForm([name, value, valid]));
     addDomain(name, value, dispatch);
   }
 

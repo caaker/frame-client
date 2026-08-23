@@ -1,6 +1,7 @@
-import { useDispatch }  from  'react-redux';
+import { useDispatch }      from  'react-redux';
 import { SVGEdit }          from  '../C0Vectors/SVGEdit.jsx';
-import                        './C1Edit.css';
+import                            './C1Edit.css';
+import { setArticleForm }   from  '../_redux/a-article-form';
 
 export default function C1Edit({ article, admin }) {
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ export default function C1Edit({ article, admin }) {
       return;
     }
     dispatch({ type: 'toggleModalOn', config: true });
-    dispatch({ type: 'setArticleForm', data: article });
+    dispatch(setArticleForm(article));
   }
   return <SVGEdit className="article_icons_right" onClick={editClicked} />;
 }
