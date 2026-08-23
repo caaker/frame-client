@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// name property is never used in code, only internally, lowercase is convention
 const userSlice = createSlice({
   name: 'user',
   initialState: { current: false },
@@ -7,7 +8,7 @@ const userSlice = createSlice({
     initializeUser: (state, action) => {
       state.current = action.payload;
     },
-  },
+  }
 });
 
 export const { initializeUser } = userSlice.actions;
