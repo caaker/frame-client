@@ -23,7 +23,7 @@ export const ArticleForm = (state = initial_state, action) => {
 import { createSlice } from '@reduxjs/toolkit';
 import { initial_state, test_state, makeData, isValid } from './a-article-form-aux';
 
-export const articleSlice = createSlice({
+export const ArticleForm = createSlice({
   name: 'articleForm',
   initialState: initial_state,
   reducers: {
