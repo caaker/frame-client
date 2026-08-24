@@ -1,15 +1,10 @@
-// f-menuleft.js
-
-export const MenuLeft = (state = { on: false }, action) => {
-  switch (action.type) {
-    case 'toggleMenuLeftOff':
-
-    return { on: false };
-
-    case 'toggleMenuLeft':
-      return { on: !state.on };
-
-    default:
-      return state;
-  }
-};
+import { createSlice } from '@reduxjs/toolkit';
+export const menuLeftSlice = createSlice({
+  name: 'menuLeft',
+  initialState: { on: false },
+  reducers: {
+    toggleMenuLeft: (state) => { state.on = !state.on; }
+  },
+});
+export const { toggleMenuLeft } = menuLeftSlice.actions;
+export const MenuLeft = menuLeftSlice.reducer;

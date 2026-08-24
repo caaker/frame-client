@@ -7,7 +7,6 @@ import makeObject                     from './M1FormHelper.js';
 import { clearArticleForm }           from '../_redux/a-article-form';
 import { toggleModalOff }             from '../_redux/f-modal';
 
-
 export default function M1Form () {
   const dispatch = useDispatch();
   const article_form = useSelector((state) => state.ArticleForm) || {};

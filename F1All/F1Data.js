@@ -9,7 +9,6 @@ import { initializeArticles } from    '../_redux/a-articles';
   
   Helper.fetchJSON(urls.articles, undefined, (articles) => { 
     store.dispatch(initializeArticles(articles));
-    console.log(articles)
   });
 
   Helper.fetchJSON(urls.users, undefined, (user) => { store.dispatch(initializeUser(user)); });

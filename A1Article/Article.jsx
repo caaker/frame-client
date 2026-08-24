@@ -1,23 +1,18 @@
 import arc              from  'frame-arc';
 import ArticleBar       from  './ArticleBar.jsx';
-import                        './Article.css';
 import config           from  '../F1All/config_all.js';
+import                        './Article.css';
 
 const handleImageError = (error) => {
-  console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'red');
-  error.currentTarget.onerror = null; 
+  console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'orange');
   error.currentTarget.src = config.fallback;   
 };
 
 export function Article ({ article }) {
   const { title, link, image, summary, tag, domain } = article;
   const hash = arc.makeAnchorHash(title);
-
-  const safeImage = image.startsWith('http') ? image : `https://${image}`;
-  const extension = new URL(safeImage).pathname.split('.').pop();
-
+  const extension = new URL(image).pathname.split('.').pop();
   const location = '/_images-lfs/' + title.toLowerCase().replace(/[^a-z0-9]+/g, "-") + '.' + extension;
-  
   return (
     <div className='__article-outer-outer'>
       <div className='__article-outer'>

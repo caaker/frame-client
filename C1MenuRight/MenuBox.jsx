@@ -1,19 +1,17 @@
 import { useEffect }                      from 'react';
 import { useDispatch, useSelector }       from 'react-redux';
-
-// SVG Containers
 import MenuBoxItem                        from './MenuBoxItem.jsx';
 import MenuBoxItemAdd                     from './MenuBoxItemAdd.jsx';
-
-// SVG
 import { SVGAdd }                         from '../C0Vectors/SVGAdd.jsx';
 import { SVGUser }                        from '../C0Vectors/SVGUser.jsx';
 import { SVGHome }                        from '../C0Vectors/SVGHome.jsx';
 import { SVGBookmark }                    from '../C0Vectors/SVGBookmark.jsx';
 import { SVGClock }                       from '../C0Vectors/SVGClock.jsx';
 import { SVGPeople }                      from '../C0Vectors/SVGPeople.jsx';
-
 import                                    './MenuBox.css';
+import { toggleMenuPageOff }              from    '../_redux/f-menu';
+
+
 
 export default function MenuBox () {
   const dispatch = useDispatch();
@@ -23,7 +21,7 @@ export default function MenuBox () {
     function bodyClicked(event) {
       const isMenuClick = event.target.closest('#menu_top');
       if (!isMenuClick) {
-        dispatch({ type: 'toggleMenuPageOff' });
+        dispatch(toggleMenuPageOff());      
       }
     }
     document.body.addEventListener('click', bodyClicked);

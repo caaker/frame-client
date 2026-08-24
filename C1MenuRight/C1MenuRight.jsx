@@ -2,13 +2,15 @@ import { useDispatch, useSelector }      from     'react-redux';
 import { SVGMenu }                       from     '../C0Vectors/SVGMenu.jsx';
 import MenuBox                           from     './MenuBox.jsx';
 import                                            './C1MenuRight.css';
+import { toggleMenuPage }                from    '../_redux/f-menu';
+
 
 export default function C1MenuRight() {
   const dispatch = useDispatch();
   const menu_on = useSelector((state) => state.MenuPage.on);
 
   // useCallback to prevent redefinitions during re-render is overkill here
-  const menuClicked = () => dispatch({ type: 'toggleMenuPage' });
+  const menuClicked = () => dispatch(toggleMenuPage());
   return (
     <>
       <SVGMenu onClick={menuClicked} id="menu_top" />
