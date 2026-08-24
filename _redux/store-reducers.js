@@ -10,7 +10,6 @@ import { Server } from                    './f-server';
 
 import { ArticleForm } from               './a-article-form';
 import { Articles } from                  './a-articles';
-import { People, PeopleInput } from       './a-people';
 import { Bookmarks } from                 './a-bookmarks';
 
 const rootReducer = combineReducers({
@@ -24,8 +23,6 @@ const rootReducer = combineReducers({
 
   Articles: Articles,
   ArticleForm: ArticleForm,
-  People: People,
-  PeopleInput: PeopleInput,
   Bookmarks: Bookmarks,
 });
 

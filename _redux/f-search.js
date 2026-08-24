@@ -1,8 +1,12 @@
-export const SearchInput = (state = { current: '' }, action) => {
-  switch (action.type) {
-    case 'updateSearchInput':
-      return { ...state, current: action.current };
-    default:
-      return state;
-  }
-};
+import { createSlice } from '@reduxjs/toolkit';
+export const searchInputSlice = createSlice({
+  name: 'searchInput',
+  initialState: { current: '' },
+  reducers: {
+    updateSearchInput: (state, action) => {
+      state.current = action.payload;
+    },
+  },
+});
+export const { updateSearchInput } = searchInputSlice.actions;
+export const SearchInput = searchInputSlice.reducer;

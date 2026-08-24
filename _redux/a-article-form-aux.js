@@ -1,27 +1,15 @@
 // initial state
 export const initial_state = {
-  link:{
-    value:''
-  },
-  image:{
-    value:''
-  },
-  title:{
-    value:''
-  },
-  summary:{
-    value:''
-  },
-  tag:{
-    value:''
-  },
-  domain:{
-    value:''
-  },
+  link:{ value:'' },
+  image:{ value:'' },
+  title:{ value:'' },
+  summary:{ value:'' },
+  tag:{ value:'' },
+  domain:{ value:'' },
   valid: false
 };
 
-// test case 1
+// test case
 export const test_state = {
   link: {
     value: 'https://www.hsph.harvard.edu/nutritionsource/salt-and-sodium/',

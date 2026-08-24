@@ -18,10 +18,10 @@
   opacity: .25;
 }
 
-#left_input_show {
+#search_input_show {
 }
 
-#left_input_hide {
+#search_input_hide {
   display:  none;
 }
 
