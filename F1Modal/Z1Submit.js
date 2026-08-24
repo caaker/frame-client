@@ -1,6 +1,8 @@
-import Helper                 from '../F1All/class.Helper.js';
+import Helper                           from '../F1All/class.Helper.js';
+import { addArticle, updateArticle }    from '../_redux/a-articles';
 const exp = {};
 const BASE = Helper.getBaseURL();
+
 
 exp.post = function(article, dispatch) {
   const options = {
@@ -9,7 +11,7 @@ exp.post = function(article, dispatch) {
     body: JSON.stringify(article)
   };
   Helper.fetchJSON(`${BASE}/articles/add`, options, (response) => {
-    dispatch({type: 'addArticle', new_article: response});
+    dispatch(addArticle(response));
   });
 };
 
@@ -20,7 +22,7 @@ exp.put = function(article, dispatch) {
     body: JSON.stringify(article)
   };
   Helper.fetchJSON(`${BASE}/articles/put/${encodeURIComponent(article._id)}`, options, () => {
-    dispatch({ type: 'updateArticle', new_article: article, index: article.index });
+    dispatch(updateArticle({ new_article: article, index: article.index }));
   });
 };
 

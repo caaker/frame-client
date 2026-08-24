@@ -6,6 +6,7 @@ const userSlice = createSlice({
   initialState: { current: false },
   reducers: {
     initializeUser: (state, action) => {
+      console.log('initializeUser');
       state.current = action.payload;
     },
   }
