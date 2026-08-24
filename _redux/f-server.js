@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-
 const serverSlice = createSlice({
   name: 'server',
   initialState: { 
@@ -14,6 +13,5 @@ const serverSlice = createSlice({
     },
   },
 });
-
 export const { setServer } = serverSlice.actions;
 export const Server = serverSlice.reducer;

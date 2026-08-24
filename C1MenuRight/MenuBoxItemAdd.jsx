@@ -1,9 +1,11 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch }       from 'react-redux';
+import { toggleModalOff }    from '../_redux/f-modal';
+
 
 export default function MenuBoxItemAdd (props) {
   const dispatch = useDispatch();
   function menuItemClicked() {
-    dispatch({type: 'toggleModalOn', config: false});
+    dispatch(toggleModalOn(false));
     dispatch({type: 'toggleMenuPageOff'});
   }
   return (
