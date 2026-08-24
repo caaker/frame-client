@@ -5,6 +5,8 @@ import M1FormButton                   from './M1FormButton.jsx';
 import Submit                         from './Z1Submit.js';
 import makeObject                     from './M1FormHelper.js';
 import { clearArticleForm }           from '../_redux/a-article-form';
+import { toggleModalOff }             from '../_redux/f-modal';
+
 
 export default function M1Form () {
   const dispatch = useDispatch();
@@ -15,7 +17,7 @@ export default function M1Form () {
     event.preventDefault();
     if (!article_form.valid) return alert('Form has errors. Please correct.');
     dispatch(clearArticleForm());
-    dispatch({type: 'toggleModalOff'});
+    dispatch(toggleModalOff());
     const payload = makeObject(article_form);
     config ? Submit.put(payload, dispatch) : Submit.post(payload, dispatch);
     alert('Action completed.  Thank you.');

@@ -2,6 +2,8 @@ import { useSelector, useDispatch }         from   'react-redux';
 import './F1Modal.css';
 import M1                                   from   './M1.jsx';
 import { clearArticleForm }                 from '../_redux/a-article-form';
+import { toggleModalOff }                   from '../_redux/f-modal';
+
 
 export default function F1Modal () {
   console.logD('DEBUG: L2 : F1-Modal', "#4285f4");
@@ -9,7 +11,7 @@ export default function F1Modal () {
   const on = useSelector(state => state.Modal.on);
   function offModalClick(event) {
     if(event.target === event.currentTarget) {
-      dispatch({type: 'toggleModalOff'});
+      dispatch(toggleModalOff());
       dispatch(clearArticleForm());
     }
   }

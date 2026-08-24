@@ -5,6 +5,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const userSlice = createSlice({
   name: 'user',
   initialState: { current: false },
+
+  // payload is the default property on the action
   reducers: {
     initializeUser: (state, action) => {
       console.log('initializeUser');
