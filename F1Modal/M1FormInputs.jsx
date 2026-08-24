@@ -1,18 +1,15 @@
 import { useSelector, useDispatch }   from  'react-redux';
 import                                      './M1FormInputs.css';
-
 import M10                            from  './M1FormInputsSingle.jsx';
 import C1Copy                         from  '../C1Copy/C1Copy.jsx';
-
 import addDomain                      from  './Z1AddDomain.jsx';
 import validate                       from  './Z1Validate.js';
-
 import { updateArticleForm }          from '../_redux/a-article-form';
 
 
 export default function M1FormInputs() {
   const dispatch = useDispatch();
-  const d1 = useSelector((state) => state.ArticleForm);
+  const d1 = useSelector((state) => state.ArticleForm) ?? { link: {}, image: {}, title: {}, summary: {}, tag: {}, domain: {} };
 
   function oC(event) {
     const { name, value } = event.target;

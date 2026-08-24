@@ -1,17 +1,15 @@
-import { useSelector, useDispatch }         from    'react-redux';
+import { useSelector, useDispatch }         from   'react-redux';
 import './F1Modal.css';
-import M1                                   from    './M1.jsx';
-import { toggleModalOff }                   from    '../_redux/a-article-form';
-import { clearArticleForm }                 from    '../_redux/a-article-form';
+import M1                                   from   './M1.jsx';
+import { clearArticleForm }                 from '../_redux/a-article-form';
 
-// consider updating this to use useEffect
 export default function F1Modal () {
   console.logD('DEBUG: L2 : F1-Modal', "#4285f4");
   const dispatch = useDispatch();
   const on = useSelector(state => state.Modal.on);
   function offModalClick(event) {
     if(event.target === event.currentTarget) {
-      dispatch(toggleModalOff());
+      dispatch({type: 'toggleModalOff'});
       dispatch(clearArticleForm());
     }
   }
