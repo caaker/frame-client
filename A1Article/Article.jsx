@@ -5,7 +5,6 @@ import                        './Article.css';
 
 const handleImageError = (error) => {
   console.logD('DEBUG: L4 : F1-Page-A1Article-Article : Image not Found ', 'orange');
-  error.currentTarget.src = config.fallback;   
 };
 
 export function Article ({ article }) {
