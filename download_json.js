@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'node:path';
-
 const inputUrl = "https://frame-server-x8qw.onrender.com/articles/get";
 const outputPath = path.join(process.cwd(), '_public-vite', 'cache.txt');
 
@@ -26,6 +25,6 @@ async function fetchData(fetch_url) {
 const articles = await fetchData(inputUrl);
 if (articles) {
   fs.writeFileSync(outputPath, JSON.stringify(articles, null, 2));
-  console.log("download_json script succeeded");
-  console.log("_public-vite/cache.txt udpated");
+  console.log("download_json script succeeded to:");
+  console.log(outputPath);
 }

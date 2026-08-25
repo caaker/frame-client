@@ -1,5 +1,16 @@
 [
   {
+    "_id": "6a8d8fcb957ce6e0d044abf4",
+    "link": "https://www.hsph.harvard.edu/nutritionsource/salt-and-sodium/",
+    "image": "https://i.pinimg.com/564x/e1/fa/80/e1fa800c86db4f694465634870ff5273.jpg",
+    "title": "Salt and Sodium",
+    "summary": "Salt, also known as sodium chloride, is about 40% sodium and 60% chloride. It flavors food and is used as a binder and stabilizer.",
+    "tag": "Nutrition",
+    "domain": "hsph.harvard.edu",
+    "timestamp": "2026-08-25T12:51:23.055Z",
+    "__v": 0
+  },
+  {
     "_id": "64a2f221c0fd9a0481add13e",
     "link": "https://www.health.com/nutrition/is-chipotle-healthy",
     "image": "https://i.pinimg.com/564x/c0/da/90/c0da907a4d3feff319c811a3825ee7b2.jpg",

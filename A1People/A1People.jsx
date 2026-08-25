@@ -7,5 +7,4 @@ export default function A1People() {
     <div id="page-people">
     </div>
   );
-
 };
