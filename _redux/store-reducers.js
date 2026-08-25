@@ -17,10 +17,8 @@ const rootReducer = combineReducers({
   MenuLeft: MenuLeft,
   Modal: Modal,
   SearchInput: SearchInput,
-
   User: User,
   Server: Server,
-
   Articles: Articles,
   ArticleForm: ArticleForm,
   Bookmarks: Bookmarks,
