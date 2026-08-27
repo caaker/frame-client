@@ -1,6 +1,14 @@
 import { LS } from './F1LS';
 const ARTICLES_KEY = 'cached_articles';
 
+/* START
+*/
+
+export function getArticles() {
+  const cached = LS.get(ARTICLES_KEY);
+  return cached && cached.articles ? cached.articles : [];
+}
+
 export function saveArticles(articles) {
   const payload = {
     timestamp: Date.now(),
@@ -9,10 +17,10 @@ export function saveArticles(articles) {
   LS.set(ARTICLES_KEY, payload);
 }
 
-export function getAllArticles() {
-  const cached = LS.get(ARTICLES_KEY);
-  return cached && cached.articles ? cached.articles : [];
-}
+/* CRUD OPERATIONS
+*/
+
+/*
 
 export function addArticle(newArticle) {
   const cached = LS.get(ARTICLES_KEY) || { articles: [] };
@@ -44,3 +52,14 @@ export function deleteArticle(articleId) {
   };  
   LS.set(ARTICLES_KEY, payload);
 }
+*/
+
+/*
+scratch
+event - start
+  check localStorage, if empty, download the <daily cache> and save to localStorage
+  if full insert <localStorage>
+  calculate client timestamp is <daily || local>
+event - server live
+  check server timestamp > client timestamp
+*/
