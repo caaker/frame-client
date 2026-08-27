@@ -18,7 +18,5 @@ import { getArticles, saveArticles } from   '../F1LS/F1LSArticles.js';
       store.dispatch(initializeArticles(arts));
     });
   } 
-
   Helper.fetchJSON(urls.users, undefined, (user) => { store.dispatch(initializeUser(user)); });
-
 })();
