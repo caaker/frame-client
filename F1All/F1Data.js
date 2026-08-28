@@ -5,14 +5,13 @@ import { initializeArticles } from          '../_redux/a-articles';
 import { getArticles, saveArticles } from   '../F1LS/F1LSArticles.js';
 
 (() => {
-  console.logD('DEBUG: L2 : F1-Data', '#34A853');
   const urls = Helper.getURLs(true);
-
-  // get Articles from localStorage or fetch them
   const articles = getArticles();
   if(articles && articles.length > 0) {
+    console.logD('DEBUG: L2 : F1-Data: localStorage utilized: ' + articles.length, '#34A853');
     store.dispatch(initializeArticles(articles));
   } else {
+    console.logD('DEBUG: L2 : F1-Data: fetch utilized:', '#34A853');
     Helper.fetchJSON(urls.articles, undefined, (arts) => {
       saveArticles(arts) 
       store.dispatch(initializeArticles(arts));
