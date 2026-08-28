@@ -1,0 +1,11 @@
+ARTICLE PROPERTIES - MONGODB, CACHE.TXT, LOCALSTORAGE
+_id
+tag
+owner
+link
+image
+title
+summary
+domain
+timestamp
+__v

@@ -19,10 +19,17 @@ export function saveArticles(articles) {
 
 /* CRUD OPERATIONS
 */
+export function LSdeleteArticle(articleId) {
+  const cached = LS.get(ARTICLES_KEY) || { articles: [] };
+  const updatedArticles = cached.articles.filter(article => article._id !== articleId);
+  const payload = {
+    timestamp: Date.now(),
+    articles: updatedArticles
+  };  
+  LS.set(ARTICLES_KEY, payload);
+}
 
-/*
-
-export function addArticle(newArticle) {
+export function LSaddArticle(newArticle) {
   const cached = LS.get(ARTICLES_KEY) || { articles: [] };
   const payload = {
     timestamp: Date.now(),
@@ -42,17 +49,6 @@ export function updateArticle(updatedArticle) {
   };  
   LS.set(ARTICLES_KEY, payload);
 }
-
-export function deleteArticle(articleId) {
-  const cached = LS.get(ARTICLES_KEY) || { articles: [] };
-  const updatedArticles = cached.articles.filter(article => article.id !== articleId);
-  const payload = {
-    timestamp: Date.now(),
-    articles: updatedArticles
-  };  
-  LS.set(ARTICLES_KEY, payload);
-}
-*/
 
 /*
 scratch
