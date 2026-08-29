@@ -6,7 +6,7 @@ import StationAir from './StationAir.jsx';
 import './A1Station.css';
 
 export default function A1Station() {
-  console.logD('DEBUG: L3 : F1-Page-Station ', '#ff0000');
+  console.logD('DEBUG: L3 : F1-Page-Station ');
 
   // default location is Austin, TX
   const [lat, setLat] = useState(30.2827813);

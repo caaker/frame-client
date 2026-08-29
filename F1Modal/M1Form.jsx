@@ -24,7 +24,7 @@ export default function M1Form () {
       Submit.put(payload, dispatch);
     } else {
       Submit.post(payload, dispatch);
-      LSAddArticle(payload);
+      LSaddArticle(payload);
     }
     alert('Action completed.  Thank you.');
   }

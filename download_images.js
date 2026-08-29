@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-// read the cache.txt and create a JS Obect using JSON.parse
+// read the cache.txt and create a JS Object using JSON.parse
 const inputPath = path.join(process.cwd(), "_public-vite", "cache.txt");
 const items = JSON.parse( await fs.readFile(inputPath, "utf8"));
 let ok = true;

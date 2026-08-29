@@ -9,7 +9,6 @@ export default function M1FormButton({config}) {
   const admin = (email === 'caaker.0@gmail.com');
   const handleTestClick = () => { 
     dispatch(testArticleForm()); 
-    console.log('yo')
   };
   return (
     <>

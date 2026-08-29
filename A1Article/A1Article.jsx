@@ -6,7 +6,7 @@ import ArticleFilter          from './ArticleFilter.js';
 import                        './A1Article.css';
 
 export default function A1Article () {
-  console.logD('DEBUG: L3 : F1-Page-A1Article', "#ff0000");
+  console.logD('DEBUG: L3 : F1-Page-A1Article');
   useEffect(() => arc.scrollToHash(0));
   let articles = useSelector((state) => state.Articles?.articles);
   let search = useSelector((state) => state.SearchInput.current);

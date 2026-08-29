@@ -33,7 +33,7 @@ export function LSaddArticle(newArticle) {
   const cached = LS.get(ARTICLES_KEY) || { articles: [] };
   const payload = {
     timestamp: Date.now(),
-    articles: [...cached.articles, newArticle]
+    articles: [newArticle, ...cached.articles]
   };
   LS.set(ARTICLES_KEY, payload);
 }
