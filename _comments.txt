@@ -1,23 +1,35 @@
-ARTICLE PROPERTIES - MONGODB, CACHE.TXT, LOCALSTORAGE, REDUX
+TODO
+- characterize M1FormHelper; can it be simplified?
+- fix the localStorage CRUD missing _id problem
+    - determine where _id is when running an edit
+    - immediately update the DOM, but have _id update when server is finished: super clean!
+
+A PROPS - FORM
 _id
-tag
-owner**
-link
-image*
-title
-summary
 domain
-timestamp**
-__v**
-
-
-ARTICLE PROPERTIES - DOM
-_id -> key
-tag
+image
 link
-title
 summary
+tag
+title
+
+A PROPS - MONGODB, CACHE.TXT, LOCALSTORAGE, REDUX
+__v *
+_id *
+domain
+image
+link
+owner *
+summary
+tag
+timestamp *
+title
+
+A PROPS - DOM
+_id -> key
 domain
 image -> file extension
-
-
+link
+summary
+tag
+title

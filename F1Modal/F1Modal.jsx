@@ -4,7 +4,6 @@ import M1                                   from   './M1.jsx';
 import { clearArticleForm }                 from '../_redux/a-article-form';
 import { toggleModalOff }                   from '../_redux/f-modal';
 
-
 export default function F1Modal () {
   console.logD('DEBUG: L2 : F1-Modal', "#4285f4");
   const dispatch = useDispatch();
