@@ -8,4 +8,6 @@ const store = configureStore({
     getDefaultMiddleware().concat(logger, errorMiddleware),
 });
 
+// use for debugging
+window.store = store;
 export default store;

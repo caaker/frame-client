@@ -1,11 +1,23 @@
-ARTICLE PROPERTIES - MONGODB, CACHE.TXT, LOCALSTORAGE
+ARTICLE PROPERTIES - MONGODB, CACHE.TXT, LOCALSTORAGE, REDUX
 _id
 tag
-owner
+owner**
 link
-image
+image*
 title
 summary
 domain
-timestamp
-__v
+timestamp**
+__v**
+
+
+ARTICLE PROPERTIES - DOM
+_id -> key
+tag
+link
+title
+summary
+domain
+image -> file extension
+
+
